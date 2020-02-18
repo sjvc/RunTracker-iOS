@@ -1,0 +1,3 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleBar.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IVBezierPathRenderer.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JJFloatingActionButton.framework

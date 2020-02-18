@@ -1,0 +1,1040 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0581FC5727F2B26F08EC275E63926FE3 /* JJActionItemTitlePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40875C8621A445AD152BB5988E5DABD2 /* JJActionItemTitlePosition.swift */; };
+		18D09554320A4B2D136735131E630D40 /* JJFloatingActionButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B68AA75ADCD0D44B8099EF4E233EE6 /* JJFloatingActionButtonState.swift */; };
+		21C804201E28FF33C4E65A9F8B98E360 /* UIBezierPath+GuidedPath.h in Headers */ = {isa = PBXBuildFile; fileRef = C412AA9B6A17ACDE7277CAA4E15F4DF3 /* UIBezierPath+GuidedPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2941D6FD25DF541311E4C15DE09FD098 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA65DCC46B3BA27D7D826F98F885D57 /* Styles.swift */; };
+		2D03706889AA70EAA2054B4B9F71CEBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		319CDA9C78434FE53446B2E3D4472915 /* JJFloatingActionButton+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051A19DD8BBA427FF13FE46E145B3ABF /* JJFloatingActionButton+Animation.swift */; };
+		35DE44316F0EC442DACC6B0B894CBB78 /* JJFloatingActionButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88006106211A50E8C555ECAC9D3FBCEC /* JJFloatingActionButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		392490EF77C9BACDCC5DB1C64E5EF862 /* JJFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055341DB2661224BABD3C78C6F6ADDA /* JJFloatingActionButton.swift */; };
+		43DE8A19AEEEBC8C373156E50CA96F8D /* IVBezierPathRenderer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55715CB9E6CAD74151DE094351937804 /* IVBezierPathRenderer-dummy.m */; };
+		6CEE1DA232D52B659F47A271E705CC70 /* AnimationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA8D7A810628264C44ED5661B3A821 /* AnimationConfiguration.swift */; };
+		6EED64A04F3FDADC69E76BF5D5028444 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		7A76FA7683A62BEFCF71CF4F89EE6C22 /* JJActionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7C3959C6C3A9473A6240BF9BABF52 /* JJActionItem.swift */; };
+		7CCE43A9C0B6AAB932CA7400616B867D /* CircleBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2DCB565F84EEB7465B664FC1C94DD /* CircleBar-dummy.m */; };
+		7D0784FE262A488C46A9816326B124AE /* Pods-RunTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E279242069E7CA46DEBCCA50E9900812 /* Pods-RunTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		892C319F31B40B03FDFA001267545BE6 /* JJFloatingActionButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F8F144EAE005A4695E5131E4E06C89 /* JJFloatingActionButtonDelegate.swift */; };
+		8B2BEA447DFDDB19EAE6023D6D2DA49D /* UIBezierPath+GuidedPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D8B156C9E4D7D7448D0F75C16C4A0 /* UIBezierPath+GuidedPath.m */; };
+		95C4A11B7AEC0B03159506E2A4CFB81F /* IVBezierPathRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 247876145E7F289294AEA680BEA72B7B /* IVBezierPathRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A3A8B8A211ED19AD3F55A826C5B689C /* UIColor+JJFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED072D56F734766AE01742FFF7D4C5A4 /* UIColor+JJFloatingActionButton.swift */; };
+		9ABBD6C2B80EE3E3F39395F477BE919F /* JJCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE0FC7B5B3A53CFC34C59B6ABE28B1C /* JJCircleView.swift */; };
+		B4644BF4F7D9500F21A9E59ED2507D8A /* IVBezierPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F544186EF3DB28621ED6AE619449FBF /* IVBezierPathRenderer.m */; };
+		BA8DA38FC765D94151DA6B59381E68E2 /* UIView+JJFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB076E33CB317B12863408DC3CA7669 /* UIView+JJFloatingActionButton.swift */; };
+		BAB7A20973143C2159E0EA320BB360E2 /* JJFloatingActionButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5D44502E9B751274D7D80F43663F3 /* JJFloatingActionButton-dummy.m */; };
+		C3E4C8B0E9F54F0E9252D465962FBE7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		CDDEBF1A34C0589917D5DC8F5C7F3BC2 /* IVBezierPathRenderer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5499E9B1040AD486FE3EFE1B3396E19A /* IVBezierPathRenderer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8DED3C84CDFAB1974C10527D3836C43 /* JJFloatingActionButton+Placement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05205A021DFFF1B699C01CDC3C783213 /* JJFloatingActionButton+Placement.swift */; };
+		DC3090CEF3AEBB3D9B1E3987D1E4F523 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		DF378D1ABACF355BD352F447B3BB210D /* CircleBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C080A3C7D449E1FEA5E3D86D0D9E629 /* CircleBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB5A46A55511253DC3185BB44A375FEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		F36F440FF6B44D182D895FA2925A1490 /* Pods-RunTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B731ACAF7D989DB185D9C25DD4FED63 /* Pods-RunTracker-dummy.m */; };
+		F7399F863C0A79AA2C0B2EC9FC061990 /* LayerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B25E69D8E9E12EB3DAEFFB1D8E1E84A /* LayerProperties.swift */; };
+		F7AE75D23C11A1220C5A7AEB70B06B0C /* SHCircleBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77749A9DB0D57B0F4A9A403A6D8AB096 /* SHCircleBarController.swift */; };
+		FF7F5D61C7E342DB4EEA1FC67B7F96A4 /* SHCircleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9C944F5109E671D460A3672B92B7A /* SHCircleBar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BF18151B1427278E36A73CFC3836544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E109C6B6B466F202BA0B94E76B45D72B;
+			remoteInfo = JJFloatingActionButton;
+		};
+		AAD3D799394D48B4A26A4EA98675A87F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DFB55D104197FC817D4F341CF2B2C44;
+			remoteInfo = IVBezierPathRenderer;
+		};
+		C1765FE0992182E5EFF4F8DF315F633C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7378E43393E401083784252E88810C0;
+			remoteInfo = CircleBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00D2DCB565F84EEB7465B664FC1C94DD /* CircleBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircleBar-dummy.m"; sourceTree = "<group>"; };
+		02806F33E13CA423040315664ED960C2 /* Pods_RunTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RunTracker.framework; path = "Pods-RunTracker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		051A19DD8BBA427FF13FE46E145B3ABF /* JJFloatingActionButton+Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JJFloatingActionButton+Animation.swift"; path = "Sources/JJFloatingActionButton+Animation.swift"; sourceTree = "<group>"; };
+		05205A021DFFF1B699C01CDC3C783213 /* JJFloatingActionButton+Placement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JJFloatingActionButton+Placement.swift"; path = "Sources/JJFloatingActionButton+Placement.swift"; sourceTree = "<group>"; };
+		1B731ACAF7D989DB185D9C25DD4FED63 /* Pods-RunTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RunTracker-dummy.m"; sourceTree = "<group>"; };
+		247876145E7F289294AEA680BEA72B7B /* IVBezierPathRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IVBezierPathRenderer.h; path = IVBezierPathRenderer/Classes/IVBezierPathRenderer.h; sourceTree = "<group>"; };
+		266EAE5CED0E4EF42CD00FB514F261C7 /* Pods-RunTracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RunTracker-frameworks.sh"; sourceTree = "<group>"; };
+		299D8B156C9E4D7D7448D0F75C16C4A0 /* UIBezierPath+GuidedPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBezierPath+GuidedPath.m"; path = "IVBezierPathRenderer/Classes/UIBezierPath+GuidedPath.m"; sourceTree = "<group>"; };
+		2AE0FC7B5B3A53CFC34C59B6ABE28B1C /* JJCircleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJCircleView.swift; path = Sources/JJCircleView.swift; sourceTree = "<group>"; };
+		2EB076E33CB317B12863408DC3CA7669 /* UIView+JJFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JJFloatingActionButton.swift"; path = "Sources/UIView+JJFloatingActionButton.swift"; sourceTree = "<group>"; };
+		2EB57CA3BDAD53B8DA9F4298D4331581 /* JJFloatingActionButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JJFloatingActionButton.modulemap; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3CECD9155739C321901796D48DDA26DC /* Pods-RunTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RunTracker.modulemap"; sourceTree = "<group>"; };
+		40875C8621A445AD152BB5988E5DABD2 /* JJActionItemTitlePosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJActionItemTitlePosition.swift; path = Sources/JJActionItemTitlePosition.swift; sourceTree = "<group>"; };
+		43697E92E1EF903807158F32D260C4DC /* CircleBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CircleBar.framework; path = CircleBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		48A217DEB5E8D197463B863887A842AA /* JJFloatingActionButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JJFloatingActionButton.xcconfig; sourceTree = "<group>"; };
+		5499E9B1040AD486FE3EFE1B3396E19A /* IVBezierPathRenderer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IVBezierPathRenderer-umbrella.h"; sourceTree = "<group>"; };
+		55715CB9E6CAD74151DE094351937804 /* IVBezierPathRenderer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IVBezierPathRenderer-dummy.m"; sourceTree = "<group>"; };
+		56CD1CA9C4D4EF10A77F0D897646E048 /* CircleBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleBar-prefix.pch"; sourceTree = "<group>"; };
+		57EA8D7A810628264C44ED5661B3A821 /* AnimationConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationConfiguration.swift; path = Sources/AnimationConfiguration.swift; sourceTree = "<group>"; };
+		5B89FE15E17BDD60DF7EE8D15300CD61 /* Pods-RunTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunTracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		5DA65DCC46B3BA27D7D826F98F885D57 /* Styles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Styles.swift; path = Sources/Styles.swift; sourceTree = "<group>"; };
+		61562409B1F6804F2B65FBC1D1DACE92 /* Pods-RunTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		65B68AA75ADCD0D44B8099EF4E233EE6 /* JJFloatingActionButtonState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJFloatingActionButtonState.swift; path = Sources/JJFloatingActionButtonState.swift; sourceTree = "<group>"; };
+		6B25E69D8E9E12EB3DAEFFB1D8E1E84A /* LayerProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerProperties.swift; path = Sources/LayerProperties.swift; sourceTree = "<group>"; };
+		6C080A3C7D449E1FEA5E3D86D0D9E629 /* CircleBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleBar-umbrella.h"; sourceTree = "<group>"; };
+		6E281A1A467CE14ED5B68F56C80D7549 /* Pods-RunTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunTracker-Info.plist"; sourceTree = "<group>"; };
+		6FF101141632A39134B4563B6322F8EB /* IVBezierPathRenderer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IVBezierPathRenderer.framework; path = IVBezierPathRenderer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77749A9DB0D57B0F4A9A403A6D8AB096 /* SHCircleBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHCircleBarController.swift; path = CircleBar/Classes/SHCircleBarController.swift; sourceTree = "<group>"; };
+		777682ED71ECA23FEBC6E3136E097B0A /* Pods-RunTracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RunTracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		88006106211A50E8C555ECAC9D3FBCEC /* JJFloatingActionButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JJFloatingActionButton-umbrella.h"; sourceTree = "<group>"; };
+		8BFB717137DD355B9C6A4F6DEE991CCD /* CircleBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CircleBar-Info.plist"; sourceTree = "<group>"; };
+		8DA459D3178DA07167FC30A9FEA00829 /* JJFloatingActionButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JJFloatingActionButton-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F544186EF3DB28621ED6AE619449FBF /* IVBezierPathRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IVBezierPathRenderer.m; path = IVBezierPathRenderer/Classes/IVBezierPathRenderer.m; sourceTree = "<group>"; };
+		A04B383940AD2AED858412631C85023A /* CircleBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CircleBar.modulemap; sourceTree = "<group>"; };
+		A47DD45D64A964DCB95687A9A67EC43C /* CircleBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircleBar.xcconfig; sourceTree = "<group>"; };
+		B055341DB2661224BABD3C78C6F6ADDA /* JJFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJFloatingActionButton.swift; path = Sources/JJFloatingActionButton.swift; sourceTree = "<group>"; };
+		B39ECB203814E0B477049873DBEA123C /* JJFloatingActionButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JJFloatingActionButton.framework; path = JJFloatingActionButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C412AA9B6A17ACDE7277CAA4E15F4DF3 /* UIBezierPath+GuidedPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBezierPath+GuidedPath.h"; path = "IVBezierPathRenderer/Classes/UIBezierPath+GuidedPath.h"; sourceTree = "<group>"; };
+		C9DC0B58D951E9CC1A71BDD3A9A0E9F5 /* IVBezierPathRenderer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IVBezierPathRenderer.xcconfig; sourceTree = "<group>"; };
+		CBB9C944F5109E671D460A3672B92B7A /* SHCircleBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHCircleBar.swift; path = CircleBar/Classes/SHCircleBar.swift; sourceTree = "<group>"; };
+		D0D1D5C65B595D61A06F8C37C083446A /* IVBezierPathRenderer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IVBezierPathRenderer.modulemap; sourceTree = "<group>"; };
+		D159081F351C59443144684C7E45B4DA /* IVBezierPathRenderer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IVBezierPathRenderer-Info.plist"; sourceTree = "<group>"; };
+		D3A5D44502E9B751274D7D80F43663F3 /* JJFloatingActionButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JJFloatingActionButton-dummy.m"; sourceTree = "<group>"; };
+		D518A77BAFB8C11DDFE0E5411B4DC02F /* Pods-RunTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunTracker.release.xcconfig"; sourceTree = "<group>"; };
+		E279242069E7CA46DEBCCA50E9900812 /* Pods-RunTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RunTracker-umbrella.h"; sourceTree = "<group>"; };
+		E5E7C3959C6C3A9473A6240BF9BABF52 /* JJActionItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJActionItem.swift; path = Sources/JJActionItem.swift; sourceTree = "<group>"; };
+		ED072D56F734766AE01742FFF7D4C5A4 /* UIColor+JJFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+JJFloatingActionButton.swift"; path = "Sources/UIColor+JJFloatingActionButton.swift"; sourceTree = "<group>"; };
+		F1603AA53B0DD93C96BE4B9AE0CA7CFA /* JJFloatingActionButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JJFloatingActionButton-prefix.pch"; sourceTree = "<group>"; };
+		F1F8F144EAE005A4695E5131E4E06C89 /* JJFloatingActionButtonDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJFloatingActionButtonDelegate.swift; path = Sources/JJFloatingActionButtonDelegate.swift; sourceTree = "<group>"; };
+		F6400530E481668B255B82E2A81EA1A3 /* IVBezierPathRenderer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IVBezierPathRenderer-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A471A5A3ACF29BB605C72BBFDDB80BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D03706889AA70EAA2054B4B9F71CEBB /* Foundation.framework in Frameworks */,
+				6EED64A04F3FDADC69E76BF5D5028444 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A7639BE20A7158EE903F5D0DF15B407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC3090CEF3AEBB3D9B1E3987D1E4F523 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8667247EA76B4B9D715B626E5261E390 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3E4C8B0E9F54F0E9252D465962FBE7B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1736D75CE483248EA7603AAABB849B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB5A46A55511253DC3185BB44A375FEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31ECDA5B200068E8F79C198EA15067DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71EEBBA879C74F75351514D7DDFC6464 /* CircleBar */,
+				DBC0DEB75541C52B4602097A4A99A638 /* IVBezierPathRenderer */,
+				F3CDAE5A00ADC8BBD8A5B4878720D414 /* JJFloatingActionButton */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		338790475495242A1BD95AC47BA157B3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EB57CA3BDAD53B8DA9F4298D4331581 /* JJFloatingActionButton.modulemap */,
+				48A217DEB5E8D197463B863887A842AA /* JJFloatingActionButton.xcconfig */,
+				D3A5D44502E9B751274D7D80F43663F3 /* JJFloatingActionButton-dummy.m */,
+				8DA459D3178DA07167FC30A9FEA00829 /* JJFloatingActionButton-Info.plist */,
+				F1603AA53B0DD93C96BE4B9AE0CA7CFA /* JJFloatingActionButton-prefix.pch */,
+				88006106211A50E8C555ECAC9D3FBCEC /* JJFloatingActionButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JJFloatingActionButton";
+			sourceTree = "<group>";
+		};
+		59A63D4280035495DC817D4934519BE3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0D1D5C65B595D61A06F8C37C083446A /* IVBezierPathRenderer.modulemap */,
+				C9DC0B58D951E9CC1A71BDD3A9A0E9F5 /* IVBezierPathRenderer.xcconfig */,
+				55715CB9E6CAD74151DE094351937804 /* IVBezierPathRenderer-dummy.m */,
+				D159081F351C59443144684C7E45B4DA /* IVBezierPathRenderer-Info.plist */,
+				F6400530E481668B255B82E2A81EA1A3 /* IVBezierPathRenderer-prefix.pch */,
+				5499E9B1040AD486FE3EFE1B3396E19A /* IVBezierPathRenderer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IVBezierPathRenderer";
+			sourceTree = "<group>";
+		};
+		7079EADF8BB67F0A280AD47B8F509A50 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A04B383940AD2AED858412631C85023A /* CircleBar.modulemap */,
+				A47DD45D64A964DCB95687A9A67EC43C /* CircleBar.xcconfig */,
+				00D2DCB565F84EEB7465B664FC1C94DD /* CircleBar-dummy.m */,
+				8BFB717137DD355B9C6A4F6DEE991CCD /* CircleBar-Info.plist */,
+				56CD1CA9C4D4EF10A77F0D897646E048 /* CircleBar-prefix.pch */,
+				6C080A3C7D449E1FEA5E3D86D0D9E629 /* CircleBar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CircleBar";
+			sourceTree = "<group>";
+		};
+		71EEBBA879C74F75351514D7DDFC6464 /* CircleBar */ = {
+			isa = PBXGroup;
+			children = (
+				CBB9C944F5109E671D460A3672B92B7A /* SHCircleBar.swift */,
+				77749A9DB0D57B0F4A9A403A6D8AB096 /* SHCircleBarController.swift */,
+				7079EADF8BB67F0A280AD47B8F509A50 /* Support Files */,
+			);
+			name = CircleBar;
+			path = CircleBar;
+			sourceTree = "<group>";
+		};
+		98DAB134F02FDD778F5EA3A6B8C4872F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43697E92E1EF903807158F32D260C4DC /* CircleBar.framework */,
+				6FF101141632A39134B4563B6322F8EB /* IVBezierPathRenderer.framework */,
+				B39ECB203814E0B477049873DBEA123C /* JJFloatingActionButton.framework */,
+				02806F33E13CA423040315664ED960C2 /* Pods_RunTracker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFC400FC2206F583E73818554375D612 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B33F32BDC09B4F97618748550836F0CF /* Pods-RunTracker */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B33F32BDC09B4F97618748550836F0CF /* Pods-RunTracker */ = {
+			isa = PBXGroup;
+			children = (
+				3CECD9155739C321901796D48DDA26DC /* Pods-RunTracker.modulemap */,
+				777682ED71ECA23FEBC6E3136E097B0A /* Pods-RunTracker-acknowledgements.markdown */,
+				5B89FE15E17BDD60DF7EE8D15300CD61 /* Pods-RunTracker-acknowledgements.plist */,
+				1B731ACAF7D989DB185D9C25DD4FED63 /* Pods-RunTracker-dummy.m */,
+				266EAE5CED0E4EF42CD00FB514F261C7 /* Pods-RunTracker-frameworks.sh */,
+				6E281A1A467CE14ED5B68F56C80D7549 /* Pods-RunTracker-Info.plist */,
+				E279242069E7CA46DEBCCA50E9900812 /* Pods-RunTracker-umbrella.h */,
+				61562409B1F6804F2B65FBC1D1DACE92 /* Pods-RunTracker.debug.xcconfig */,
+				D518A77BAFB8C11DDFE0E5411B4DC02F /* Pods-RunTracker.release.xcconfig */,
+			);
+			name = "Pods-RunTracker";
+			path = "Target Support Files/Pods-RunTracker";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				31ECDA5B200068E8F79C198EA15067DF /* Pods */,
+				98DAB134F02FDD778F5EA3A6B8C4872F /* Products */,
+				AFC400FC2206F583E73818554375D612 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DBC0DEB75541C52B4602097A4A99A638 /* IVBezierPathRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				247876145E7F289294AEA680BEA72B7B /* IVBezierPathRenderer.h */,
+				9F544186EF3DB28621ED6AE619449FBF /* IVBezierPathRenderer.m */,
+				C412AA9B6A17ACDE7277CAA4E15F4DF3 /* UIBezierPath+GuidedPath.h */,
+				299D8B156C9E4D7D7448D0F75C16C4A0 /* UIBezierPath+GuidedPath.m */,
+				59A63D4280035495DC817D4934519BE3 /* Support Files */,
+			);
+			name = IVBezierPathRenderer;
+			path = IVBezierPathRenderer;
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F3CDAE5A00ADC8BBD8A5B4878720D414 /* JJFloatingActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				57EA8D7A810628264C44ED5661B3A821 /* AnimationConfiguration.swift */,
+				E5E7C3959C6C3A9473A6240BF9BABF52 /* JJActionItem.swift */,
+				40875C8621A445AD152BB5988E5DABD2 /* JJActionItemTitlePosition.swift */,
+				2AE0FC7B5B3A53CFC34C59B6ABE28B1C /* JJCircleView.swift */,
+				B055341DB2661224BABD3C78C6F6ADDA /* JJFloatingActionButton.swift */,
+				051A19DD8BBA427FF13FE46E145B3ABF /* JJFloatingActionButton+Animation.swift */,
+				05205A021DFFF1B699C01CDC3C783213 /* JJFloatingActionButton+Placement.swift */,
+				F1F8F144EAE005A4695E5131E4E06C89 /* JJFloatingActionButtonDelegate.swift */,
+				65B68AA75ADCD0D44B8099EF4E233EE6 /* JJFloatingActionButtonState.swift */,
+				6B25E69D8E9E12EB3DAEFFB1D8E1E84A /* LayerProperties.swift */,
+				5DA65DCC46B3BA27D7D826F98F885D57 /* Styles.swift */,
+				ED072D56F734766AE01742FFF7D4C5A4 /* UIColor+JJFloatingActionButton.swift */,
+				2EB076E33CB317B12863408DC3CA7669 /* UIView+JJFloatingActionButton.swift */,
+				338790475495242A1BD95AC47BA157B3 /* Support Files */,
+			);
+			name = JJFloatingActionButton;
+			path = JJFloatingActionButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		221336D41DE40039675DB1613D4CDADA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF378D1ABACF355BD352F447B3BB210D /* CircleBar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EA299E65DE31F5055CA2FBD9F3FF651 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35DE44316F0EC442DACC6B0B894CBB78 /* JJFloatingActionButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BBDEDA10DD0726EBB941DB98CE62F0E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDDEBF1A34C0589917D5DC8F5C7F3BC2 /* IVBezierPathRenderer-umbrella.h in Headers */,
+				95C4A11B7AEC0B03159506E2A4CFB81F /* IVBezierPathRenderer.h in Headers */,
+				21C804201E28FF33C4E65A9F8B98E360 /* UIBezierPath+GuidedPath.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9B9402C0F94350A3752B0E49CA873A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D0784FE262A488C46A9816326B124AE /* Pods-RunTracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7DFB55D104197FC817D4F341CF2B2C44 /* IVBezierPathRenderer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8ABC05C1FCB4889DB62ACC9E45A8D33 /* Build configuration list for PBXNativeTarget "IVBezierPathRenderer" */;
+			buildPhases = (
+				8BBDEDA10DD0726EBB941DB98CE62F0E /* Headers */,
+				2EAC6BAC4DD6FF8DA8F4BC2DC70E5F76 /* Sources */,
+				8667247EA76B4B9D715B626E5261E390 /* Frameworks */,
+				7A6D0300B476E6B33591E1A3CEE3CECB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IVBezierPathRenderer;
+			productName = IVBezierPathRenderer;
+			productReference = 6FF101141632A39134B4563B6322F8EB /* IVBezierPathRenderer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B7378E43393E401083784252E88810C0 /* CircleBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D6E0DC73A4DFBF30C70A7DFE2707E71 /* Build configuration list for PBXNativeTarget "CircleBar" */;
+			buildPhases = (
+				221336D41DE40039675DB1613D4CDADA /* Headers */,
+				113BE18E3C3AD654CD3B1EAF0D3496EE /* Sources */,
+				E1736D75CE483248EA7603AAABB849B9 /* Frameworks */,
+				7FB422C6E795506AAD6CA282CAA2D116 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircleBar;
+			productName = CircleBar;
+			productReference = 43697E92E1EF903807158F32D260C4DC /* CircleBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E109C6B6B466F202BA0B94E76B45D72B /* JJFloatingActionButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41A52B17C6477187CCA74D1FB8818FAA /* Build configuration list for PBXNativeTarget "JJFloatingActionButton" */;
+			buildPhases = (
+				4EA299E65DE31F5055CA2FBD9F3FF651 /* Headers */,
+				901B615255AAA5CF8C591867EB1F7D45 /* Sources */,
+				2A471A5A3ACF29BB605C72BBFDDB80BB /* Frameworks */,
+				50E77406962BAF4F71E5E4622E720B8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JJFloatingActionButton;
+			productName = JJFloatingActionButton;
+			productReference = B39ECB203814E0B477049873DBEA123C /* JJFloatingActionButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E6CA704C3ECF6D4832E8D656D6319926 /* Pods-RunTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F0333D97F6F58B4888A9D6C9AD1F168 /* Build configuration list for PBXNativeTarget "Pods-RunTracker" */;
+			buildPhases = (
+				8F9B9402C0F94350A3752B0E49CA873A /* Headers */,
+				A194AFDE3B05E714563B816C6C2D44DC /* Sources */,
+				3A7639BE20A7158EE903F5D0DF15B407 /* Frameworks */,
+				C3FC0007372533D507CF32B0B7F903BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89D69FF37E6350F6527C14ACDE6116D5 /* PBXTargetDependency */,
+				1A3F9188D8F719F487325CA6F0874765 /* PBXTargetDependency */,
+				57A3204DDFFE074DE2D201000CE48B1A /* PBXTargetDependency */,
+			);
+			name = "Pods-RunTracker";
+			productName = "Pods-RunTracker";
+			productReference = 02806F33E13CA423040315664ED960C2 /* Pods_RunTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 98DAB134F02FDD778F5EA3A6B8C4872F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7378E43393E401083784252E88810C0 /* CircleBar */,
+				7DFB55D104197FC817D4F341CF2B2C44 /* IVBezierPathRenderer */,
+				E109C6B6B466F202BA0B94E76B45D72B /* JJFloatingActionButton */,
+				E6CA704C3ECF6D4832E8D656D6319926 /* Pods-RunTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50E77406962BAF4F71E5E4622E720B8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A6D0300B476E6B33591E1A3CEE3CECB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB422C6E795506AAD6CA282CAA2D116 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FC0007372533D507CF32B0B7F903BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		113BE18E3C3AD654CD3B1EAF0D3496EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CCE43A9C0B6AAB932CA7400616B867D /* CircleBar-dummy.m in Sources */,
+				FF7F5D61C7E342DB4EEA1FC67B7F96A4 /* SHCircleBar.swift in Sources */,
+				F7AE75D23C11A1220C5A7AEB70B06B0C /* SHCircleBarController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EAC6BAC4DD6FF8DA8F4BC2DC70E5F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43DE8A19AEEEBC8C373156E50CA96F8D /* IVBezierPathRenderer-dummy.m in Sources */,
+				B4644BF4F7D9500F21A9E59ED2507D8A /* IVBezierPathRenderer.m in Sources */,
+				8B2BEA447DFDDB19EAE6023D6D2DA49D /* UIBezierPath+GuidedPath.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		901B615255AAA5CF8C591867EB1F7D45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CEE1DA232D52B659F47A271E705CC70 /* AnimationConfiguration.swift in Sources */,
+				7A76FA7683A62BEFCF71CF4F89EE6C22 /* JJActionItem.swift in Sources */,
+				0581FC5727F2B26F08EC275E63926FE3 /* JJActionItemTitlePosition.swift in Sources */,
+				9ABBD6C2B80EE3E3F39395F477BE919F /* JJCircleView.swift in Sources */,
+				319CDA9C78434FE53446B2E3D4472915 /* JJFloatingActionButton+Animation.swift in Sources */,
+				D8DED3C84CDFAB1974C10527D3836C43 /* JJFloatingActionButton+Placement.swift in Sources */,
+				BAB7A20973143C2159E0EA320BB360E2 /* JJFloatingActionButton-dummy.m in Sources */,
+				392490EF77C9BACDCC5DB1C64E5EF862 /* JJFloatingActionButton.swift in Sources */,
+				892C319F31B40B03FDFA001267545BE6 /* JJFloatingActionButtonDelegate.swift in Sources */,
+				18D09554320A4B2D136735131E630D40 /* JJFloatingActionButtonState.swift in Sources */,
+				F7399F863C0A79AA2C0B2EC9FC061990 /* LayerProperties.swift in Sources */,
+				2941D6FD25DF541311E4C15DE09FD098 /* Styles.swift in Sources */,
+				9A3A8B8A211ED19AD3F55A826C5B689C /* UIColor+JJFloatingActionButton.swift in Sources */,
+				BA8DA38FC765D94151DA6B59381E68E2 /* UIView+JJFloatingActionButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A194AFDE3B05E714563B816C6C2D44DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F36F440FF6B44D182D895FA2925A1490 /* Pods-RunTracker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A3F9188D8F719F487325CA6F0874765 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IVBezierPathRenderer;
+			target = 7DFB55D104197FC817D4F341CF2B2C44 /* IVBezierPathRenderer */;
+			targetProxy = AAD3D799394D48B4A26A4EA98675A87F /* PBXContainerItemProxy */;
+		};
+		57A3204DDFFE074DE2D201000CE48B1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JJFloatingActionButton;
+			target = E109C6B6B466F202BA0B94E76B45D72B /* JJFloatingActionButton */;
+			targetProxy = 2BF18151B1427278E36A73CFC3836544 /* PBXContainerItemProxy */;
+		};
+		89D69FF37E6350F6527C14ACDE6116D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CircleBar;
+			target = B7378E43393E401083784252E88810C0 /* CircleBar */;
+			targetProxy = C1765FE0992182E5EFF4F8DF315F633C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01AC1EBB0DFD70C906E714CBB0ABA388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D518A77BAFB8C11DDFE0E5411B4DC02F /* Pods-RunTracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RunTracker/Pods-RunTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RunTracker/Pods-RunTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3611EF45293DAB1E7B1C62058F3FCC79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A47DD45D64A964DCB95687A9A67EC43C /* CircleBar.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CircleBar/CircleBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircleBar/CircleBar-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CircleBar/CircleBar.modulemap";
+				PRODUCT_MODULE_NAME = CircleBar;
+				PRODUCT_NAME = CircleBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		43E89DD2A848DBF903E55FCBC44158A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9DC0B58D951E9CC1A71BDD3A9A0E9F5 /* IVBezierPathRenderer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer.modulemap";
+				PRODUCT_MODULE_NAME = IVBezierPathRenderer;
+				PRODUCT_NAME = IVBezierPathRenderer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		56CAE19035257841C65C14DA9C5B4632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9DC0B58D951E9CC1A71BDD3A9A0E9F5 /* IVBezierPathRenderer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer.modulemap";
+				PRODUCT_MODULE_NAME = IVBezierPathRenderer;
+				PRODUCT_NAME = IVBezierPathRenderer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8D26E77158EE465B9E8996C51C63B50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A47DD45D64A964DCB95687A9A67EC43C /* CircleBar.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CircleBar/CircleBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircleBar/CircleBar-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CircleBar/CircleBar.modulemap";
+				PRODUCT_MODULE_NAME = CircleBar;
+				PRODUCT_NAME = CircleBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A82972A5B11D5CE0F674E2E09E4B5631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A217DEB5E8D197463B863887A842AA /* JJFloatingActionButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton.modulemap";
+				PRODUCT_MODULE_NAME = JJFloatingActionButton;
+				PRODUCT_NAME = JJFloatingActionButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB92A0F4C6061F02D3399C84C17E42D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61562409B1F6804F2B65FBC1D1DACE92 /* Pods-RunTracker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RunTracker/Pods-RunTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RunTracker/Pods-RunTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF6DCB8B89B022484BD859A5CB73225E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A217DEB5E8D197463B863887A842AA /* JJFloatingActionButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton.modulemap";
+				PRODUCT_MODULE_NAME = JJFloatingActionButton;
+				PRODUCT_NAME = JJFloatingActionButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D6E0DC73A4DFBF30C70A7DFE2707E71 /* Build configuration list for PBXNativeTarget "CircleBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3611EF45293DAB1E7B1C62058F3FCC79 /* Debug */,
+				8D26E77158EE465B9E8996C51C63B50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F0333D97F6F58B4888A9D6C9AD1F168 /* Build configuration list for PBXNativeTarget "Pods-RunTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB92A0F4C6061F02D3399C84C17E42D9 /* Debug */,
+				01AC1EBB0DFD70C906E714CBB0ABA388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41A52B17C6477187CCA74D1FB8818FAA /* Build configuration list for PBXNativeTarget "JJFloatingActionButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A82972A5B11D5CE0F674E2E09E4B5631 /* Debug */,
+				DF6DCB8B89B022484BD859A5CB73225E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131356BE54884448CA49C07BEDF4BB2A /* Debug */,
+				F090CD07A80273D5A73C8EA19224ADDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8ABC05C1FCB4889DB62ACC9E45A8D33 /* Build configuration list for PBXNativeTarget "IVBezierPathRenderer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56CAE19035257841C65C14DA9C5B4632 /* Debug */,
+				43E89DD2A848DBF903E55FCBC44158A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

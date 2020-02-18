@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-RunTracker/Pods-RunTracker-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CircleBar/CircleBar.framework
+${BUILT_PRODUCTS_DIR}/IVBezierPathRenderer/IVBezierPathRenderer.framework
+${BUILT_PRODUCTS_DIR}/JJFloatingActionButton/JJFloatingActionButton.framework
