@@ -13,9 +13,29 @@ import CoreLocation
 import CoreData
 import IVBezierPathRenderer
 
+// TODO: AutoPause con detector de actividad de CoreMotion (nos indica qué actividad estamos haciendo). ¿O usar GPS?
+
 class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+ 
+    @IBOutlet weak var timeLabel: UILabel! // Tiempo en HH:MM
+    @IBOutlet weak var kmLabel: UILabel!   // Distancia en kilómetros
+    @IBOutlet weak var mpkLabel: UILabel!  // Ritmo (Metros Por Kilómetro)
+    @IBOutlet weak var spmLabel: UILabel!  // Cadencia (Pasos Por Minuto)
+    @IBOutlet weak var dataContainerView: UIView!
+    
+    // Label superior -> Horizontal: Centrado, Width = 144
+    //                -> Vertical: Top Space = 16, Height = 64
+    // Tamaño de letra 42
+    
+    // Label izq      -> Horizontal: Leading Space = 16, Width = 90
+    //                -> Vertical: Top Space 88, Height = 60
+    // Label centro   -> Horizontal: Centrado, Width = 90
+    //                -> Vertical: Top Space 88, Height = 60
+    // Label dcha     -> Horizontal: Trailing Space = 16, Width = 90
+    //                -> Vertical: Top Space 88, Height = 60
+    // Tamaño de letra 28
     
     enum RunStatus {
         case Stopped
@@ -42,15 +62,73 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     var autoCenterMapOnUserLocation = true // Si está a true, el mapa centra la vista en la ubicación del usuario
     var mapChangedFromUserInteraction = false
     
+    var dataContainerConstraints : Dictionary<String, [NSLayoutConstraint]> = Dictionary() // key = name, value = [top, left, width, height]
+    
+    var dataLabels : Dictionary<String, UILabel> = Dictionary()
+    
+    override func loadView() {
+        super.loadView()
+        
+        dataLabels["time"] = timeLabel
+        dataLabels["km"] = kmLabel
+        dataLabels["mpk"] = mpkLabel
+        dataLabels["spm"] = spmLabel
+        
+        dataContainerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        timeLabel.translatesAutoresizingMaskIntoConstraints = false
+        dataContainerConstraints["time"] = [
+            timeLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: (dataContainerView.bounds.width - 144) * 0.5),
+            timeLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 16),
+            timeLabel.widthAnchor.constraint(equalToConstant: 144),
+            timeLabel.heightAnchor.constraint(equalToConstant: 64)
+        ]
+        NSLayoutConstraint.activate(dataContainerConstraints["time"]!)
+
+        
+        kmLabel.translatesAutoresizingMaskIntoConstraints = false
+        dataContainerConstraints["km"] = [
+            kmLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: 16),
+            kmLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 88),
+            kmLabel.widthAnchor.constraint(equalToConstant: 144),
+            kmLabel.heightAnchor.constraint(equalToConstant: 64),
+        ]
+        NSLayoutConstraint.activate(dataContainerConstraints["km"]!)
+        
+        mpkLabel.translatesAutoresizingMaskIntoConstraints = false
+        dataContainerConstraints["mpk"] = [
+            mpkLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: (dataContainerView.bounds.width - 144) * 0.5),
+            mpkLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 88),
+            mpkLabel.widthAnchor.constraint(equalToConstant: 144),
+            mpkLabel.heightAnchor.constraint(equalToConstant: 64)
+        ]
+        NSLayoutConstraint.activate(dataContainerConstraints["mpk"]!)
+        
+        spmLabel.translatesAutoresizingMaskIntoConstraints = false
+        dataContainerConstraints["spm"] = [
+            spmLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: dataContainerView.bounds.width - 144 - 16),
+            spmLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 88),
+            spmLabel.widthAnchor.constraint(equalToConstant: 144),
+            spmLabel.heightAnchor.constraint(equalToConstant: 64)
+        ]
+        NSLayoutConstraint.activate(dataContainerConstraints["spm"]!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createFabs()
+        refreshDataContainerConstraints("time", "km", "mpk", "spm", duration: 0) // TODO: secuencia inicial de shared prefs
         
         mapView.showsUserLocation = true
         mapView.delegate = self
         
         locationManager.delegate = self
+        
+        timeLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(timeLabelTapped)) )
+        kmLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(kmLabelTapped)) )
+        mpkLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(mpkLabelTapped)) )
+        spmLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(spmLabelTapped)) )
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -251,96 +329,135 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         // renderer.borderMultiplier = 1.5
         return renderer
     }
-
-private func startLocationUpdates() {
-    locationManager.allowsBackgroundLocationUpdates = true
-    locationManager.activityType = .fitness
-    locationManager.distanceFilter = 10
-    locationManager.startUpdatingLocation()
-}
-
-private func stopLocationUpdates() {
-    locationManager.stopUpdatingLocation()
-}
-
-func setRunStatus(newStatus: RunStatus) {
-    if (newStatus == self.runStatus) {
-        return
+    
+    private func startLocationUpdates() {
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.activityType = .fitness
+        locationManager.distanceFilter = 10
+        locationManager.startUpdatingLocation()
     }
     
-    if debug {
-        print("Cambio de estado: \(self.runStatus) -> \(newStatus)")
+    private func stopLocationUpdates() {
+        locationManager.stopUpdatingLocation()
     }
     
-    startRunFab?.isHidden = newStatus != RunStatus.Stopped
-    pauseRunFab?.isHidden = !startRunFab!.isHidden
-    pauseRunFab?.buttonImage = newStatus == RunStatus.Paused || newStatus == RunStatus.Stopping ? UIImage(systemName: "play.fill") : UIImage(systemName: "pause.fill")
-    pauseRunFab!.buttonImageColor = newStatus == RunStatus.Paused || newStatus == RunStatus.Stopping ? UIColor(red:0.30, green:0.69, blue:0.31, alpha:1.0) : UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
-    
-    switch newStatus {
-    case RunStatus.Running:
-        if self.runStatus == RunStatus.Stopped {
-            seconds = 0
-            distance = Measurement(value: 0, unit: UnitLength.meters)
-            locationList.removeAll()
-            mapView.removeOverlays(mapView.overlays)
+    func setRunStatus(newStatus: RunStatus) {
+        if (newStatus == self.runStatus) {
+            return
         }
+        
+        if debug {
+            print("Cambio de estado: \(self.runStatus) -> \(newStatus)")
+        }
+        
+        startRunFab?.isHidden = newStatus != RunStatus.Stopped
+        pauseRunFab?.isHidden = !startRunFab!.isHidden
+        pauseRunFab?.buttonImage = newStatus == RunStatus.Paused || newStatus == RunStatus.Stopping ? UIImage(systemName: "play.fill") : UIImage(systemName: "pause.fill")
+        pauseRunFab!.buttonImageColor = newStatus == RunStatus.Paused || newStatus == RunStatus.Stopping ? UIColor(red:0.30, green:0.69, blue:0.31, alpha:1.0) : UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
+        
+        switch newStatus {
+        case RunStatus.Running:
+            if self.runStatus == RunStatus.Stopped {
+                seconds = 0
+                distance = Measurement(value: 0, unit: UnitLength.meters)
+                locationList.removeAll()
+                mapView.removeOverlays(mapView.overlays)
+            }
+            updateDisplay()
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+                self.eachSecond()
+            }
+            lastLocation = nil
+            startLocationUpdates()
+            break
+            
+        case RunStatus.Paused:
+            timer?.invalidate()
+            stopLocationUpdates()
+            break
+            
+        case RunStatus.Stopped:
+            timer?.invalidate()
+            stopLocationUpdates()
+            saveRun()
+            break
+            
+        default:
+            break
+        }
+        
+        self.runStatus = newStatus
+    }
+    
+    private func saveRun() {
+        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let newRun = Run(context: managedContext)
+        newRun.distance = distance.value
+        newRun.duration = Int32(seconds)
+        newRun.date = Date()
+        for location in locationList {
+            newRun.addToLocations(location)
+        }
+        
+        try! managedContext.save()
+        
+        run = newRun
+    }
+    
+    func eachSecond() {
+        seconds += 1
         updateDisplay()
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            self.eachSecond()
-        }
-        lastLocation = nil
-        startLocationUpdates()
-        break
-        
-    case RunStatus.Paused:
-        timer?.invalidate()
-        stopLocationUpdates()
-        break
-        
-    case RunStatus.Stopped:
-        timer?.invalidate()
-        stopLocationUpdates()
-        saveRun()
-        break
-        
-    default:
-        break
     }
     
-    self.runStatus = newStatus
-}
-
-private func saveRun() {
-    let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let newRun = Run(context: managedContext)
-    newRun.distance = distance.value
-    newRun.duration = Int32(seconds)
-    newRun.date = Date()
-    for location in locationList {
-        newRun.addToLocations(location)
+    private func updateDisplay() {
+        //        let formattedDistance = FormatDisplay.distance(distance)
+        //        let formattedTime = FormatDisplay.time(seconds)
+        //        let formattedPace = FormatDisplay.pace(distance: distance,
+        //                                               seconds: seconds,
+        //                                               outputUnit: UnitSpeed.minutesPerMile)
+        //
+        //        distanceLabel.text = "Distance:  \(formattedDistance)"
+        //        timeLabel.text = "Time:  \(formattedTime)"
+        //        paceLabel.text = "Pace:  \(formattedPace)"
     }
     
-    try! managedContext.save()
+    @objc func timeLabelTapped(sender: UITapGestureRecognizer) {
+        refreshDataContainerConstraints("time", "km", "mpk", "spm")
+    }
     
-    run = newRun
-}
+    @objc func kmLabelTapped(sender: UITapGestureRecognizer) {
+        refreshDataContainerConstraints("km", "time", "mpk", "spm")
+    }
+    
+    @objc func mpkLabelTapped(sender: UITapGestureRecognizer) {
+        refreshDataContainerConstraints("mpk", "km", "time", "spm")
+    }
+    
+    @objc func spmLabelTapped(sender: UITapGestureRecognizer) {
+        refreshDataContainerConstraints("spm", "km", "mpk", "time")
+    }
+    
+    func refreshDataContainerConstraints(_ labelId0: String, _ labelId1: String, _ labelId2: String, _ labelId3: String, duration : Double = 0.3) {
+        dataContainerConstraints[labelId0]![0].constant = (dataContainerView.bounds.width - 144) * 0.5
+        dataContainerConstraints[labelId0]![1].constant = 16
+        
+        dataContainerConstraints[labelId1]![0].constant = 16
+        dataContainerConstraints[labelId1]![1].constant = 88
+        
+        dataContainerConstraints[labelId2]![0].constant = (dataContainerView.bounds.width - 144) * 0.5
+        dataContainerConstraints[labelId2]![1].constant = 88
+        
+        dataContainerConstraints[labelId3]![0].constant = dataContainerView.bounds.width - 144 - 16
+        dataContainerConstraints[labelId3]![1].constant = 88
+        
+        UIView.animate(withDuration: duration, delay: 0.0, options: .curveEaseInOut , animations: {
+            self.dataLabels[labelId0]!.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.dataLabels[labelId1]!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
+            self.dataLabels[labelId2]!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
+            self.dataLabels[labelId3]!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
+            self.dataContainerView.layoutIfNeeded()
+        }, completion: { finished in
 
-func eachSecond() {
-    seconds += 1
-    updateDisplay()
-}
-
-private func updateDisplay() {
-    //        let formattedDistance = FormatDisplay.distance(distance)
-    //        let formattedTime = FormatDisplay.time(seconds)
-    //        let formattedPace = FormatDisplay.pace(distance: distance,
-    //                                               seconds: seconds,
-    //                                               outputUnit: UnitSpeed.minutesPerMile)
-    //
-    //        distanceLabel.text = "Distance:  \(formattedDistance)"
-    //        timeLabel.text = "Time:  \(formattedTime)"
-    //        paceLabel.text = "Pace:  \(formattedPace)"
-}
-
+        })
+    }
 }
