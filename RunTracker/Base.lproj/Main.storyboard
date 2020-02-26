@@ -53,34 +53,44 @@
                                                 <rect key="frame" x="16" y="137" width="144" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIEMPO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kO-wd-xz5">
                                                 <rect key="frame" x="135" y="72" width="144" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RITMO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRh-RU-Pjk">
                                                 <rect key="frame" x="162" y="137" width="144" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CADENCIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxh-8Y-v7h">
                                                 <rect key="frame" x="308" y="137" width="144" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6RZ-NR-Xan">
+                                                <rect key="frame" x="127" y="29.5" width="160" height="37.5"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="160" id="9gm-br-ZML"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Jyp-RI-bio"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32" weight="light"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="71f-8O-C9C"/>
+                                            <constraint firstItem="6RZ-NR-Xan" firstAttribute="centerX" secondItem="zck-aX-bdW" secondAttribute="centerX" id="zVQ-kc-FoN"/>
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lqc-To-WMP">
@@ -91,6 +101,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.28793999549999999" green="0.5820527673" blue="0.92552942039999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="6RZ-NR-Xan" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="7nd-hW-gNz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0e5-95-iJz" secondAttribute="bottom" id="9md-2N-DUw"/>
                             <constraint firstItem="0e5-95-iJz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tng-fc-5z6"/>
                             <constraint firstItem="0e5-95-iJz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sCP-pJ-9bm"/>
@@ -100,6 +111,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Entreno" image="hare" catalog="system" id="U2F-c8-umj"/>
                     <connections>
+                        <outlet property="bigLabelIconImage" destination="6RZ-NR-Xan" id="OS5-ff-zh0"/>
                         <outlet property="cadenceLabel" destination="Mxh-8Y-v7h" id="18t-ML-zIQ"/>
                         <outlet property="dataContainerView" destination="zck-aX-bdW" id="Adq-zn-ZWq"/>
                         <outlet property="distanceLabel" destination="dJc-pB-PHD" id="HiG-xg-1O5"/>
@@ -187,6 +199,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock" catalog="system" width="64" height="60"/>
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="hare" catalog="system" width="64" height="46"/>

@@ -23,13 +23,15 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     
     @IBOutlet weak var secondsLabel: UILabel! // Tiempo en HH:MM
     @IBOutlet weak var kmLabel: UILabel!   // Distancia en kilómetros
-    @IBOutlet weak var mpkLabel: UILabel!  // Ritmo (Metros Por Kilómetro)
+    @IBOutlet weak var mpkLabel: UILabel!  // Ritmo (Minutos Por Kilómetro)
     @IBOutlet weak var spmLabel: UILabel!  // Cadencia (Pasos Por Minuto)
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var rythmLabel: UILabel!
     @IBOutlet weak var cadenceLabel: UILabel!
+    
+    @IBOutlet weak var bigLabelIconImage: UIImageView!
     
     enum RunStatus {
         case Stopped
@@ -58,22 +60,35 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     
     var dataContainerConstraints : Dictionary<String, [NSLayoutConstraint]> = Dictionary() // key = name, value = [top, left, width, height]
     
-    var dataLabels : Dictionary<String, UILabel> = Dictionary()
+    var dataValuesLabels : Dictionary<String, UILabel> = Dictionary()
+    var dataLabelsLabels : Dictionary<String, UILabel> = Dictionary()
+    var dataIconsImages: Dictionary<String, UIImage> = Dictionary()
     
     override func loadView() {
         super.loadView()
         
-        dataLabels["time"] = secondsLabel
-        dataLabels["km"] = kmLabel
-        dataLabels["mpk"] = mpkLabel
-        dataLabels["spm"] = spmLabel
+        dataValuesLabels["time"] = secondsLabel
+        dataValuesLabels["distance"] = kmLabel
+        dataValuesLabels["rythm"] = mpkLabel
+        dataValuesLabels["cadence"] = spmLabel
+        
+        dataLabelsLabels["time"] = timeLabel
+        dataLabelsLabels["distance"] = distanceLabel
+        dataLabelsLabels["rythm"] = rythmLabel
+        dataLabelsLabels["cadence"] = cadenceLabel
+        
+        dataIconsImages["time"] = UIImage(systemName: "clock")
+        dataIconsImages["distance"] = UIImage(systemName: "mappin.and.ellipse")
+        dataIconsImages["rythm"] = UIImage(systemName: "stopwatch")
+        dataIconsImages["cadence"] = UIImage(systemName: "metronome")
         
         dataContainerView.translatesAutoresizingMaskIntoConstraints = false
         
+        // DEFINIR CONSTRAINTS DE LOS VALORES DE LOS CAMPOS DE INFORMACIÓN (LEFT Y TOP A 0, YA QUE SE ASIGNAN EN refreshDataContainerConstraints())
         secondsLabel.translatesAutoresizingMaskIntoConstraints = false
         dataContainerConstraints["time"] = [
-            secondsLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: (dataContainerView.bounds.width - 144) * 0.5),
-            secondsLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 16),
+            secondsLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: 0),
+            secondsLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 0),
             secondsLabel.widthAnchor.constraint(equalToConstant: 144),
             secondsLabel.heightAnchor.constraint(equalToConstant: 64)
         ]
@@ -81,32 +96,33 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
 
         
         kmLabel.translatesAutoresizingMaskIntoConstraints = false
-        dataContainerConstraints["km"] = [
-            kmLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: 16),
-            kmLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 88),
+        dataContainerConstraints["distance"] = [
+            kmLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: 0),
+            kmLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 0),
             kmLabel.widthAnchor.constraint(equalToConstant: 144),
             kmLabel.heightAnchor.constraint(equalToConstant: 64),
         ]
-        NSLayoutConstraint.activate(dataContainerConstraints["km"]!)
+        NSLayoutConstraint.activate(dataContainerConstraints["distance"]!)
         
         mpkLabel.translatesAutoresizingMaskIntoConstraints = false
-        dataContainerConstraints["mpk"] = [
-            mpkLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: (dataContainerView.bounds.width - 144) * 0.5),
-            mpkLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 88),
+        dataContainerConstraints["rythm"] = [
+            mpkLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: 0),
+            mpkLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 0),
             mpkLabel.widthAnchor.constraint(equalToConstant: 144),
             mpkLabel.heightAnchor.constraint(equalToConstant: 64)
         ]
-        NSLayoutConstraint.activate(dataContainerConstraints["mpk"]!)
+        NSLayoutConstraint.activate(dataContainerConstraints["rythm"]!)
         
         spmLabel.translatesAutoresizingMaskIntoConstraints = false
-        dataContainerConstraints["spm"] = [
-            spmLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: dataContainerView.bounds.width - 144 - 16),
-            spmLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 88),
+        dataContainerConstraints["cadence"] = [
+            spmLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: 0),
+            spmLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 0),
             spmLabel.widthAnchor.constraint(equalToConstant: 144),
             spmLabel.heightAnchor.constraint(equalToConstant: 64)
         ]
-        NSLayoutConstraint.activate(dataContainerConstraints["spm"]!)
+        NSLayoutConstraint.activate(dataContainerConstraints["cadence"]!)
         
+        // DEFINIR CONSTRAINTS DE LOS LABELS DE LOS CAMPOS DE INFORMACIÓN
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
         timeLabel.leftAnchor.constraint(equalTo: secondsLabel.leftAnchor, constant: 0).isActive = true
         timeLabel.topAnchor.constraint(equalTo: secondsLabel.topAnchor, constant: 24).isActive = true
@@ -136,7 +152,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         super.viewDidLoad()
         
         createFabs()
-        refreshDataContainerConstraints("time", "km", "mpk", "spm", duration: 0) // TODO: secuencia inicial de shared prefs
+        refreshDataContainerConstraints("time", "distance", "rythm", "cadence", duration: 0) // TODO: secuencia inicial de shared prefs
         
         mapView.showsUserLocation = true
         mapView.delegate = self
@@ -440,42 +456,65 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     }
     
     @objc func timeLabelTapped(sender: UITapGestureRecognizer) {
-        refreshDataContainerConstraints("time", "km", "mpk", "spm")
+        refreshDataContainerConstraints("time", "distance", "rythm", "cadence")
     }
     
     @objc func kmLabelTapped(sender: UITapGestureRecognizer) {
-        refreshDataContainerConstraints("km", "time", "mpk", "spm")
+        refreshDataContainerConstraints("distance", "time", "rythm", "cadence")
     }
     
     @objc func mpkLabelTapped(sender: UITapGestureRecognizer) {
-        refreshDataContainerConstraints("mpk", "km", "time", "spm")
+        refreshDataContainerConstraints("rythm", "distance", "time", "cadence")
     }
     
     @objc func spmLabelTapped(sender: UITapGestureRecognizer) {
-        refreshDataContainerConstraints("spm", "km", "mpk", "time")
+        refreshDataContainerConstraints("cadence", "distance", "rythm", "time")
     }
     
     func refreshDataContainerConstraints(_ labelId0: String, _ labelId1: String, _ labelId2: String, _ labelId3: String, duration : Double = 0.3) {
-        dataContainerConstraints[labelId0]![0].constant = (dataContainerView.bounds.width - 144) * 0.5
-        dataContainerConstraints[labelId0]![1].constant = 16
+        let labelWidth = 144.0 as CGFloat
+        let bigLabelHOffset = 36.0 as CGFloat
+        let bigLabelTop = 16.0 as CGFloat
+        let smallLabelLeft = 16.0 as CGFloat
+        let smallLabelTop = 76.0 as CGFloat
         
-        dataContainerConstraints[labelId1]![0].constant = 16
-        dataContainerConstraints[labelId1]![1].constant = 88
+        // Cambiar left y top de los constraints de los labels de los valores de los datos
+        dataContainerConstraints[labelId0]![0].constant = (dataContainerView.bounds.width - labelWidth + bigLabelHOffset) * 0.5
+        dataContainerConstraints[labelId0]![1].constant = bigLabelTop
         
-        dataContainerConstraints[labelId2]![0].constant = (dataContainerView.bounds.width - 144) * 0.5
-        dataContainerConstraints[labelId2]![1].constant = 88
+        dataContainerConstraints[labelId1]![0].constant = smallLabelLeft
+        dataContainerConstraints[labelId1]![1].constant = smallLabelTop
         
-        dataContainerConstraints[labelId3]![0].constant = dataContainerView.bounds.width - 144 - 16
-        dataContainerConstraints[labelId3]![1].constant = 88
+        dataContainerConstraints[labelId2]![0].constant = (dataContainerView.bounds.width - labelWidth) * 0.5
+        dataContainerConstraints[labelId2]![1].constant = smallLabelTop
         
+        dataContainerConstraints[labelId3]![0].constant = dataContainerView.bounds.width - labelWidth - smallLabelLeft
+        dataContainerConstraints[labelId3]![1].constant = smallLabelTop
+        
+        // Animar transición de los datos
         UIView.animate(withDuration: duration, delay: 0.0, options: .curveEaseInOut , animations: {
-            self.dataLabels[labelId0]!.transform = CGAffineTransform(scaleX: 1, y: 1)
-            self.dataLabels[labelId1]!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
-            self.dataLabels[labelId2]!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
-            self.dataLabels[labelId3]!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
+            self.dataLabelsLabels[labelId0]?.alpha = 0
+            self.dataLabelsLabels[labelId1]?.alpha = 1
+            self.dataLabelsLabels[labelId2]?.alpha = 1
+            self.dataLabelsLabels[labelId3]?.alpha = 1
+            
+            self.dataValuesLabels[labelId0]!.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.dataValuesLabels[labelId1]!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
+            self.dataValuesLabels[labelId2]!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
+            self.dataValuesLabels[labelId3]!.transform = CGAffineTransform(scaleX: 0.67, y: 0.67)
             self.dataContainerView.layoutIfNeeded()
         }, completion: { finished in
 
+        })
+        
+        // Animar transición del icono
+        UIView.animate(withDuration: duration * 0.5, delay: 0.0, options: .curveEaseInOut , animations: {
+            self.bigLabelIconImage.alpha = 0
+        }, completion: { finished in
+            UIView.animate(withDuration: duration * 0.5, delay: 0.0, options: .curveEaseInOut , animations: {
+                self.bigLabelIconImage.image = self.dataIconsImages[labelId0]
+                self.bigLabelIconImage.alpha = 1
+            })
         })
     }
 }
