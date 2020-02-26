@@ -383,9 +383,6 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     }
     
     private func startPedometerUpdates() {
-        lastPedometerPace = 0
-        lastPedometerCadence = 0
-        
         if CMPedometer.isCadenceAvailable() && CMPedometer.isPaceAvailable() {
             pedometer.startUpdates(from: runResumeDate!) {
                 [weak self] pedometerData, error in
@@ -429,6 +426,9 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     
     private func stopPedometerUpdates() {
         pedometer.stopUpdates()
+        
+        lastPedometerPace = 0
+        lastPedometerCadence = 0
     }
     
     func setRunStatus(newStatus: RunStatus) {
@@ -482,6 +482,8 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         default:
             break
         }
+        
+        updateDisplay()
         
         self.runStatus = newStatus
     }
