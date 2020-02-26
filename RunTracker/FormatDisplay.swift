@@ -24,12 +24,12 @@ public class FormatDisplay {
     }
     
     // Devuelve el ritmo en minutos por kilómetro
-    public static func pace(secondsPerMeter : NSNumber?) -> String {
-        return String(format: "%05.2f", Double(truncating: secondsPerMeter ?? 0) / (60.0 * 1000.0))
+    public static func pace(secondsPerMeter : NSNumber) -> String {
+        return String(format: "%05.2f", Double(truncating: secondsPerMeter) * (1000.0 / 60.0))
     }
     
     // Devuelve la cadencia en pasos por minuto
-    public static func cadence(stepsPerSeconds : NSNumber?) -> String {
-        return String(format: "%05.2f", Double(truncating: stepsPerSeconds ?? 0) / 60.0)
+    public static func cadence(stepsPerSeconds : NSNumber) -> String {
+        return String(format: "%05.1f", Double(truncating: stepsPerSeconds) * 60.0)
     }
 }
