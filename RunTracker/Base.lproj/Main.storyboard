@@ -118,7 +118,7 @@
                         <outlet property="kmLabel" destination="kBv-9m-6Wn" id="7FA-uD-4Cz"/>
                         <outlet property="mapView" destination="Lqc-To-WMP" id="9Tq-1L-rIT"/>
                         <outlet property="mpkLabel" destination="o0x-Ag-kBU" id="Nvm-aT-Z8F"/>
-                        <outlet property="rythmLabel" destination="bRh-RU-Pjk" id="BbS-WP-R3Q"/>
+                        <outlet property="paceLabel" destination="bRh-RU-Pjk" id="BbS-WP-R3Q"/>
                         <outlet property="secondsLabel" destination="4aH-Nx-aR3" id="GrN-yc-sot"/>
                         <outlet property="spmLabel" destination="XUN-wB-bcE" id="sOd-R6-kcX"/>
                         <outlet property="timeLabel" destination="6kO-wd-xz5" id="Yjp-du-R8C"/>

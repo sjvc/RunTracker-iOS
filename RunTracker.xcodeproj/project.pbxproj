@@ -16,6 +16,7 @@
 		497E658123FA9B6B00AA2E0E /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658023FA9B6B00AA2E0E /* RunViewController.swift */; };
 		497E658523FAEE4600AA2E0E /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658423FAEE4600AA2E0E /* BlurLoader.swift */; };
 		497E658723FAF23D00AA2E0E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658623FAF23D00AA2E0E /* LocationManager.swift */; };
+		49E41C58240691B1006F8465 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E41C57240691B1006F8465 /* FormatDisplay.swift */; };
 		F2B571533FA4AAE6A0CA7BC0 /* Pods_RunTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81E04CED3E4C0223A4B2A9D /* Pods_RunTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		497E658023FA9B6B00AA2E0E /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		497E658423FAEE4600AA2E0E /* BlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
 		497E658623FAF23D00AA2E0E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		49E41C57240691B1006F8465 /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
 		80B42B209B264E85D7C9297F /* Pods-RunTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunTracker.debug.xcconfig"; path = "Target Support Files/Pods-RunTracker/Pods-RunTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		E81E04CED3E4C0223A4B2A9D /* Pods_RunTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				497E657223FA967F00AA2E0E /* RunTracker.xcdatamodeld */,
 				497E658423FAEE4600AA2E0E /* BlurLoader.swift */,
 				497E658623FAF23D00AA2E0E /* LocationManager.swift */,
+				49E41C57240691B1006F8465 /* FormatDisplay.swift */,
 			);
 			path = RunTracker;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				497E657423FA967F00AA2E0E /* RunTracker.xcdatamodeld in Sources */,
+				49E41C58240691B1006F8465 /* FormatDisplay.swift in Sources */,
 				497E658523FAEE4600AA2E0E /* BlurLoader.swift in Sources */,
 				497E658723FAF23D00AA2E0E /* LocationManager.swift in Sources */,
 				497E656A23FA967F00AA2E0E /* AppDelegate.swift in Sources */,

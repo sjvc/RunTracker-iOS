@@ -63,6 +63,8 @@
 	<string>Monitorizar tu entrenamiento</string>
 	<key>NSLocationUsageDescription</key>
 	<string>Monitorizar tu entrenamiento</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Monitorizar tu entrenamiento</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

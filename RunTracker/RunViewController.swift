@@ -10,6 +10,7 @@ import UIKit
 import JJFloatingActionButton
 import MapKit
 import CoreLocation
+import CoreMotion
 import CoreData
 import IVBezierPathRenderer
 
@@ -28,7 +29,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var rythmLabel: UILabel!
+    @IBOutlet weak var paceLabel: UILabel!
     @IBOutlet weak var cadenceLabel: UILabel!
     
     @IBOutlet weak var bigLabelIconImage: UIImageView!
@@ -48,6 +49,10 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     var centerMapFab: JJFloatingActionButton? = nil
     var runStatus = RunStatus.Stopped
     
+    let activityManager = CMMotionActivityManager()
+    let pedometer = CMPedometer()
+    
+    var runResumeDate : Date?
     let locationManager = LocationManager.shared
     var seconds = 0 // Duración del entrenamiento
     var timer: Timer? // Para actualizar la interfaz
@@ -69,17 +74,17 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         
         dataValuesLabels["time"] = secondsLabel
         dataValuesLabels["distance"] = kmLabel
-        dataValuesLabels["rythm"] = mpkLabel
+        dataValuesLabels["pace"] = mpkLabel
         dataValuesLabels["cadence"] = spmLabel
         
         dataLabelsLabels["time"] = timeLabel
         dataLabelsLabels["distance"] = distanceLabel
-        dataLabelsLabels["rythm"] = rythmLabel
+        dataLabelsLabels["pace"] = paceLabel
         dataLabelsLabels["cadence"] = cadenceLabel
         
         dataIconsImages["time"] = UIImage(systemName: "clock")
         dataIconsImages["distance"] = UIImage(systemName: "mappin.and.ellipse")
-        dataIconsImages["rythm"] = UIImage(systemName: "stopwatch")
+        dataIconsImages["pace"] = UIImage(systemName: "stopwatch")
         dataIconsImages["cadence"] = UIImage(systemName: "metronome")
         
         dataContainerView.translatesAutoresizingMaskIntoConstraints = false
@@ -105,13 +110,13 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         NSLayoutConstraint.activate(dataContainerConstraints["distance"]!)
         
         mpkLabel.translatesAutoresizingMaskIntoConstraints = false
-        dataContainerConstraints["rythm"] = [
+        dataContainerConstraints["pace"] = [
             mpkLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: 0),
             mpkLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 0),
             mpkLabel.widthAnchor.constraint(equalToConstant: 144),
             mpkLabel.heightAnchor.constraint(equalToConstant: 64)
         ]
-        NSLayoutConstraint.activate(dataContainerConstraints["rythm"]!)
+        NSLayoutConstraint.activate(dataContainerConstraints["pace"]!)
         
         spmLabel.translatesAutoresizingMaskIntoConstraints = false
         dataContainerConstraints["cadence"] = [
@@ -135,11 +140,11 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         distanceLabel.widthAnchor.constraint(equalToConstant: 144).isActive = true
         distanceLabel.heightAnchor.constraint(equalToConstant: 64).isActive = true
         
-        rythmLabel.translatesAutoresizingMaskIntoConstraints = false
-        rythmLabel.leftAnchor.constraint(equalTo: mpkLabel.leftAnchor, constant: 0).isActive = true
-        rythmLabel.topAnchor.constraint(equalTo: mpkLabel.topAnchor, constant: 24).isActive = true
-        rythmLabel.widthAnchor.constraint(equalToConstant: 144).isActive = true
-        rythmLabel.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        paceLabel.translatesAutoresizingMaskIntoConstraints = false
+        paceLabel.leftAnchor.constraint(equalTo: mpkLabel.leftAnchor, constant: 0).isActive = true
+        paceLabel.topAnchor.constraint(equalTo: mpkLabel.topAnchor, constant: 24).isActive = true
+        paceLabel.widthAnchor.constraint(equalToConstant: 144).isActive = true
+        paceLabel.heightAnchor.constraint(equalToConstant: 64).isActive = true
         
         cadenceLabel.translatesAutoresizingMaskIntoConstraints = false
         cadenceLabel.leftAnchor.constraint(equalTo: spmLabel.leftAnchor, constant: 0).isActive = true
@@ -152,7 +157,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         super.viewDidLoad()
         
         createFabs()
-        refreshDataContainerConstraints("time", "distance", "rythm", "cadence", duration: 0) // TODO: secuencia inicial de shared prefs
+        refreshDataContainerConstraints("time", "distance", "pace", "cadence", duration: 0) // TODO: secuencia inicial de shared prefs
         
         mapView.showsUserLocation = true
         mapView.delegate = self
@@ -375,6 +380,18 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         locationManager.stopUpdatingLocation()
     }
     
+    private func startPedometerUpdates() {
+        if CMPedometer.isCadenceAvailable() && CMPedometer.isPaceAvailable() {
+            pedometer.startUpdates(from: runResumeDate!) { pedometerData, error in
+                
+            }
+        }
+    }
+    
+    private func stopPedometerUpdates() {
+        pedometer.stopUpdates()
+    }
+    
     func setRunStatus(newStatus: RunStatus) {
         if (newStatus == self.runStatus) {
             return
@@ -397,22 +414,26 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
                 locationList.removeAll()
                 mapView.removeOverlays(mapView.overlays)
             }
+            runResumeDate = Date()
             updateDisplay()
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
                 self.eachSecond()
             }
             lastLocation = nil
             startLocationUpdates()
+            startPedometerUpdates()
             break
             
         case RunStatus.Paused:
             timer?.invalidate()
             stopLocationUpdates()
+            stopPedometerUpdates()
             break
             
         case RunStatus.Stopped:
             timer?.invalidate()
             stopLocationUpdates()
+            stopPedometerUpdates()
             saveRun()
             break
             
@@ -453,22 +474,35 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         //        distanceLabel.text = "Distance:  \(formattedDistance)"
         //        timeLabel.text = "Time:  \(formattedTime)"
         //        paceLabel.text = "Pace:  \(formattedPace)"
+        
+        secondsLabel.text = FormatDisplay.time(seconds: seconds)
+        kmLabel.text = FormatDisplay.distance(meters: distance.value)
+        
+        pedometer.queryPedometerData(from: runResumeDate!, to: Date()) {
+            [weak self] pedometerData, error in
+            if let pedometerData = pedometerData {
+                DispatchQueue.main.async {
+                    self?.mpkLabel.text = FormatDisplay.pace(secondsPerMeter: pedometerData.currentPace)
+                    self?.spmLabel.text = FormatDisplay.cadence(stepsPerSeconds: pedometerData.currentCadence)
+                }
+            }
+        }
     }
     
     @objc func timeLabelTapped(sender: UITapGestureRecognizer) {
-        refreshDataContainerConstraints("time", "distance", "rythm", "cadence")
+        refreshDataContainerConstraints("time", "distance", "pace", "cadence")
     }
     
     @objc func kmLabelTapped(sender: UITapGestureRecognizer) {
-        refreshDataContainerConstraints("distance", "time", "rythm", "cadence")
+        refreshDataContainerConstraints("distance", "time", "pace", "cadence")
     }
     
     @objc func mpkLabelTapped(sender: UITapGestureRecognizer) {
-        refreshDataContainerConstraints("rythm", "distance", "time", "cadence")
+        refreshDataContainerConstraints("pace", "distance", "time", "cadence")
     }
     
     @objc func spmLabelTapped(sender: UITapGestureRecognizer) {
-        refreshDataContainerConstraints("cadence", "distance", "rythm", "time")
+        refreshDataContainerConstraints("cadence", "distance", "pace", "time")
     }
     
     func refreshDataContainerConstraints(_ labelId0: String, _ labelId1: String, _ labelId2: String, _ labelId3: String, duration : Double = 0.3) {
