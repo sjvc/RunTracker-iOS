@@ -98,7 +98,6 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             secondsLabel.heightAnchor.constraint(equalToConstant: 64)
         ]
         NSLayoutConstraint.activate(dataContainerConstraints["time"]!)
-
         
         kmLabel.translatesAutoresizingMaskIntoConstraints = false
         dataContainerConstraints["distance"] = [
@@ -157,7 +156,6 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         super.viewDidLoad()
         
         createFabs()
-        refreshDataContainerConstraints("time", "distance", "pace", "cadence", duration: 0) // TODO: secuencia inicial de shared prefs
         
         mapView.showsUserLocation = true
         mapView.delegate = self
@@ -173,19 +171,21 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        refreshDataContainerConstraints("time", "distance", "pace", "cadence", duration: 0) // TODO: secuencia inicial de shared prefs
+        
         switch CLLocationManager.authorizationStatus() {
-        case .notDetermined:
-            locationManager.requestAlwaysAuthorization()
-            break
-            
-        case .restricted, .denied:
-            showPermissionAlert()
-            break
-            
-        case .authorizedAlways, .authorizedWhenInUse:
-            break
-            
-        @unknown default: break
+            case .notDetermined:
+                locationManager.requestAlwaysAuthorization()
+                break
+                
+            case .restricted, .denied:
+                showPermissionAlert()
+                break
+                
+            case .authorizedAlways, .authorizedWhenInUse:
+                break
+                
+            @unknown default: break
         }
     }
     
@@ -388,6 +388,27 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         }
     }
     
+    private func startTrackingActivityType() {
+        activityManager.startActivityUpdates(to: OperationQueue.main) { (activity: CMMotionActivity?) in
+            guard let activity = activity else { return }
+            DispatchQueue.main.async {
+                if activity.stationary {
+                    
+                } else if activity.walking {
+                   
+                } else if activity.running {
+                    
+                } else if activity.automotive {
+                    
+                }
+            }
+        }
+    }
+    
+    private func stopTrackingActivityType() {
+        activityManager.stopActivityUpdates()
+    }
+    
     private func stopPedometerUpdates() {
         pedometer.stopUpdates()
     }
@@ -422,18 +443,21 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             lastLocation = nil
             startLocationUpdates()
             startPedometerUpdates()
+            startTrackingActivityType()
             break
             
         case RunStatus.Paused:
             timer?.invalidate()
             stopLocationUpdates()
             stopPedometerUpdates()
+            stopTrackingActivityType()
             break
             
         case RunStatus.Stopped:
             timer?.invalidate()
             stopLocationUpdates()
             stopPedometerUpdates()
+            stopTrackingActivityType()
             saveRun()
             break
             
@@ -465,16 +489,6 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     }
     
     private func updateDisplay() {
-        //        let formattedDistance = FormatDisplay.distance(distance)
-        //        let formattedTime = FormatDisplay.time(seconds)
-        //        let formattedPace = FormatDisplay.pace(distance: distance,
-        //                                               seconds: seconds,
-        //                                               outputUnit: UnitSpeed.minutesPerMile)
-        //
-        //        distanceLabel.text = "Distance:  \(formattedDistance)"
-        //        timeLabel.text = "Time:  \(formattedTime)"
-        //        paceLabel.text = "Pace:  \(formattedPace)"
-        
         secondsLabel.text = FormatDisplay.time(seconds: seconds)
         kmLabel.text = FormatDisplay.distance(meters: distance.value)
         
@@ -509,7 +523,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         let labelWidth = 144.0 as CGFloat
         let bigLabelHOffset = 36.0 as CGFloat
         let bigLabelTop = 16.0 as CGFloat
-        let smallLabelLeft = 16.0 as CGFloat
+        let smallLabelLeft = 0.0 as CGFloat
         let smallLabelTop = 76.0 as CGFloat
         
         // Cambiar left y top de los constraints de los labels de los valores de los datos
