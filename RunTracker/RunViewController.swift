@@ -51,6 +51,8 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     
     let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
+    var lastPedometerPace : NSNumber?
+    var lastPedometerCadence : NSNumber?
     
     var runResumeDate : Date?
     let locationManager = LocationManager.shared
@@ -381,13 +383,21 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     }
     
     private func startPedometerUpdates() {
+        lastPedometerPace = 0
+        lastPedometerCadence = 0
+        
         if CMPedometer.isCadenceAvailable() && CMPedometer.isPaceAvailable() {
             pedometer.startUpdates(from: runResumeDate!) {
                 [weak self] pedometerData, error in
                 guard let pedometerData = pedometerData, error == nil else { return }
 
                 DispatchQueue.main.async {
-                    self?.updatePedometerDataDisplay(viewController: self, pedometerData: pedometerData)
+                    if pedometerData.currentPace != nil {
+                        self?.lastPedometerPace = pedometerData.currentPace
+                    }
+                    if (pedometerData.currentCadence != nil) {
+                        self?.lastPedometerCadence = pedometerData.currentCadence
+                    }
                 }
             }
         }
@@ -499,25 +509,8 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     private func updateDisplay() {
         secondsLabel.text = FormatDisplay.time(seconds: seconds)
         kmLabel.text = FormatDisplay.distance(meters: distance.value)
-        
-        pedometer.queryPedometerData(from: runResumeDate!, to: Date()) {
-            [weak self] pedometerData, error in
-            if let pedometerData = pedometerData {
-                DispatchQueue.main.async {
-                    self?.updatePedometerDataDisplay(viewController: self, pedometerData: pedometerData)
-                }
-            }
-        }
-    }
-    
-    private func updatePedometerDataDisplay(viewController : RunViewController?,  pedometerData : CMPedometerData) {
-        if pedometerData.currentPace != nil {
-            viewController?.mpkLabel.text = FormatDisplay.pace(secondsPerMeter: pedometerData.currentPace!)
-        }
-        
-        if pedometerData.currentCadence != nil {
-            viewController?.spmLabel.text = FormatDisplay.cadence(stepsPerSeconds: pedometerData.currentCadence!)
-        }
+        mpkLabel.text = FormatDisplay.pace(secondsPerMeter: lastPedometerPace ?? 0)
+        spmLabel.text = FormatDisplay.cadence(stepsPerSeconds: lastPedometerCadence ?? 0)
     }
     
     @objc func timeLabelTapped(sender: UITapGestureRecognizer) {
