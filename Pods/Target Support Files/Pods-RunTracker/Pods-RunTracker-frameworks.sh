@@ -164,11 +164,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CircleBar/CircleBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IVBezierPathRenderer/IVBezierPathRenderer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JJFloatingActionButton/JJFloatingActionButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/QuickTableViewController/QuickTableViewController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CircleBar/CircleBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IVBezierPathRenderer/IVBezierPathRenderer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JJFloatingActionButton/JJFloatingActionButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/QuickTableViewController/QuickTableViewController.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

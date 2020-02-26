@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4933BF682406D4DC0018ABCA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933BF672406D4DC0018ABCA /* SettingsViewController.swift */; };
+		4933BF6A2406E84A0018ABCA /* CadenceSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933BF692406E84A0018ABCA /* CadenceSettingsViewController.swift */; };
+		4933BF6C2406F5B40018ABCA /* IntervalSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933BF6B2406F5B40018ABCA /* IntervalSettingsViewController.swift */; };
+		4933BF6F2406FB260018ABCA /* GpsSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933BF6E2406FB260018ABCA /* GpsSettingsViewController.swift */; };
 		497E656A23FA967F00AA2E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E656923FA967F00AA2E0E /* AppDelegate.swift */; };
 		497E656C23FA967F00AA2E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E656B23FA967F00AA2E0E /* SceneDelegate.swift */; };
 		497E657123FA967F00AA2E0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497E656F23FA967F00AA2E0E /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 
 /* Begin PBXFileReference section */
 		3D6DB91D26408E3B2FC8181B /* Pods-RunTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunTracker.release.xcconfig"; path = "Target Support Files/Pods-RunTracker/Pods-RunTracker.release.xcconfig"; sourceTree = "<group>"; };
+		4933BF672406D4DC0018ABCA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4933BF692406E84A0018ABCA /* CadenceSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadenceSettingsViewController.swift; sourceTree = "<group>"; };
+		4933BF6B2406F5B40018ABCA /* IntervalSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalSettingsViewController.swift; sourceTree = "<group>"; };
+		4933BF6E2406FB260018ABCA /* GpsSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpsSettingsViewController.swift; sourceTree = "<group>"; };
 		497E656623FA967F00AA2E0E /* RunTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497E656923FA967F00AA2E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497E656B23FA967F00AA2E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +66,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4933BF6D2406F6990018ABCA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4933BF672406D4DC0018ABCA /* SettingsViewController.swift */,
+				4933BF692406E84A0018ABCA /* CadenceSettingsViewController.swift */,
+				4933BF6B2406F5B40018ABCA /* IntervalSettingsViewController.swift */,
+				4933BF6E2406FB260018ABCA /* GpsSettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		497E655D23FA967F00AA2E0E = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +109,7 @@
 				497E658423FAEE4600AA2E0E /* BlurLoader.swift */,
 				497E658623FAF23D00AA2E0E /* LocationManager.swift */,
 				49E41C57240691B1006F8465 /* FormatDisplay.swift */,
+				4933BF6D2406F6990018ABCA /* Settings */,
 			);
 			path = RunTracker;
 			sourceTree = "<group>";
@@ -218,13 +238,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4933BF6F2406FB260018ABCA /* GpsSettingsViewController.swift in Sources */,
 				497E657423FA967F00AA2E0E /* RunTracker.xcdatamodeld in Sources */,
 				49E41C58240691B1006F8465 /* FormatDisplay.swift in Sources */,
 				497E658523FAEE4600AA2E0E /* BlurLoader.swift in Sources */,
 				497E658723FAF23D00AA2E0E /* LocationManager.swift in Sources */,
 				497E656A23FA967F00AA2E0E /* AppDelegate.swift in Sources */,
 				497E656C23FA967F00AA2E0E /* SceneDelegate.swift in Sources */,
+				4933BF6C2406F5B40018ABCA /* IntervalSettingsViewController.swift in Sources */,
 				497E658123FA9B6B00AA2E0E /* RunViewController.swift in Sources */,
+				4933BF6A2406E84A0018ABCA /* CadenceSettingsViewController.swift in Sources */,
+				4933BF682406D4DC0018ABCA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@ target 'RunTracker' do
   # Pods for RunTracker
   pod 'CircleBar'
   pod 'JJFloatingActionButton'
-  pod "IVBezierPathRenderer"
+  pod 'IVBezierPathRenderer'
+  pod 'QuickTableViewController'
 
 end
