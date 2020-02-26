@@ -19,23 +19,17 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     
     @IBOutlet weak var mapView: MKMapView!
  
-    @IBOutlet weak var timeLabel: UILabel! // Tiempo en HH:MM
+    @IBOutlet weak var dataContainerView: UIView!
+    
+    @IBOutlet weak var secondsLabel: UILabel! // Tiempo en HH:MM
     @IBOutlet weak var kmLabel: UILabel!   // Distancia en kilómetros
     @IBOutlet weak var mpkLabel: UILabel!  // Ritmo (Metros Por Kilómetro)
     @IBOutlet weak var spmLabel: UILabel!  // Cadencia (Pasos Por Minuto)
-    @IBOutlet weak var dataContainerView: UIView!
     
-    // Label superior -> Horizontal: Centrado, Width = 144
-    //                -> Vertical: Top Space = 16, Height = 64
-    // Tamaño de letra 42
-    
-    // Label izq      -> Horizontal: Leading Space = 16, Width = 90
-    //                -> Vertical: Top Space 88, Height = 60
-    // Label centro   -> Horizontal: Centrado, Width = 90
-    //                -> Vertical: Top Space 88, Height = 60
-    // Label dcha     -> Horizontal: Trailing Space = 16, Width = 90
-    //                -> Vertical: Top Space 88, Height = 60
-    // Tamaño de letra 28
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var rythmLabel: UILabel!
+    @IBOutlet weak var cadenceLabel: UILabel!
     
     enum RunStatus {
         case Stopped
@@ -69,19 +63,19 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     override func loadView() {
         super.loadView()
         
-        dataLabels["time"] = timeLabel
+        dataLabels["time"] = secondsLabel
         dataLabels["km"] = kmLabel
         dataLabels["mpk"] = mpkLabel
         dataLabels["spm"] = spmLabel
         
         dataContainerView.translatesAutoresizingMaskIntoConstraints = false
         
-        timeLabel.translatesAutoresizingMaskIntoConstraints = false
+        secondsLabel.translatesAutoresizingMaskIntoConstraints = false
         dataContainerConstraints["time"] = [
-            timeLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: (dataContainerView.bounds.width - 144) * 0.5),
-            timeLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 16),
-            timeLabel.widthAnchor.constraint(equalToConstant: 144),
-            timeLabel.heightAnchor.constraint(equalToConstant: 64)
+            secondsLabel.leftAnchor.constraint(equalTo: self.dataContainerView.leftAnchor, constant: (dataContainerView.bounds.width - 144) * 0.5),
+            secondsLabel.topAnchor.constraint(equalTo: self.dataContainerView.topAnchor, constant: 16),
+            secondsLabel.widthAnchor.constraint(equalToConstant: 144),
+            secondsLabel.heightAnchor.constraint(equalToConstant: 64)
         ]
         NSLayoutConstraint.activate(dataContainerConstraints["time"]!)
 
@@ -112,6 +106,30 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             spmLabel.heightAnchor.constraint(equalToConstant: 64)
         ]
         NSLayoutConstraint.activate(dataContainerConstraints["spm"]!)
+        
+        timeLabel.translatesAutoresizingMaskIntoConstraints = false
+        timeLabel.leftAnchor.constraint(equalTo: secondsLabel.leftAnchor, constant: 0).isActive = true
+        timeLabel.topAnchor.constraint(equalTo: secondsLabel.topAnchor, constant: 24).isActive = true
+        timeLabel.widthAnchor.constraint(equalToConstant: 144).isActive = true
+        timeLabel.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        
+        distanceLabel.translatesAutoresizingMaskIntoConstraints = false
+        distanceLabel.leftAnchor.constraint(equalTo: kmLabel.leftAnchor, constant: 0).isActive = true
+        distanceLabel.topAnchor.constraint(equalTo: kmLabel.topAnchor, constant: 24).isActive = true
+        distanceLabel.widthAnchor.constraint(equalToConstant: 144).isActive = true
+        distanceLabel.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        
+        rythmLabel.translatesAutoresizingMaskIntoConstraints = false
+        rythmLabel.leftAnchor.constraint(equalTo: mpkLabel.leftAnchor, constant: 0).isActive = true
+        rythmLabel.topAnchor.constraint(equalTo: mpkLabel.topAnchor, constant: 24).isActive = true
+        rythmLabel.widthAnchor.constraint(equalToConstant: 144).isActive = true
+        rythmLabel.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        
+        cadenceLabel.translatesAutoresizingMaskIntoConstraints = false
+        cadenceLabel.leftAnchor.constraint(equalTo: spmLabel.leftAnchor, constant: 0).isActive = true
+        cadenceLabel.topAnchor.constraint(equalTo: spmLabel.topAnchor, constant: 24).isActive = true
+        cadenceLabel.widthAnchor.constraint(equalToConstant: 144).isActive = true
+        cadenceLabel.heightAnchor.constraint(equalToConstant: 64).isActive = true
     }
     
     override func viewDidLoad() {
@@ -125,7 +143,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         
         locationManager.delegate = self
         
-        timeLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(timeLabelTapped)) )
+        secondsLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(timeLabelTapped)) )
         kmLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(kmLabelTapped)) )
         mpkLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(mpkLabelTapped)) )
         spmLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(spmLabelTapped)) )
