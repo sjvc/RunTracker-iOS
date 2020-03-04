@@ -14,14 +14,18 @@ class CadenceSettingsViewController : QuickTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let currentCadence = Settings.getCadence()
+        
         var optionRows = [OptionRow<UITableViewCell>]()
+        optionRows.append(OptionRow(text: "Ninguna", isSelected: currentCadence == 0, action: didToggleSelection(0)))
+        
         let minCadence = 90
         let maxCadence = 180
         let cadenceInterval = 5
         
         var cadence = minCadence
         repeat {
-            optionRows.append(OptionRow(text: String(cadence), isSelected: false, action: didToggleSelection()))
+            optionRows.append(OptionRow(text: String(cadence), isSelected: currentCadence == cadence, action: didToggleSelection(cadence)))
             cadence += cadenceInterval
         } while(cadence <= maxCadence)
         
@@ -30,9 +34,9 @@ class CadenceSettingsViewController : QuickTableViewController {
         ]
     }
     
-    private func didToggleSelection() -> (Row) -> Void {
+    private func didToggleSelection(_ value : Int) -> (Row) -> Void {
         return { [weak self] row in
-            // ...
+            Settings.setCadence(value: value)
         }
     }
     

@@ -32,7 +32,9 @@ class SettingsViewController : QuickTableViewController {
                     let viewController = self.storyboard!.instantiateViewController(withIdentifier: "GpsSettingsViewController") as! GpsSettingsViewController
                     self.navigationController!.pushViewController(viewController, animated: true)
                 }),
-                SwitchRow(text: "Autopause", switchValue: false, icon: .image(UIImage(systemName: "pause")!), action: { _ in })
+                SwitchRow(text: "Autopause", switchValue: Settings.getAutoPause(), icon: .image(UIImage(systemName: "pause")!), action: { row in
+                    Settings.setAutoPause(value: (row as! SwitchRow).switchValue)
+                })
             ])
         ]
     }
