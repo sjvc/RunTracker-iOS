@@ -78,7 +78,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6RZ-NR-Xan">
-                                                <rect key="frame" x="127" y="28" width="160" height="40"/>
+                                                <rect key="frame" x="127" y="29.5" width="160" height="37.5"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="9gm-br-ZML"/>
@@ -99,7 +99,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.28793999549999999" green="0.5820527673" blue="0.92552942039999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6RZ-NR-Xan" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="7nd-hW-gNz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0e5-95-iJz" secondAttribute="bottom" id="9md-2N-DUw"/>
@@ -129,20 +129,49 @@
             <point key="canvasLocation" x="1363.768115942029" y="-595.98214285714278"/>
         </scene>
         <!--Historial-->
-        <scene sceneID="e51-jO-u12">
+        <scene sceneID="MUC-gA-eCL">
             <objects>
-                <viewController id="U0U-ae-9pN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XxT-53-pC2">
+                <tableViewController title="Historial" id="dQS-5g-3xK" customClass="RunHistoryTableViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CPb-QG-oNC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.94585114719999996" green="0.61719495059999996" blue="0.21946054700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="r4a-rk-u8h"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Historial" image="doc.plaintext" catalog="system" id="3ml-Wu-cKe"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jWF-El-hSl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MiCelda" textLabel="1an-jg-zbS" detailTextLabel="KZJ-zO-ot4" style="IBUITableViewCellStyleValue1" id="7Ct-T2-lSn">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Ct-T2-lSn" id="DYL-MZ-ZbE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1an-jg-zbS">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KZJ-zO-ot4">
+                                            <rect key="frame" x="335" y="12" width="59" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dQS-5g-3xK" id="fVn-CB-pcU"/>
+                            <outlet property="delegate" destination="dQS-5g-3xK" id="ll2-hQ-1zC"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Historial" image="doc.plaintext" catalog="system" id="Eev-WE-Iy3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gU-i7-ysO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367" y="107"/>
+            <point key="canvasLocation" x="1394" y="108"/>
         </scene>
         <!--Opciones-->
         <scene sceneID="Qbu-JX-gZ3">
@@ -151,7 +180,7 @@
                     <view key="view" contentMode="scaleToFill" id="qeD-5k-n83">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.88337630030000003" green="0.32345634699999998" blue="0.25486066940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ul5-EI-2Hz"/>
                     </view>
                     <navigationItem key="navigationItem" id="ewA-qi-km3"/>
@@ -167,7 +196,7 @@
                     <view key="view" contentMode="scaleToFill" id="Lrk-CC-oXp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.40362891550000002" green="0.67918294670000001" blue="0.36072468759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Fgo-s2-7Tt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" id="o99-1i-HRK"/>
@@ -188,7 +217,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="AYR-32-Rjr"/>
-                        <segue destination="U0U-ae-9pN" kind="relationship" relationship="viewControllers" id="h0T-JS-j1u"/>
+                        <segue destination="dQS-5g-3xK" kind="relationship" relationship="viewControllers" id="nzk-V1-FCq"/>
                         <segue destination="hHa-kW-j8h" kind="relationship" relationship="viewControllers" id="6l6-Ui-S88"/>
                         <segue destination="xBH-Zf-atO" kind="relationship" relationship="viewControllers" id="FaW-bn-yPd"/>
                     </connections>
