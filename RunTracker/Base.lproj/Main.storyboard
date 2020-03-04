@@ -160,6 +160,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="l4c-6g-M4h" kind="show" identifier="showDetail" id="2Dy-d2-PZd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -167,11 +170,53 @@
                             <outlet property="delegate" destination="dQS-5g-3xK" id="ll2-hQ-1zC"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Historial" image="doc.plaintext" catalog="system" id="Eev-WE-Iy3"/>
+                    <navigationItem key="navigationItem" id="tdd-nx-tD9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gU-i7-ysO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1394" y="108"/>
+            <point key="canvasLocation" x="2293" y="108"/>
+        </scene>
+        <!--Run Details View Controller-->
+        <scene sceneID="JwK-yp-Jio">
+            <objects>
+                <viewController id="l4c-6g-M4h" customClass="RunDetailsViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FLW-g2-ZnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H1P-t8-2on">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWy-7X-hUm" userLabel="Data Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="e5C-I8-4kW"/>
+                                        </constraints>
+                                    </view>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="elB-qm-bJJ">
+                                        <rect key="frame" x="0.0" y="160" width="414" height="565"/>
+                                    </mapView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="H1P-t8-2on" firstAttribute="leading" secondItem="2RE-zf-KP8" secondAttribute="leading" id="Fza-cC-crv"/>
+                            <constraint firstItem="2RE-zf-KP8" firstAttribute="bottom" secondItem="H1P-t8-2on" secondAttribute="bottom" id="Nnx-Dd-1Fp"/>
+                            <constraint firstItem="H1P-t8-2on" firstAttribute="top" secondItem="2RE-zf-KP8" secondAttribute="top" id="Qie-we-eFQ"/>
+                            <constraint firstItem="2RE-zf-KP8" firstAttribute="trailing" secondItem="H1P-t8-2on" secondAttribute="trailing" id="UnY-g1-LrP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2RE-zf-KP8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V47-l6-qtG"/>
+                    <connections>
+                        <outlet property="mapView" destination="elB-qm-bJJ" id="hZl-QG-g5z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVt-zj-JCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3283" y="108"/>
         </scene>
         <!--Opciones-->
         <scene sceneID="Qbu-JX-gZ3">
@@ -217,7 +262,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="AYR-32-Rjr"/>
-                        <segue destination="dQS-5g-3xK" kind="relationship" relationship="viewControllers" id="nzk-V1-FCq"/>
+                        <segue destination="H8U-Rf-gIq" kind="relationship" relationship="viewControllers" id="nzk-V1-FCq"/>
                         <segue destination="hHa-kW-j8h" kind="relationship" relationship="viewControllers" id="6l6-Ui-S88"/>
                         <segue destination="xBH-Zf-atO" kind="relationship" relationship="viewControllers" id="FaW-bn-yPd"/>
                     </connections>
@@ -289,6 +334,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUa-L3-PpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3813" y="1640"/>
+        </scene>
+        <!--Historial-->
+        <scene sceneID="cJh-z9-4SF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H8U-Rf-gIq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Historial" image="doc.plaintext" catalog="system" id="Eev-WE-Iy3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HN7-d7-gXL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dQS-5g-3xK" kind="relationship" relationship="rootViewController" id="5uo-GE-Xcv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3v-GF-4oR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392.753623188406" y="107.8125"/>
         </scene>
     </scenes>
     <resources>
