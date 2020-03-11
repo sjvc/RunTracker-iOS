@@ -284,18 +284,83 @@
         <!--Perfil-->
         <scene sceneID="2vo-0B-ARv">
             <objects>
-                <viewController id="hHa-kW-j8h" sceneMemberID="viewController">
+                <viewController id="hHa-kW-j8h" customClass="ProfileViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lrk-CC-oXp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="FyO-wu-qB9">
+                                <rect key="frame" x="40" y="32" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="dFs-yW-WRX"/>
+                                    <constraint firstAttribute="height" constant="240" id="mTv-wM-ttx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sergio Viudes Carbonell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41r-6S-3YV">
+                                <rect key="frame" x="25" y="304" width="270" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea6-iG-o6l">
+                                <rect key="frame" x="16" y="387" width="49" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6iN-8Q-CkX">
+                                <rect key="frame" x="73" y="383" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Woe-9T-SuA"/>
+                                    <constraint firstAttribute="height" constant="32" id="hym-W0-4eN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso: 00 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDZ-68-WCV">
+                                <rect key="frame" x="16" y="435" width="103" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edad: 00 años" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-LY-j4l">
+                                <rect key="frame" x="165" y="387" width="126" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura: 000 cm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSL-4c-oLq">
+                                <rect key="frame" x="160.5" y="435" width="130.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fgo-s2-7Tt" firstAttribute="trailing" secondItem="Z2A-LY-j4l" secondAttribute="trailing" constant="29" id="662-2K-q8R"/>
+                            <constraint firstItem="Ea6-iG-o6l" firstAttribute="top" secondItem="41r-6S-3YV" secondAttribute="bottom" constant="54" id="66b-UD-Cfy"/>
+                            <constraint firstItem="FyO-wu-qB9" firstAttribute="centerX" secondItem="Lrk-CC-oXp" secondAttribute="centerX" id="6Fz-l2-s0V"/>
+                            <constraint firstItem="6iN-8Q-CkX" firstAttribute="centerY" secondItem="Ea6-iG-o6l" secondAttribute="centerY" id="6a3-v1-7HA"/>
+                            <constraint firstItem="Z2A-LY-j4l" firstAttribute="centerY" secondItem="Ea6-iG-o6l" secondAttribute="centerY" id="7Ue-dW-fYT"/>
+                            <constraint firstItem="dDZ-68-WCV" firstAttribute="top" secondItem="Ea6-iG-o6l" secondAttribute="bottom" constant="24" id="LVA-eR-doz"/>
+                            <constraint firstItem="Ea6-iG-o6l" firstAttribute="leading" secondItem="Fgo-s2-7Tt" secondAttribute="leading" constant="16" id="TWB-yv-l48"/>
+                            <constraint firstItem="41r-6S-3YV" firstAttribute="centerX" secondItem="Lrk-CC-oXp" secondAttribute="centerX" id="bId-4X-r9j"/>
+                            <constraint firstItem="41r-6S-3YV" firstAttribute="top" secondItem="FyO-wu-qB9" secondAttribute="bottom" constant="32" id="eAN-sJ-cSa"/>
+                            <constraint firstItem="FyO-wu-qB9" firstAttribute="top" secondItem="Fgo-s2-7Tt" secondAttribute="top" constant="32" id="egH-FC-crl"/>
+                            <constraint firstItem="vSL-4c-oLq" firstAttribute="centerY" secondItem="dDZ-68-WCV" secondAttribute="centerY" id="fkK-ux-zBh"/>
+                            <constraint firstItem="dDZ-68-WCV" firstAttribute="leading" secondItem="Fgo-s2-7Tt" secondAttribute="leading" constant="16" id="k4s-lN-cEd"/>
+                            <constraint firstItem="6iN-8Q-CkX" firstAttribute="leading" secondItem="Ea6-iG-o6l" secondAttribute="trailing" constant="8" id="n0w-UC-4nm"/>
+                            <constraint firstItem="Fgo-s2-7Tt" firstAttribute="trailing" secondItem="vSL-4c-oLq" secondAttribute="trailing" constant="29" id="pZq-gW-kdP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fgo-s2-7Tt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" id="o99-1i-HRK"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="FyO-wu-qB9" id="Lce-S2-MP0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ete-SE-WcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373" y="824"/>
+            <point key="canvasLocation" x="1372.5" y="823.94366197183103"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EJ2-0N-BTL">
@@ -408,5 +473,6 @@
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="hare" catalog="system" width="64" height="46"/>
         <image name="person" catalog="system" width="64" height="58"/>
+        <image name="profile" width="240" height="240"/>
     </resources>
 </document>
