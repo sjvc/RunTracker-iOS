@@ -14,7 +14,16 @@ class RunDetailsViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var distanceAndTimeLabel: UILabel!
+    @IBOutlet weak var avgSpeedLabel: UILabel!
+    @IBOutlet weak var maxSpeedLabel: UILabel!
+    @IBOutlet weak var paceLabel: UILabel!
+    
     var run : Run?
+    
+    var globalAvgSpeed : Double?
+    var globalMaxSpeed : Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +31,16 @@ class RunDetailsViewController: UIViewController {
         mapView.delegate = self
         
         loadMap()
+        
+        fillRunDetails()
+    }
+    
+    private func fillRunDetails() {
+        dateLabel.text = DateFormatter.localizedString(from: (run?.date!)!, dateStyle: .short, timeStyle: .medium)
+        distanceAndTimeLabel.set(html: "Has hecho <b>\(FormatDisplay.distance(meters: run!.distance)) km</b> en <b>\(FormatDisplay.timeWithSuffixes(seconds: Int(run!.distance)))</b>,")
+        avgSpeedLabel.set(html: "con una <i>velocidad media</i> de <b>\(FormatDisplay.speed(metersPerSeconds: globalAvgSpeed!)) km/h</b>,")
+        maxSpeedLabel.set(html: "<i>velocidad máxima</i> de <b>\(FormatDisplay.speed(metersPerSeconds: globalMaxSpeed!)) km/h</b>,")
+        paceLabel.set(html: "a un <i>ritmo</i> de <b>\(FormatDisplay.pace(secondsPerMeter: NSNumber(value: Double(run!.duration) / run!.distance))) min/km</b>")
     }
     
     // Carga el mapa
@@ -103,6 +122,10 @@ class RunDetailsViewController: UIViewController {
             segment.color = segmentColor(speed: speed, midSpeed: midSpeed, slowestSpeed: minSpeed, fastestSpeed: maxSpeed)
             segments.append(segment)
         }
+        
+        globalAvgSpeed = midSpeed
+        globalMaxSpeed = maxSpeed
+        
         return segments
     }
     

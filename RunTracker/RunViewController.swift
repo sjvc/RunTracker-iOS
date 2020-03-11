@@ -509,10 +509,10 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     }
     
     private func updateDisplay() {
-        secondsLabel.text = FormatDisplay.time(seconds: seconds)
-        kmLabel.text = FormatDisplay.distance(meters: distance.value)
-        mpkLabel.text = FormatDisplay.pace(secondsPerMeter: lastPedometerPace ?? 0)
-        spmLabel.text = FormatDisplay.cadence(stepsPerSeconds: lastPedometerCadence ?? 0)
+        secondsLabel.text = FormatDisplay.timeWithTwoComponents(seconds: seconds)
+        kmLabel.text = FormatDisplay.distanceWithLeadingZeroes(meters: distance.value)
+        mpkLabel.text = FormatDisplay.paceWidthLeadingZeroes(secondsPerMeter: lastPedometerPace ?? 0)
+        spmLabel.text = FormatDisplay.cadenceWithLeadingZeroes(stepsPerSeconds: lastPedometerCadence ?? 0)
     }
     
     @objc func timeLabelTapped(sender: UITapGestureRecognizer) {

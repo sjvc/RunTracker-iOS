@@ -51,7 +51,7 @@ class RunHistoryTableViewController: UITableViewController, NSFetchedResultsCont
         
         let run = self.frc.object(at: indexPath)
         cell.textLabel?.text = DateFormatter.localizedString(from: run.date!, dateStyle: .short, timeStyle: .medium)
-        cell.detailTextLabel?.text = FormatDisplay.distance(meters: run.distance) + " km."
+        cell.detailTextLabel?.text = FormatDisplay.distance(meters: run.distance) + " km"
         
         return cell
     }

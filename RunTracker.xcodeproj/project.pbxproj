@@ -20,6 +20,7 @@
 		497E658123FA9B6B00AA2E0E /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658023FA9B6B00AA2E0E /* RunViewController.swift */; };
 		497E658523FAEE4600AA2E0E /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658423FAEE4600AA2E0E /* BlurLoader.swift */; };
 		497E658723FAF23D00AA2E0E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658623FAF23D00AA2E0E /* LocationManager.swift */; };
+		49AB967C24194C1700770AB4 /* UILabel+html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB967B24194C1700770AB4 /* UILabel+html.swift */; };
 		49B2E157240FFC590052F0F3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2E156240FFC590052F0F3 /* Settings.swift */; };
 		49B2E1592410113B0052F0F3 /* RunHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2E1582410113B0052F0F3 /* RunHistoryTableViewController.swift */; };
 		49B2E15B241018E10052F0F3 /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2E15A241018E10052F0F3 /* RunDetailsViewController.swift */; };
@@ -45,6 +46,7 @@
 		497E658023FA9B6B00AA2E0E /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		497E658423FAEE4600AA2E0E /* BlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
 		497E658623FAF23D00AA2E0E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		49AB967B24194C1700770AB4 /* UILabel+html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+html.swift"; sourceTree = "<group>"; };
 		49B2E156240FFC590052F0F3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		49B2E1582410113B0052F0F3 /* RunHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunHistoryTableViewController.swift; sourceTree = "<group>"; };
 		49B2E15A241018E10052F0F3 /* RunDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				49E41C57240691B1006F8465 /* FormatDisplay.swift */,
 				49B2E15E241026EB0052F0F3 /* MulticolorPolyline.swift */,
 				4933BF6D2406F6990018ABCA /* Settings */,
+				49AB967B24194C1700770AB4 /* UILabel+html.swift */,
 			);
 			path = RunTracker;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				497E656C23FA967F00AA2E0E /* SceneDelegate.swift in Sources */,
 				4933BF6C2406F5B40018ABCA /* IntervalSettingsViewController.swift in Sources */,
 				497E658123FA9B6B00AA2E0E /* RunViewController.swift in Sources */,
+				49AB967C24194C1700770AB4 /* UILabel+html.swift in Sources */,
 				49B2E15F241026EB0052F0F3 /* MulticolorPolyline.swift in Sources */,
 				4933BF6A2406E84A0018ABCA /* CadenceSettingsViewController.swift in Sources */,
 				49B2E1592410113B0052F0F3 /* RunHistoryTableViewController.swift in Sources */,

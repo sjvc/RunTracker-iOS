@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OmC-MQ-nhQ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +12,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RunViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0e5-95-iJz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zck-aX-bdW">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                         <subviews>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aH-Nx-aR3">
                                                 <rect key="frame" x="135" y="16" width="144" height="64"/>
@@ -78,7 +78,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6RZ-NR-Xan">
-                                                <rect key="frame" x="127" y="29.5" width="160" height="37.5"/>
+                                                <rect key="frame" x="80" y="29.5" width="160" height="37.5"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="9gm-br-ZML"/>
@@ -94,7 +94,7 @@
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lqc-To-WMP">
-                                        <rect key="frame" x="0.0" y="160" width="414" height="609"/>
+                                        <rect key="frame" x="0.0" y="160" width="320" height="359"/>
                                     </mapView>
                                 </subviews>
                             </stackView>
@@ -133,26 +133,26 @@
             <objects>
                 <tableViewController title="Historial" id="dQS-5g-3xK" customClass="RunHistoryTableViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CPb-QG-oNC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MiCelda" textLabel="1an-jg-zbS" detailTextLabel="KZJ-zO-ot4" style="IBUITableViewCellStyleValue1" id="7Ct-T2-lSn">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Ct-T2-lSn" id="DYL-MZ-ZbE">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1an-jg-zbS">
-                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KZJ-zO-ot4">
-                                            <rect key="frame" x="335" y="12" width="59" height="20.5"/>
+                                            <rect key="frame" x="245" y="12" width="59" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -181,21 +181,62 @@
             <objects>
                 <viewController id="l4c-6g-M4h" customClass="RunDetailsViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FLW-g2-ZnQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H1P-t8-2on">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWy-7X-hUm" userLabel="Data Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20/02/2020 13:41" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpV-V8-Lgg">
+                                                <rect key="frame" x="31.5" y="16" width="257.5" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has hecho 15 km en 1h 2m 22s," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzG-R6-G2h">
+                                                <rect key="frame" x="45" y="62.5" width="230" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="con una velocidad media de 15 km/h," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAt-Lt-HjO">
+                                                <rect key="frame" x="26" y="82" width="268" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="velocidad máxima de 29 km/h," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISR-x0-WKK">
+                                                <rect key="frame" x="49.5" y="101.5" width="221" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a un ritmo de 15 min/km." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-Au-Q5J">
+                                                <rect key="frame" x="71" y="121" width="178.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="lAt-Lt-HjO" firstAttribute="centerX" secondItem="FWy-7X-hUm" secondAttribute="centerX" id="1hE-wQ-hjH"/>
+                                            <constraint firstItem="UzG-R6-G2h" firstAttribute="top" secondItem="IpV-V8-Lgg" secondAttribute="bottom" constant="8" id="9vE-mc-9rA"/>
+                                            <constraint firstItem="UzG-R6-G2h" firstAttribute="centerX" secondItem="FWy-7X-hUm" secondAttribute="centerX" id="G85-bI-qFp"/>
+                                            <constraint firstItem="Qvb-Au-Q5J" firstAttribute="centerX" secondItem="FWy-7X-hUm" secondAttribute="centerX" id="GM6-2O-sd1"/>
+                                            <constraint firstItem="ISR-x0-WKK" firstAttribute="top" secondItem="lAt-Lt-HjO" secondAttribute="bottom" id="PyD-KW-vKJ"/>
                                             <constraint firstAttribute="height" constant="160" id="e5C-I8-4kW"/>
+                                            <constraint firstItem="ISR-x0-WKK" firstAttribute="centerX" secondItem="FWy-7X-hUm" secondAttribute="centerX" id="jEa-po-2Ne"/>
+                                            <constraint firstItem="lAt-Lt-HjO" firstAttribute="top" secondItem="UzG-R6-G2h" secondAttribute="bottom" id="q7S-m4-YGc"/>
+                                            <constraint firstItem="Qvb-Au-Q5J" firstAttribute="top" secondItem="ISR-x0-WKK" secondAttribute="bottom" id="sHn-Qv-uU9"/>
+                                            <constraint firstItem="IpV-V8-Lgg" firstAttribute="centerX" secondItem="FWy-7X-hUm" secondAttribute="centerX" id="uqJ-vu-yo7"/>
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="elB-qm-bJJ">
-                                        <rect key="frame" x="0.0" y="160" width="414" height="565"/>
+                                        <rect key="frame" x="0.0" y="160" width="320" height="315"/>
                                     </mapView>
                                 </subviews>
                             </stackView>
@@ -205,13 +246,19 @@
                             <constraint firstItem="H1P-t8-2on" firstAttribute="leading" secondItem="2RE-zf-KP8" secondAttribute="leading" id="Fza-cC-crv"/>
                             <constraint firstItem="2RE-zf-KP8" firstAttribute="bottom" secondItem="H1P-t8-2on" secondAttribute="bottom" id="Nnx-Dd-1Fp"/>
                             <constraint firstItem="H1P-t8-2on" firstAttribute="top" secondItem="2RE-zf-KP8" secondAttribute="top" id="Qie-we-eFQ"/>
+                            <constraint firstItem="IpV-V8-Lgg" firstAttribute="top" secondItem="2RE-zf-KP8" secondAttribute="top" constant="16" id="ThV-84-gkJ"/>
                             <constraint firstItem="2RE-zf-KP8" firstAttribute="trailing" secondItem="H1P-t8-2on" secondAttribute="trailing" id="UnY-g1-LrP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2RE-zf-KP8"/>
                     </view>
                     <navigationItem key="navigationItem" id="V47-l6-qtG"/>
                     <connections>
+                        <outlet property="avgSpeedLabel" destination="lAt-Lt-HjO" id="nod-dV-CRi"/>
+                        <outlet property="dateLabel" destination="IpV-V8-Lgg" id="KpJ-ta-MO4"/>
+                        <outlet property="distanceAndTimeLabel" destination="UzG-R6-G2h" id="S4l-gX-upk"/>
                         <outlet property="mapView" destination="elB-qm-bJJ" id="hZl-QG-g5z"/>
+                        <outlet property="maxSpeedLabel" destination="ISR-x0-WKK" id="8GF-ve-Jsa"/>
+                        <outlet property="paceLabel" destination="Qvb-Au-Q5J" id="5vD-gK-l7k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVt-zj-JCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,7 +270,7 @@
             <objects>
                 <viewController title="Opciones" id="3yX-Lr-TA9" customClass="SettingsViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qeD-5k-n83">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ul5-EI-2Hz"/>
@@ -239,7 +286,7 @@
             <objects>
                 <viewController id="hHa-kW-j8h" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lrk-CC-oXp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Fgo-s2-7Tt"/>
@@ -278,7 +325,7 @@
                     <tabBarItem key="tabBarItem" title="Opciones" image="gear" catalog="system" id="wcm-Bb-wPg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="32P-8L-7iZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -295,7 +342,7 @@
             <objects>
                 <viewController storyboardIdentifier="CadenceSettingsViewController" title="Cadencia" id="fD7-iA-D0g" customClass="CadenceSettingsViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zjc-Fu-8WN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2ub-U6-huC"/>
@@ -310,7 +357,7 @@
             <objects>
                 <viewController storyboardIdentifier="IntervalSettingsViewController" title="Intervalos" id="kOJ-aH-b7m" customClass="IntervalSettingsViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="831-ib-DwM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IhV-kp-mIU"/>
@@ -325,7 +372,7 @@
             <objects>
                 <viewController storyboardIdentifier="GpsSettingsViewController" title="Precisión GPS" id="4i3-wF-S25" customClass="GpsSettingsViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w60-m7-whH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Hcf-ff-ibe"/>
@@ -342,7 +389,7 @@
                     <tabBarItem key="tabBarItem" title="Historial" image="doc.plaintext" catalog="system" id="Eev-WE-Iy3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HN7-d7-gXL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
