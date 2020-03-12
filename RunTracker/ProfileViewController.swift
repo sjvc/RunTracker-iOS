@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var genderImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
@@ -23,13 +23,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        makeProfileImageRounded()
+        makePhotoRounded()
         
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
         imagePicker.mediaTypes = ["public.image"]
         
-        profileImageView.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onProfileImageClicked)) )
+        photoImageView.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onPhotoClicked)) )
         genderImageView.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onGenderImageClicked)) )
         nameLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onNameLabelClicked)) )
         ageLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onAgeLabelClicked)) )
@@ -37,15 +37,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         heightLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onHeightLabelClicked)) )
         genderLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onGenderLabelClicked)) )
         
-        refreshUi()
+        refreshUi(true)
     }
     
-    private func makeProfileImageRounded() {
-        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2
-        self.profileImageView.clipsToBounds = true
+    private func makePhotoRounded() {
+        self.photoImageView.layer.cornerRadius = self.photoImageView.frame.size.width / 2
+        self.photoImageView.clipsToBounds = true
+        photoImageView.contentMode = .scaleAspectFill
     }
     
-    private func refreshUi() {
+    private func refreshUi(_ loadPhoto : Bool = false) {
         let name = Settings.getProfileName()
         let age = Settings.getProfileAge()
         let weight = Settings.getProfileWeight()
@@ -53,12 +54,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         let gender = Settings.getProfileGender()
         
         nameLabel.text = name == "" ? "Escribe aquí tu nombre" : name
-        ageLabel.text = age == 0 ? "Edad: _______" : "Edad: \(String(age)) años"
-        weightLabel.text = weight == 0 ? "Peso: _______" : "Peso: \(String(weight)) kg"
-        heightLabel.text = height == 0 ? "Altura: _______" : "Altura: \(String(height)) cm"
+        ageLabel.set(html: age == 0 ? "Edad: _______" : "Edad: <b>\(String(age)) años</b>")
+        weightLabel.set(html: weight == 0 ? "Peso: _______" : "Peso: <b>\(String(weight)) kg</b>")
+        heightLabel.set(html: height == 0 ? "Altura: _______" : "Altura: <b>\(String(height)) cm</b>")
         genderLabel.text = gender == Gender.UNDEFINED ? "Sexo: _______" : "Sexo: "
         genderImageView.isHidden = gender == Gender.UNDEFINED
         genderImageView.image = UIImage.init(named: gender == Gender.FEMALE ? "icon_female" : "icon_male" )
+        
+        if loadPhoto, let photo = getSavedImage() {
+            photoImageView.image = photo
+        }
     }
     
     @objc private func onNameLabelClicked(sender: UITapGestureRecognizer) {
@@ -85,7 +90,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         changeGender()
     }
     
-    @objc private func onProfileImageClicked(sender: UITapGestureRecognizer) {
+    @objc private func onPhotoClicked(sender: UITapGestureRecognizer) {
         promptPhoto()
     }
     
@@ -213,8 +218,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
         if UIDevice.current.userInterfaceIdiom == .pad {
-            alertController.popoverPresentationController?.sourceView = profileImageView
-            alertController.popoverPresentationController?.sourceRect = profileImageView.bounds
+            alertController.popoverPresentationController?.sourceView = photoImageView
+            alertController.popoverPresentationController?.sourceRect = photoImageView.bounds
             alertController.popoverPresentationController?.permittedArrowDirections = [.down, .up]
         }
 
@@ -234,8 +239,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            profileImageView.contentMode = .scaleAspectFill
-            profileImageView.image = pickedImage
+            photoImageView.image = pickedImage
+            _ = saveImage(image: pickedImage)
         }
      
         dismiss(animated: true, completion: nil)
@@ -243,6 +248,29 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func saveImage(image: UIImage) -> Bool {
+        guard let data = image.jpegData(compressionQuality: 1) ?? image.pngData() else {
+            return false
+        }
+        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
+            return false
+        }
+        do {
+            try data.write(to: directory.appendingPathComponent("runTrackerUserProfile.png")!)
+            return true
+        } catch {
+            print(error.localizedDescription)
+            return false
+        }
+    }
+    
+    func getSavedImage() -> UIImage? {
+        if let dir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
+            return UIImage(contentsOfFile: URL(fileURLWithPath: dir.absoluteString).appendingPathComponent("runTrackerUserProfile.png").path)
+        }
+        return nil
     }
     
 }

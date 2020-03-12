@@ -360,7 +360,7 @@
                         <outlet property="genderLabel" destination="Ea6-iG-o6l" id="Kca-W1-sPu"/>
                         <outlet property="heightLabel" destination="vSL-4c-oLq" id="6bZ-gN-k4B"/>
                         <outlet property="nameLabel" destination="41r-6S-3YV" id="m5U-MR-ZXL"/>
-                        <outlet property="profileImageView" destination="FyO-wu-qB9" id="Lce-S2-MP0"/>
+                        <outlet property="photoImageView" destination="FyO-wu-qB9" id="Lce-S2-MP0"/>
                         <outlet property="weightLabel" destination="dDZ-68-WCV" id="esT-SI-eWN"/>
                     </connections>
                 </viewController>
