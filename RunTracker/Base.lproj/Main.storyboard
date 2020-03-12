@@ -478,7 +478,7 @@
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="hare" catalog="system" width="64" height="46"/>
-        <image name="icon_male" width="64" height="64"/>
+        <image name="icon_male" width="128" height="128"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="profile" width="240" height="240"/>
     </resources>

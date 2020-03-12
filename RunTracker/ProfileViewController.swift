@@ -8,29 +8,34 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var profileImageView: UIImageView!
-    
-    
+    @IBOutlet weak var genderImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
-    @IBOutlet weak var genderImageView: UIImageView!
+    
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         makeProfileImageRounded()
         
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        imagePicker.mediaTypes = ["public.image"]
+        
+        profileImageView.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onProfileImageClicked)) )
+        genderImageView.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onGenderImageClicked)) )
         nameLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onNameLabelClicked)) )
         ageLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onAgeLabelClicked)) )
         weightLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onWeightLabelClicked)) )
         heightLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onHeightLabelClicked)) )
         genderLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onGenderLabelClicked)) )
-        genderImageView.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(onGenderImageClicked)) )
         
         refreshUi()
     }
@@ -47,7 +52,7 @@ class ProfileViewController: UIViewController {
         let height = Settings.getProfileHeight()
         let gender = Settings.getProfileGender()
         
-        nameLabel.text = name == "" ? "Toca aquí para poner tu nombre" : name
+        nameLabel.text = name == "" ? "Escribe aquí tu nombre" : name
         ageLabel.text = age == 0 ? "Edad: _______" : "Edad: \(String(age)) años"
         weightLabel.text = weight == 0 ? "Peso: _______" : "Peso: \(String(weight)) kg"
         heightLabel.text = height == 0 ? "Altura: _______" : "Altura: \(String(height)) cm"
@@ -78,6 +83,10 @@ class ProfileViewController: UIViewController {
     
     @objc private func onGenderImageClicked(sender: UITapGestureRecognizer) {
         changeGender()
+    }
+    
+    @objc private func onProfileImageClicked(sender: UITapGestureRecognizer) {
+        promptPhoto()
     }
     
     private func promptName() {
@@ -188,14 +197,52 @@ class ProfileViewController: UIViewController {
         refreshUi()
     }
     
-    /*
-     // MARK: - Navigation
+    private func promptPhoto() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+        if let action = self.action(for: .camera, title: "Cámara") {
+            alertController.addAction(action)
+        }
+        if let action = self.action(for: .savedPhotosAlbum, title: "Carrete") {
+            alertController.addAction(action)
+        }
+        if let action = self.action(for: .photoLibrary, title: "Fotos") {
+            alertController.addAction(action)
+        }
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            alertController.popoverPresentationController?.sourceView = profileImageView
+            alertController.popoverPresentationController?.sourceRect = profileImageView.bounds
+            alertController.popoverPresentationController?.permittedArrowDirections = [.down, .up]
+        }
+
+       present(alertController, animated: true)
+    }
+    
+    private func action(for type: UIImagePickerController.SourceType, title: String) -> UIAlertAction? {
+        guard UIImagePickerController.isSourceTypeAvailable(type) else {
+            return nil
+        }
+
+        return UIAlertAction(title: title, style: .default) { [unowned self] _ in
+            self.imagePicker.sourceType = type
+            self.present(self.imagePicker, animated: true)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            profileImageView.contentMode = .scaleAspectFill
+            profileImageView.image = pickedImage
+        }
      
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
