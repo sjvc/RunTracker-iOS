@@ -289,45 +289,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="FyO-wu-qB9">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="FyO-wu-qB9">
                                 <rect key="frame" x="40" y="32" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="dFs-yW-WRX"/>
                                     <constraint firstAttribute="height" constant="240" id="mTv-wM-ttx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sergio Viudes Carbonell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41r-6S-3YV">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sergio Viudes Carbonell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41r-6S-3YV">
                                 <rect key="frame" x="25" y="304" width="270" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea6-iG-o6l">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea6-iG-o6l">
                                 <rect key="frame" x="16" y="387" width="49" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6iN-8Q-CkX">
-                                <rect key="frame" x="73" y="383" width="32" height="32"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_male" translatesAutoresizingMaskIntoConstraints="NO" id="6iN-8Q-CkX">
+                                <rect key="frame" x="57" y="367" width="64" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="Woe-9T-SuA"/>
-                                    <constraint firstAttribute="height" constant="32" id="hym-W0-4eN"/>
+                                    <constraint firstAttribute="width" constant="64" id="Woe-9T-SuA"/>
+                                    <constraint firstAttribute="height" constant="64" id="hym-W0-4eN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso: 00 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDZ-68-WCV">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso: 00 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDZ-68-WCV">
                                 <rect key="frame" x="16" y="435" width="103" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edad: 00 años" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-LY-j4l">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edad: 00 años" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-LY-j4l">
                                 <rect key="frame" x="165" y="387" width="126" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura: 000 cm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSL-4c-oLq">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura: 000 cm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSL-4c-oLq">
                                 <rect key="frame" x="160.5" y="435" width="130.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -348,14 +348,20 @@
                             <constraint firstItem="FyO-wu-qB9" firstAttribute="top" secondItem="Fgo-s2-7Tt" secondAttribute="top" constant="32" id="egH-FC-crl"/>
                             <constraint firstItem="vSL-4c-oLq" firstAttribute="centerY" secondItem="dDZ-68-WCV" secondAttribute="centerY" id="fkK-ux-zBh"/>
                             <constraint firstItem="dDZ-68-WCV" firstAttribute="leading" secondItem="Fgo-s2-7Tt" secondAttribute="leading" constant="16" id="k4s-lN-cEd"/>
-                            <constraint firstItem="6iN-8Q-CkX" firstAttribute="leading" secondItem="Ea6-iG-o6l" secondAttribute="trailing" constant="8" id="n0w-UC-4nm"/>
+                            <constraint firstItem="6iN-8Q-CkX" firstAttribute="leading" secondItem="Ea6-iG-o6l" secondAttribute="trailing" constant="-8" id="n0w-UC-4nm"/>
                             <constraint firstItem="Fgo-s2-7Tt" firstAttribute="trailing" secondItem="vSL-4c-oLq" secondAttribute="trailing" constant="29" id="pZq-gW-kdP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fgo-s2-7Tt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" id="o99-1i-HRK"/>
                     <connections>
+                        <outlet property="ageLabel" destination="Z2A-LY-j4l" id="EQO-Ak-vqX"/>
+                        <outlet property="genderImageView" destination="6iN-8Q-CkX" id="gmx-XJ-Te2"/>
+                        <outlet property="genderLabel" destination="Ea6-iG-o6l" id="Kca-W1-sPu"/>
+                        <outlet property="heightLabel" destination="vSL-4c-oLq" id="6bZ-gN-k4B"/>
+                        <outlet property="nameLabel" destination="41r-6S-3YV" id="m5U-MR-ZXL"/>
                         <outlet property="profileImageView" destination="FyO-wu-qB9" id="Lce-S2-MP0"/>
+                        <outlet property="weightLabel" destination="dDZ-68-WCV" id="esT-SI-eWN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ete-SE-WcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -472,6 +478,7 @@
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="hare" catalog="system" width="64" height="46"/>
+        <image name="icon_male" width="64" height="64"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="profile" width="240" height="240"/>
     </resources>

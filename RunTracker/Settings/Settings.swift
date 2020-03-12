@@ -15,9 +15,15 @@ public enum GpsAccuracy : Int {
 }
 
 public enum IntervalType : Int {
-    case NONE = 0
+    case UNDEFINED = 0
     case TIME = 1
     case DISTANCE = 2
+}
+
+public enum Gender : Int {
+    case UNDEFINED = 0
+    case FEMALE = 1
+    case MALE = 2
 }
 
 public class Settings {
@@ -27,45 +33,92 @@ public class Settings {
     private static let KEY_INTERVAL_TYPE = "IntervalType"
     private static let KEY_AUTOPAUSE = "AutoPause"
     
+    private static let KEY_PROFILE_NAME = "Profile_Name"
+    private static let KEY_PROFILE_GENDER = "Profile_Gender"
+    private static let KEY_PROFILE_AGE = "Profile_Age"
+    private static let KEY_PROFILE_WEIGHT = "Profile_Weight"
+    private static let KEY_PROFILE_HEIGHT = "Profile_Height"
+    
     public static func getCadence() -> Int {
-        return UserDefaults.standard.integer(forKey: Settings.KEY_CADENCE)
+        return UserDefaults.standard.integer(forKey: KEY_CADENCE)
     }
     
     public static func getGpsAccuracty() -> GpsAccuracy {
-        let intValue = UserDefaults.standard.integer(forKey: Settings.KEY_GPS_ACCURACY)
+        let intValue = UserDefaults.standard.integer(forKey: KEY_GPS_ACCURACY)
         return GpsAccuracy(rawValue: intValue)!
     }
     
     public static func getIntervalValue() -> Int {
-        return UserDefaults.standard.integer(forKey: Settings.KEY_INTERVAL_VALUE)
+        return UserDefaults.standard.integer(forKey: KEY_INTERVAL_VALUE)
     }
     
     public static func getIntervalType() -> IntervalType {
-        let intValue = UserDefaults.standard.integer(forKey: Settings.KEY_INTERVAL_TYPE)
+        let intValue = UserDefaults.standard.integer(forKey: KEY_INTERVAL_TYPE)
         return IntervalType(rawValue: intValue)!
     }
     
     public static func getAutoPause() -> Bool {
-        return UserDefaults.standard.bool(forKey: Settings.KEY_AUTOPAUSE)
+        return UserDefaults.standard.bool(forKey: KEY_AUTOPAUSE)
     }
     
     public static func setCadence(value: Int) {
-        UserDefaults.standard.set(value, forKey: Settings.KEY_CADENCE)
+        UserDefaults.standard.set(value, forKey: KEY_CADENCE)
     }
     
     public static func setGpsAccuracy(value: GpsAccuracy) {
-        UserDefaults.standard.set(value.rawValue, forKey: Settings.KEY_GPS_ACCURACY)
+        UserDefaults.standard.set(value.rawValue, forKey: KEY_GPS_ACCURACY)
     }
     
     public static func setIntervalValue(value: Int) {
-        UserDefaults.standard.set(value, forKey: Settings.KEY_INTERVAL_VALUE)
+        UserDefaults.standard.set(value, forKey: KEY_INTERVAL_VALUE)
     }
     
     public static func setIntervalType(value: IntervalType) {
-        UserDefaults.standard.set(value.rawValue, forKey: Settings.KEY_INTERVAL_TYPE)
+        UserDefaults.standard.set(value.rawValue, forKey: KEY_INTERVAL_TYPE)
     }
     
     public static func setAutoPause(value: Bool) {
-        UserDefaults.standard.set(value, forKey: Settings.KEY_AUTOPAUSE)
+        UserDefaults.standard.set(value, forKey: KEY_AUTOPAUSE)
+    }
+    
+    public static func getProfileName() -> String {
+        return UserDefaults.standard.string(forKey: KEY_PROFILE_NAME) ?? ""
+    }
+    
+    public static func setProfileName(_ name: String) {
+        UserDefaults.standard.set(name, forKey: KEY_PROFILE_NAME)
+    }
+    
+    public static func getProfileGender() -> Gender {
+        let intValue = UserDefaults.standard.integer(forKey: KEY_PROFILE_GENDER)
+        return Gender(rawValue: intValue)!
+    }
+    
+    public static func setProfileGender(_ gender: Gender) {
+        UserDefaults.standard.set(gender.rawValue, forKey: KEY_PROFILE_GENDER)
+    }
+    
+    public static func getProfileAge() -> Int {
+        return UserDefaults.standard.integer(forKey: KEY_PROFILE_AGE)
+    }
+    
+    public static func setProfileAge(value: Int) {
+        UserDefaults.standard.set(value, forKey: KEY_PROFILE_AGE)
+    }
+    
+    public static func getProfileWeight() -> Int {
+        return UserDefaults.standard.integer(forKey: KEY_PROFILE_WEIGHT)
+    }
+    
+    public static func setProfileWeight(value: Int) {
+        UserDefaults.standard.set(value, forKey: KEY_PROFILE_WEIGHT)
+    }
+    
+    public static func getProfileHeight() -> Int {
+        return UserDefaults.standard.integer(forKey: KEY_PROFILE_HEIGHT)
+    }
+    
+    public static func setProfileHeight(value: Int) {
+        UserDefaults.standard.set(value, forKey: KEY_PROFILE_HEIGHT)
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,12 +22,13 @@
 		497E658723FAF23D00AA2E0E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658623FAF23D00AA2E0E /* LocationManager.swift */; };
 		49AB967C24194C1700770AB4 /* UILabel+html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB967B24194C1700770AB4 /* UILabel+html.swift */; };
 		49AB967E2419678B00770AB4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB967D2419678B00770AB4 /* ProfileViewController.swift */; };
+		49AB968024196B7C00770AB4 /* UIAlertController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB967F24196B7C00770AB4 /* UIAlertController+TextField.swift */; };
 		49B2E157240FFC590052F0F3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2E156240FFC590052F0F3 /* Settings.swift */; };
 		49B2E1592410113B0052F0F3 /* RunHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2E1582410113B0052F0F3 /* RunHistoryTableViewController.swift */; };
 		49B2E15B241018E10052F0F3 /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2E15A241018E10052F0F3 /* RunDetailsViewController.swift */; };
 		49B2E15F241026EB0052F0F3 /* MulticolorPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2E15E241026EB0052F0F3 /* MulticolorPolyline.swift */; };
 		49E41C58240691B1006F8465 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E41C57240691B1006F8465 /* FormatDisplay.swift */; };
-		A42D275943D089164409ED55 /* Pods_RunTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BFE478A3ADDFB97E83860D /* Pods_RunTracker.framework */; };
+		EFDB69F37CB1E72C7D70912E /* libPods-RunTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0272E2A87C633CE3B1C20BB /* libPods-RunTracker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,13 +50,14 @@
 		497E658623FAF23D00AA2E0E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		49AB967B24194C1700770AB4 /* UILabel+html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+html.swift"; sourceTree = "<group>"; };
 		49AB967D2419678B00770AB4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		49AB967F24196B7C00770AB4 /* UIAlertController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+TextField.swift"; sourceTree = "<group>"; };
 		49B2E156240FFC590052F0F3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		49B2E1582410113B0052F0F3 /* RunHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunHistoryTableViewController.swift; sourceTree = "<group>"; };
 		49B2E15A241018E10052F0F3 /* RunDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
 		49B2E15E241026EB0052F0F3 /* MulticolorPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticolorPolyline.swift; sourceTree = "<group>"; };
 		49E41C57240691B1006F8465 /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
 		80B42B209B264E85D7C9297F /* Pods-RunTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunTracker.debug.xcconfig"; path = "Target Support Files/Pods-RunTracker/Pods-RunTracker.debug.xcconfig"; sourceTree = "<group>"; };
-		E5BFE478A3ADDFB97E83860D /* Pods_RunTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0272E2A87C633CE3B1C20BB /* libPods-RunTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RunTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A42D275943D089164409ED55 /* Pods_RunTracker.framework in Frameworks */,
+				EFDB69F37CB1E72C7D70912E /* libPods-RunTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +75,7 @@
 		30534F912A47704F3D94A8AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E5BFE478A3ADDFB97E83860D /* Pods_RunTracker.framework */,
+				F0272E2A87C633CE3B1C20BB /* libPods-RunTracker.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,6 +130,7 @@
 				49B2E15E241026EB0052F0F3 /* MulticolorPolyline.swift */,
 				4933BF6D2406F6990018ABCA /* Settings */,
 				49AB967B24194C1700770AB4 /* UILabel+html.swift */,
+				49AB967F24196B7C00770AB4 /* UIAlertController+TextField.swift */,
 			);
 			path = RunTracker;
 			sourceTree = "<group>";
@@ -152,7 +155,6 @@
 				497E656223FA967F00AA2E0E /* Sources */,
 				497E656323FA967F00AA2E0E /* Frameworks */,
 				497E656423FA967F00AA2E0E /* Resources */,
-				885F7803E92073AE82727B59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,23 +234,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		885F7803E92073AE82727B59 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RunTracker/Pods-RunTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RunTracker/Pods-RunTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RunTracker/Pods-RunTracker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,6 +247,7 @@
 				49B2E15B241018E10052F0F3 /* RunDetailsViewController.swift in Sources */,
 				497E658523FAEE4600AA2E0E /* BlurLoader.swift in Sources */,
 				497E658723FAF23D00AA2E0E /* LocationManager.swift in Sources */,
+				49AB968024196B7C00770AB4 /* UIAlertController+TextField.swift in Sources */,
 				497E656A23FA967F00AA2E0E /* AppDelegate.swift in Sources */,
 				49AB967E2419678B00770AB4 /* ProfileViewController.swift in Sources */,
 				49B2E157240FFC590052F0F3 /* Settings.swift in Sources */,
@@ -418,7 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D3SG8PQCUP;
+				DEVELOPMENT_TEAM = QQ4TN73BMC;
 				INFOPLIST_FILE = RunTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,7 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D3SG8PQCUP;
+				DEVELOPMENT_TEAM = QQ4TN73BMC;
 				INFOPLIST_FILE = RunTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

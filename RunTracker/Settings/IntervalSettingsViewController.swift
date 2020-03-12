@@ -22,7 +22,7 @@ class IntervalSettingsViewController : QuickTableViewController {
         
         tableContents = [
             RadioSection(title: "Selecciona intervalo de notificación", options: [
-                OptionRow(text: "Ninguno", isSelected: type == IntervalType.NONE, action: didToggleSelection(IntervalType.NONE, 0)),
+                OptionRow(text: "Ninguno", isSelected: type == IntervalType.UNDEFINED, action: didToggleSelection(IntervalType.UNDEFINED, 0)),
                 OptionRow(text: "1 minuto", isSelected: type == IntervalType.TIME && value == 1, icon: .image(timeImage!), action: didToggleSelection(IntervalType.TIME, 1)),
                 OptionRow(text: "5 minutos", isSelected: type == IntervalType.TIME && value == 5, icon: .image(timeImage!), action: didToggleSelection(IntervalType.TIME, 5)),
                 OptionRow(text: "10 minutos", isSelected: type == IntervalType.TIME && value == 10, icon: .image(timeImage!), action: didToggleSelection(IntervalType.TIME, 10)),

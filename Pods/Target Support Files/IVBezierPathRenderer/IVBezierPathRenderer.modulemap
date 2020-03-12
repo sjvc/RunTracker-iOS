@@ -1,4 +1,4 @@
-framework module IVBezierPathRenderer {
+module IVBezierPathRenderer {
   umbrella header "IVBezierPathRenderer-umbrella.h"
 
   export *

@@ -3,469 +3,433 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0581FC5727F2B26F08EC275E63926FE3 /* JJActionItemTitlePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC8229646AA6D9F73829B2D63C63332 /* JJActionItemTitlePosition.swift */; };
-		07898C802008C513800D7160086D59AC /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D8DEDFE488FC475109D9626B2E1F3 /* Subtitle.swift */; };
-		105AB6387C76D40EB21ABF22657F19F0 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFACF595376744194297BF0F8F63DDF /* Deprecated.swift */; };
-		17A113BF15197305C270F59DB821EDB6 /* Pods-RunTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E279242069E7CA46DEBCCA50E9900812 /* Pods-RunTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18D09554320A4B2D136735131E630D40 /* JJFloatingActionButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070E31662516224A0DC69D0F44E933A /* JJFloatingActionButtonState.swift */; };
-		21C804201E28FF33C4E65A9F8B98E360 /* UIBezierPath+GuidedPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2EBFB04700E172537F80A832952BB5 /* UIBezierPath+GuidedPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23090B6E3B50A20A4CDA177F88306361 /* TapActionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089550420175071B17BE557E922752E /* TapActionRow.swift */; };
-		23C08E79767B3469BAFDC3A05EA7708E /* QuickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7AD9950EE388E67BE462F3D3D86B6 /* QuickTableViewController.swift */; };
-		2941D6FD25DF541311E4C15DE09FD098 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62C04B9471D148E11641100972A2E5 /* Styles.swift */; };
-		2A7668C904625BD7143905BCB94A95EF /* DetailText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B24B4E6F019B2AE69A03039207BA04 /* DetailText.swift */; };
-		2D03706889AA70EAA2054B4B9F71CEBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		2E6D23173201FD8696A04F11A012F541 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39A0E344C66DC5A62D73F47E0593BC /* Configurable.swift */; };
-		30D7F3BF1038D22E5B03E4EE7F3C2482 /* RadioSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71E6C5076858C93DF21FFC7425C7B8 /* RadioSection.swift */; };
-		319CDA9C78434FE53446B2E3D4472915 /* JJFloatingActionButton+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D319B6F733DD126C6CCCBA5C73602E93 /* JJFloatingActionButton+Animation.swift */; };
-		35DE44316F0EC442DACC6B0B894CBB78 /* JJFloatingActionButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BD9E5D98C271BC12B1B44532521A672 /* JJFloatingActionButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36C5B65CE92BD69F2A614B83F47A9065 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C35A36E9FCD1A69DEA85C206D15C96 /* Row.swift */; };
-		36C5D6BD146967C86B630B9169159FC3 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D04D1C9355F9CD6A0D8AAFCA8E84DF /* Icon.swift */; };
-		381CEF1FBD3A743539F3D7BE3C59E5A7 /* QuickTableViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D4C589AB2E9E7414F619A3124D9F091 /* QuickTableViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		392490EF77C9BACDCC5DB1C64E5EF862 /* JJFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB14BA8C39F9DFE48B8480C5EA03C31 /* JJFloatingActionButton.swift */; };
-		399BB8D333C09505FB799B06DF1B4C2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		43DE8A19AEEEBC8C373156E50CA96F8D /* IVBezierPathRenderer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99272A5941A19DC4202CAA6EB777F613 /* IVBezierPathRenderer-dummy.m */; };
-		5DC0E68954C8AE1378E91A9F8DEC1E8A /* OptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BDF62E14B91ABB72DCBF7F0F4DFCD /* OptionRow.swift */; };
-		6CEE1DA232D52B659F47A271E705CC70 /* AnimationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6568DFCC8441E2D4E450DFBE89CC1917 /* AnimationConfiguration.swift */; };
-		6D01609D8B2BEBDE3CA89D8858432C83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		6EED64A04F3FDADC69E76BF5D5028444 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		7A76FA7683A62BEFCF71CF4F89EE6C22 /* JJActionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1447667E20B1FC08935152B86DED7E6 /* JJActionItem.swift */; };
-		7CCE43A9C0B6AAB932CA7400616B867D /* CircleBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE8DE3A64BDAA01E6116D2C5C93AC0 /* CircleBar-dummy.m */; };
-		892C319F31B40B03FDFA001267545BE6 /* JJFloatingActionButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A417607597BFC2B2E0CC6298359512A7 /* JJFloatingActionButtonDelegate.swift */; };
-		8B2BEA447DFDDB19EAE6023D6D2DA49D /* UIBezierPath+GuidedPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CDE95C0B455477CF85B24C73DF04C7 /* UIBezierPath+GuidedPath.m */; };
-		95C4A11B7AEC0B03159506E2A4CFB81F /* IVBezierPathRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = DB466263B8E8FE13E31C7B718BD3AF26 /* IVBezierPathRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9817C03A7C30D2160B17482798330CE6 /* RowCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377B0071A30231ECC1BC75DB6A9A931 /* RowCompatible.swift */; };
-		9A3A8B8A211ED19AD3F55A826C5B689C /* UIColor+JJFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E98BA840EA125FB45194C7847731C9 /* UIColor+JJFloatingActionButton.swift */; };
-		9ABBD6C2B80EE3E3F39395F477BE919F /* JJCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52AA94E28D73F9965BEDF1287CF9749 /* JJCircleView.swift */; };
-		9B13BF9D901FC55A9D2D9362333F6DB7 /* RowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55053AC7374312E90474A231D4464DA8 /* RowStyle.swift */; };
-		B4644BF4F7D9500F21A9E59ED2507D8A /* IVBezierPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C283D55A0E698E80204F7E237E9DA72 /* IVBezierPathRenderer.m */; };
-		B7C974C99AFE6B8C24C413D9A2ADF0FF /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EABB711F5159CFDA473E18962707EB /* Reusable.swift */; };
-		BA8DA38FC765D94151DA6B59381E68E2 /* UIView+JJFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DC2D44D9105DA4C851C09065148F7 /* UIView+JJFloatingActionButton.swift */; };
-		BAB7A20973143C2159E0EA320BB360E2 /* JJFloatingActionButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 802A91A5D0DBD6E0EB2AB95CF31996AB /* JJFloatingActionButton-dummy.m */; };
-		C3D5809932973831E875B8DCFD5C3FC7 /* TapActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F955BF2370578BF351836C2045C1E3 /* TapActionCell.swift */; };
-		C3E4C8B0E9F54F0E9252D465962FBE7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		C8F5E9C6B499170CE116C3F3010DD611 /* NavigationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F760E2F3BBFC38EFCA69F69AA37983 /* NavigationRow.swift */; };
-		CDDEBF1A34C0589917D5DC8F5C7F3BC2 /* IVBezierPathRenderer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12DC9C642DAC53C53D1839A6ABF2FB92 /* IVBezierPathRenderer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0E46EE7A576EBFBB367F2D279DBE783 /* Pods-RunTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B731ACAF7D989DB185D9C25DD4FED63 /* Pods-RunTracker-dummy.m */; };
-		D2BE414742211AFA83FC9E43546147FB /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07674C7B6AC847E21C21F974891679 /* SwitchCell.swift */; };
-		D8DED3C84CDFAB1974C10527D3836C43 /* JJFloatingActionButton+Placement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083ECE6F3FD1C7ECED60EBC158B8C80 /* JJFloatingActionButton+Placement.swift */; };
-		DF378D1ABACF355BD352F447B3BB210D /* CircleBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 003BE3194A2870FEC45696A2E9806802 /* CircleBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2EDB7A3C5B1EE901D282005DDA2BC51 /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E94A34FFEEFDE34A2E5C8AA7416461 /* SwitchRow.swift */; };
-		E3266C1899A6363E8D72293C59E643B5 /* QuickTableViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D6A165D247268E9C2FE5EEDA49059 /* QuickTableViewController-dummy.m */; };
-		EB5A46A55511253DC3185BB44A375FEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		F3754258FE6F52FF2DA0DD5899A16242 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D75512BCC879D9E00889BE7B26E116 /* Section.swift */; };
-		F7399F863C0A79AA2C0B2EC9FC061990 /* LayerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF31FDEB15326736D14B641B30EC3D0 /* LayerProperties.swift */; };
-		F7AE75D23C11A1220C5A7AEB70B06B0C /* SHCircleBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED8129B131DB20EB9BB3A152BAF588 /* SHCircleBarController.swift */; };
-		FF7F5D61C7E342DB4EEA1FC67B7F96A4 /* SHCircleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA77CEC9FBFE4A95230A33C0052E65 /* SHCircleBar.swift */; };
+		01949B880D210EF96FCE574B6364D123 /* UIBezierPath+GuidedPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 883B7400F530F77F2B0CFC86F81C1885 /* UIBezierPath+GuidedPath.m */; };
+		06A2E0C01EC9316E5C17A8AEE199B582 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D117D58A9765889D20C50A5703F69E83 /* Subtitle.swift */; };
+		08B7B3D09647F32D98F409293C29FD86 /* DetailText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3DE021F92849D84375F0FE29506F59 /* DetailText.swift */; };
+		094523C685AA315745EB03E0AE7A66DC /* JJFloatingActionButton+Placement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE335110D31D840D9076BFCC0FC9A27C /* JJFloatingActionButton+Placement.swift */; };
+		0A31B59642B3F5A563A47E327035010B /* QuickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671D1CDD77890FBCA0BB91929D254A3 /* QuickTableViewController.swift */; };
+		0E24E1BFA630E94D44666EEB9E4997C2 /* JJActionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14F69DC0CA2410AA59AC6C7BA9E068E /* JJActionItem.swift */; };
+		0FF923A71A50D41C6C9DC31F3ACA2398 /* RowCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D234B8D135C6107FBDED99064E60577 /* RowCompatible.swift */; };
+		104ADEE5F9B33ADFAC00618D98B8FCCB /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F024710AA83324338535902F6E01E85 /* Deprecated.swift */; };
+		17B7D4523A4E66C57075A132893A0FFF /* UIView+JJFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0A41D54E9540DC506D94C20F401250 /* UIView+JJFloatingActionButton.swift */; };
+		1F8BA966885763FD4F895F5B19BFE696 /* QuickTableViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16F7E7CAED2F4C2AA3AF365FE2AB50BF /* QuickTableViewController-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		221F69F371CB5B4B6932F3C03C3336E7 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ED3C777EE65B70AE8C964A82C9164B /* Section.swift */; };
+		24828E0EDBF62182DDE759B9FB5A9B36 /* UIColor+JJFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C94D292707F3E3F9E65F49F401477 /* UIColor+JJFloatingActionButton.swift */; };
+		2A56EEFA9CD9355122779AF2290075A9 /* SHCircleBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DB65679240159F56C02D6E7DFD491 /* SHCircleBarController.swift */; };
+		2E8793444C6CD4DCA8E38FE1B22A4D9F /* JJActionItemTitlePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F7490592A2AA72AA2A35C9EE4C84B2 /* JJActionItemTitlePosition.swift */; };
+		34CE4EC5649D490952C6785C08E0583E /* CircleBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2A896DAE6679D723B1E7DE1BA9AA32 /* CircleBar-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4AC9574EFE74B2516E5C6728F1243CDB /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F5A48091CF715C75124569664B3C8D /* Styles.swift */; };
+		4CDA19897BE4A6FFFEE24AF0FFF1B2D2 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = D513BD6BA0BE23668B4C4F04CBE7C52F /* Row.swift */; };
+		514EE9B491F8B7A2374C40B70D18BA39 /* RadioSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC866BD1FBD4A6368AB9359EF5717BA /* RadioSection.swift */; };
+		5FACCE2F95F0EBB6A243363ECBADBA45 /* IVBezierPathRenderer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3510AFB08AAC6AA4B2CD1E9F451E217 /* IVBezierPathRenderer-dummy.m */; };
+		6CE7FA2B2857F7582254AEF029DF50B5 /* IVBezierPathRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF87A4B7C56616100072B8D3B2BEDF2 /* IVBezierPathRenderer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		719837FF65B9272879D04795D6DF8EA9 /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39338BFF78D8C10C5A744585D79C1B0 /* SwitchRow.swift */; };
+		724E55DF39290E49D9DFC3EA968CDEB4 /* JJFloatingActionButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF54072D46F61026ADD51B2CDBCDCB7 /* JJFloatingActionButton-dummy.m */; };
+		783B4BFBC5766F01E694FE3F4FB686D4 /* RowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2FA86C0A1EF6D75E081A4B9006292 /* RowStyle.swift */; };
+		78F379279B6E77B6E75493EEE8E97E60 /* JJCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0B4EADEF7791C83B2FD8D056FEE5F /* JJCircleView.swift */; };
+		7935986CAD12EB623251E6B4A88BAF36 /* QuickTableViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F18192FBCB76E379647B1E183AA4EB /* QuickTableViewController-dummy.m */; };
+		7D374D1CF7F16F296908A974B9432B60 /* IVBezierPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F934849B3FA21A3E345CFD5FA6229F /* IVBezierPathRenderer.m */; };
+		7F4C9B1D6C424635423FCECFCFAD2BF6 /* TapActionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F92FFC4C3E4F5EF1E7E5B2831E891 /* TapActionRow.swift */; };
+		80FF71733E053EF4D07B2F30A6485F94 /* UIBezierPath+GuidedPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 5972096DCCE545A81FC98E1B56730A17 /* UIBezierPath+GuidedPath.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8E3FB4CA2B5438A14AE5D7401D1D584C /* Pods-RunTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9B7967631702E1118A80CC325570A7 /* Pods-RunTracker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		92900465FFABC38CCF91051C70E4529C /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F53FDB667717A0606A32A5133075208 /* SwitchCell.swift */; };
+		95D78BA6BD48F793C0BC01838A46BBB0 /* TapActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089E68BF3659D0E54FFBA7691281FCBA /* TapActionCell.swift */; };
+		9E4ED0568CDD0FC01952E3275FED7546 /* LayerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F77F0B87D696BB220B89A100DE432 /* LayerProperties.swift */; };
+		9F4D5794545089AB343160BE3ECD5F35 /* IVBezierPathRenderer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8EE2F55BF6325BD56B68C37E2DFCC53 /* IVBezierPathRenderer-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A7A8C28E9DBC60F3BB24EF6E2C489101 /* SHCircleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EABA62BA21D2F0F71E104462EF182 /* SHCircleBar.swift */; };
+		ABB3EDDE974AE85764766D86BB28C099 /* JJFloatingActionButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14D39E365E7EE2F37A66FAF1B691DBC /* JJFloatingActionButtonDelegate.swift */; };
+		B519640628BB048656DBBB734A8A094F /* CircleBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1BD55B54ADD40828917A493F8C42FF /* CircleBar-dummy.m */; };
+		B9BB1A4095662D7D818C8DB81E173253 /* JJFloatingActionButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD787D6485FC1CCE3635D4178AC3DBF4 /* JJFloatingActionButton-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C34792C0A02C608104936F6189FA5D7F /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D132D3BA465806C20A6BA6E1FF4AA7 /* Icon.swift */; };
+		C666ED65CE0D813AA29EB11A45294515 /* Pods-RunTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B81C9F29F309275641879E07026595 /* Pods-RunTracker-dummy.m */; };
+		CC0ADA7EB902340A9A0260E445690D5C /* NavigationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0270038F8A33FBD30EB29538C04105 /* NavigationRow.swift */; };
+		CF4BAB094362CAD409198FD374276C6E /* JJFloatingActionButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFD5A4A0E67F915E838BFBCEFE56D6F /* JJFloatingActionButtonState.swift */; };
+		DB7597745762C517FFA5E349F634EF04 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9845472964972E3C7185F1E99A4E22 /* Reusable.swift */; };
+		E0EB99757F4ED3CFB1167BDF709BF4C3 /* OptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36DF422D6109F4CD8B5FE308ED3AEF /* OptionRow.swift */; };
+		E8A2D75FFB079D55A1161C344CA2CE71 /* JJFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EA82E7908AB79270EF20700A5A2F4D /* JJFloatingActionButton.swift */; };
+		EB991ED27584BFF526463EEC448003AF /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8263301FBDE9D793C92044090195737 /* Configurable.swift */; };
+		F21CA13F824959FF7E40C9F5295FE1D8 /* JJFloatingActionButton+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581005824D3150EF44BDB6AFA2DEEB5 /* JJFloatingActionButton+Animation.swift */; };
+		FCED18ABC548CA831CF7BEBD17D770C9 /* AnimationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B04F394EE229706E77C3E830940CC /* AnimationConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1FF29402C1FCAA8C4CCD3ECA5959EFE5 /* PBXContainerItemProxy */ = {
+		4569828D45A804BFC98C088B8987E578 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7DFB55D104197FC817D4F341CF2B2C44;
 			remoteInfo = IVBezierPathRenderer;
 		};
-		244AF0801E496730B61C011DE738CA62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B7378E43393E401083784252E88810C0;
-			remoteInfo = CircleBar;
-		};
-		373D5CBDC87B7C932BB505FE676A9795 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E7D16F6260A6FAB7F88EB5ACC56D911D;
-			remoteInfo = QuickTableViewController;
-		};
-		4EAB565BFA80895E785DAA8FDBEAB9DF /* PBXContainerItemProxy */ = {
+		550B7FE82FF4C3A4115CCA3E8A359C1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E109C6B6B466F202BA0B94E76B45D72B;
 			remoteInfo = JJFloatingActionButton;
 		};
+		767F1961E7253B30797BBC82C423D36B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7D16F6260A6FAB7F88EB5ACC56D911D;
+			remoteInfo = QuickTableViewController;
+		};
+		EF0E0678E8DB54B2062ADD7FCDBA0441 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7378E43393E401083784252E88810C0;
+			remoteInfo = CircleBar;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		003BE3194A2870FEC45696A2E9806802 /* CircleBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleBar-umbrella.h"; sourceTree = "<group>"; };
-		0083ECE6F3FD1C7ECED60EBC158B8C80 /* JJFloatingActionButton+Placement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JJFloatingActionButton+Placement.swift"; path = "Sources/JJFloatingActionButton+Placement.swift"; sourceTree = "<group>"; };
-		0089550420175071B17BE557E922752E /* TapActionRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapActionRow.swift; path = Source/Rows/TapActionRow.swift; sourceTree = "<group>"; };
-		02806F33E13CA423040315664ED960C2 /* Pods_RunTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RunTracker.framework; path = "Pods-RunTracker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		02CDE95C0B455477CF85B24C73DF04C7 /* UIBezierPath+GuidedPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBezierPath+GuidedPath.m"; path = "IVBezierPathRenderer/Classes/UIBezierPath+GuidedPath.m"; sourceTree = "<group>"; };
-		05EE8DE3A64BDAA01E6116D2C5C93AC0 /* CircleBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircleBar-dummy.m"; sourceTree = "<group>"; };
-		08C7AD9950EE388E67BE462F3D3D86B6 /* QuickTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTableViewController.swift; path = Source/QuickTableViewController.swift; sourceTree = "<group>"; };
-		0AB14BA8C39F9DFE48B8480C5EA03C31 /* JJFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJFloatingActionButton.swift; path = Sources/JJFloatingActionButton.swift; sourceTree = "<group>"; };
-		0BC8229646AA6D9F73829B2D63C63332 /* JJActionItemTitlePosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJActionItemTitlePosition.swift; path = Sources/JJActionItemTitlePosition.swift; sourceTree = "<group>"; };
-		0D62C04B9471D148E11641100972A2E5 /* Styles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Styles.swift; path = Sources/Styles.swift; sourceTree = "<group>"; };
-		12DC9C642DAC53C53D1839A6ABF2FB92 /* IVBezierPathRenderer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IVBezierPathRenderer-umbrella.h"; sourceTree = "<group>"; };
-		13A75867D8F0C884F70E577E8C18BDBD /* IVBezierPathRenderer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IVBezierPathRenderer-prefix.pch"; sourceTree = "<group>"; };
-		145FD806E2C191FFFF424C900FF15AFF /* QuickTableViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QuickTableViewController-prefix.pch"; sourceTree = "<group>"; };
-		1B731ACAF7D989DB185D9C25DD4FED63 /* Pods-RunTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RunTracker-dummy.m"; sourceTree = "<group>"; };
-		1FA89163971C9751850A2C3EFD313884 /* QuickTableViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QuickTableViewController.framework; path = QuickTableViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24071A007C8C71DE789E31E8333A79D1 /* QuickTableViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QuickTableViewController-Info.plist"; sourceTree = "<group>"; };
-		2521BD2D7ED10B817CAFCF679447232A /* IVBezierPathRenderer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IVBezierPathRenderer.modulemap; sourceTree = "<group>"; };
-		266EAE5CED0E4EF42CD00FB514F261C7 /* Pods-RunTracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RunTracker-frameworks.sh"; sourceTree = "<group>"; };
-		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		3C39A0E344C66DC5A62D73F47E0593BC /* Configurable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configurable.swift; path = Source/Protocol/Configurable.swift; sourceTree = "<group>"; };
-		3CECD9155739C321901796D48DDA26DC /* Pods-RunTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RunTracker.modulemap"; sourceTree = "<group>"; };
-		43697E92E1EF903807158F32D260C4DC /* CircleBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CircleBar.framework; path = CircleBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		47937733D3D934D73274C310DA1404BF /* IVBezierPathRenderer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IVBezierPathRenderer-Info.plist"; sourceTree = "<group>"; };
-		4A2EBFB04700E172537F80A832952BB5 /* UIBezierPath+GuidedPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBezierPath+GuidedPath.h"; path = "IVBezierPathRenderer/Classes/UIBezierPath+GuidedPath.h"; sourceTree = "<group>"; };
-		5070E31662516224A0DC69D0F44E933A /* JJFloatingActionButtonState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJFloatingActionButtonState.swift; path = Sources/JJFloatingActionButtonState.swift; sourceTree = "<group>"; };
-		55053AC7374312E90474A231D4464DA8 /* RowStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowStyle.swift; path = Source/Protocol/RowStyle.swift; sourceTree = "<group>"; };
-		5B89FE15E17BDD60DF7EE8D15300CD61 /* Pods-RunTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunTracker-acknowledgements.plist"; sourceTree = "<group>"; };
-		61562409B1F6804F2B65FBC1D1DACE92 /* Pods-RunTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunTracker.debug.xcconfig"; sourceTree = "<group>"; };
-		6568DFCC8441E2D4E450DFBE89CC1917 /* AnimationConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationConfiguration.swift; path = Sources/AnimationConfiguration.swift; sourceTree = "<group>"; };
-		6D4C589AB2E9E7414F619A3124D9F091 /* QuickTableViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QuickTableViewController-umbrella.h"; sourceTree = "<group>"; };
-		6E281A1A467CE14ED5B68F56C80D7549 /* Pods-RunTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunTracker-Info.plist"; sourceTree = "<group>"; };
-		6FF101141632A39134B4563B6322F8EB /* IVBezierPathRenderer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IVBezierPathRenderer.framework; path = IVBezierPathRenderer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		70B24B4E6F019B2AE69A03039207BA04 /* DetailText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DetailText.swift; path = Source/Model/DetailText.swift; sourceTree = "<group>"; };
-		712EC9563BB17E30F17DF99745E811EA /* QuickTableViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QuickTableViewController.xcconfig; sourceTree = "<group>"; };
-		777682ED71ECA23FEBC6E3136E097B0A /* Pods-RunTracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RunTracker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		802A91A5D0DBD6E0EB2AB95CF31996AB /* JJFloatingActionButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JJFloatingActionButton-dummy.m"; sourceTree = "<group>"; };
-		8041F4B0D58B00089AA35A85E57B9212 /* JJFloatingActionButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JJFloatingActionButton-prefix.pch"; sourceTree = "<group>"; };
-		80828051BD07D05E3A6409A461B2BF16 /* CircleBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CircleBar.modulemap; sourceTree = "<group>"; };
-		80D04D1C9355F9CD6A0D8AAFCA8E84DF /* Icon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Icon.swift; path = Source/Model/Icon.swift; sourceTree = "<group>"; };
-		82459659489F79610955E3FC63CE72C6 /* IVBezierPathRenderer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IVBezierPathRenderer.xcconfig; sourceTree = "<group>"; };
-		8447AA1FB316B69E0B64BF18A4338184 /* JJFloatingActionButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JJFloatingActionButton.xcconfig; sourceTree = "<group>"; };
-		89DA77CEC9FBFE4A95230A33C0052E65 /* SHCircleBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHCircleBar.swift; path = CircleBar/Classes/SHCircleBar.swift; sourceTree = "<group>"; };
-		920BDF62E14B91ABB72DCBF7F0F4DFCD /* OptionRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionRow.swift; path = Source/Rows/OptionRow.swift; sourceTree = "<group>"; };
-		925D6A165D247268E9C2FE5EEDA49059 /* QuickTableViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QuickTableViewController-dummy.m"; sourceTree = "<group>"; };
-		94EABB711F5159CFDA473E18962707EB /* Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Source/Protocol/Reusable.swift; sourceTree = "<group>"; };
-		99272A5941A19DC4202CAA6EB777F613 /* IVBezierPathRenderer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IVBezierPathRenderer-dummy.m"; sourceTree = "<group>"; };
-		9BD9E5D98C271BC12B1B44532521A672 /* JJFloatingActionButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JJFloatingActionButton-umbrella.h"; sourceTree = "<group>"; };
-		9BF31FDEB15326736D14B641B30EC3D0 /* LayerProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerProperties.swift; path = Sources/LayerProperties.swift; sourceTree = "<group>"; };
-		9C283D55A0E698E80204F7E237E9DA72 /* IVBezierPathRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IVBezierPathRenderer.m; path = IVBezierPathRenderer/Classes/IVBezierPathRenderer.m; sourceTree = "<group>"; };
+		02806F33E13CA423040315664ED960C2 /* libPods-RunTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RunTracker.a"; path = "libPods-RunTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02DFC1FCE218407FDBF17B923EC855FE /* Pods-RunTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		059483D8A9F0DC9F5BCEBD271A90A41B /* Pods-RunTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RunTracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		05F18192FBCB76E379647B1E183AA4EB /* QuickTableViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QuickTableViewController-dummy.m"; sourceTree = "<group>"; };
+		089E68BF3659D0E54FFBA7691281FCBA /* TapActionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapActionCell.swift; path = Source/Views/TapActionCell.swift; sourceTree = "<group>"; };
+		0E48F3DF59CC4E01FB60AFA10913C1FA /* JJFloatingActionButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JJFloatingActionButton.modulemap; sourceTree = "<group>"; };
+		0F2A896DAE6679D723B1E7DE1BA9AA32 /* CircleBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleBar-umbrella.h"; sourceTree = "<group>"; };
+		16F7E7CAED2F4C2AA3AF365FE2AB50BF /* QuickTableViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QuickTableViewController-umbrella.h"; sourceTree = "<group>"; };
+		1D234B8D135C6107FBDED99064E60577 /* RowCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowCompatible.swift; path = Source/Protocol/RowCompatible.swift; sourceTree = "<group>"; };
+		1FA89163971C9751850A2C3EFD313884 /* libQuickTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libQuickTableViewController.a; path = libQuickTableViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		226A45A4EE41FB0BFF009C5DC114EF9E /* QuickTableViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QuickTableViewController-prefix.pch"; sourceTree = "<group>"; };
+		2D0270038F8A33FBD30EB29538C04105 /* NavigationRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationRow.swift; path = Source/Rows/NavigationRow.swift; sourceTree = "<group>"; };
+		2F36DF422D6109F4CD8B5FE308ED3AEF /* OptionRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionRow.swift; path = Source/Rows/OptionRow.swift; sourceTree = "<group>"; };
+		32304368E83D950DB290F91D810232C8 /* JJFloatingActionButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JJFloatingActionButton-prefix.pch"; sourceTree = "<group>"; };
+		353E67DE0F22E1F987E1DEAB8D0EA81C /* IVBezierPathRenderer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IVBezierPathRenderer.modulemap; sourceTree = "<group>"; };
+		38F0B4EADEF7791C83B2FD8D056FEE5F /* JJCircleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJCircleView.swift; path = Sources/JJCircleView.swift; sourceTree = "<group>"; };
+		39F934849B3FA21A3E345CFD5FA6229F /* IVBezierPathRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IVBezierPathRenderer.m; path = IVBezierPathRenderer/Classes/IVBezierPathRenderer.m; sourceTree = "<group>"; };
+		43697E92E1EF903807158F32D260C4DC /* libCircleBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCircleBar.a; path = libCircleBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F024710AA83324338535902F6E01E85 /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Source/Model/Deprecated.swift; sourceTree = "<group>"; };
+		58F7490592A2AA72AA2A35C9EE4C84B2 /* JJActionItemTitlePosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJActionItemTitlePosition.swift; path = Sources/JJActionItemTitlePosition.swift; sourceTree = "<group>"; };
+		5972096DCCE545A81FC98E1B56730A17 /* UIBezierPath+GuidedPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBezierPath+GuidedPath.h"; path = "IVBezierPathRenderer/Classes/UIBezierPath+GuidedPath.h"; sourceTree = "<group>"; };
+		67ED3C777EE65B70AE8C964A82C9164B /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Source/Model/Section.swift; sourceTree = "<group>"; };
+		68D456CC37D47ADE13F538E2D5D3457A /* Pods-RunTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunTracker.release.xcconfig"; sourceTree = "<group>"; };
+		6BF87A4B7C56616100072B8D3B2BEDF2 /* IVBezierPathRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IVBezierPathRenderer.h; path = IVBezierPathRenderer/Classes/IVBezierPathRenderer.h; sourceTree = "<group>"; };
+		6FF101141632A39134B4563B6322F8EB /* libIVBezierPathRenderer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libIVBezierPathRenderer.a; path = libIVBezierPathRenderer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1F92FFC4C3E4F5EF1E7E5B2831E891 /* TapActionRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapActionRow.swift; path = Source/Rows/TapActionRow.swift; sourceTree = "<group>"; };
+		7A8C9423C243F1410C16EE7362ED7746 /* Pods-RunTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RunTracker.modulemap"; sourceTree = "<group>"; };
+		7B9B7967631702E1118A80CC325570A7 /* Pods-RunTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RunTracker-umbrella.h"; sourceTree = "<group>"; };
+		7F53FDB667717A0606A32A5133075208 /* SwitchCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCell.swift; path = Source/Views/SwitchCell.swift; sourceTree = "<group>"; };
+		883B7400F530F77F2B0CFC86F81C1885 /* UIBezierPath+GuidedPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBezierPath+GuidedPath.m"; path = "IVBezierPathRenderer/Classes/UIBezierPath+GuidedPath.m"; sourceTree = "<group>"; };
+		8BC866BD1FBD4A6368AB9359EF5717BA /* RadioSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioSection.swift; path = Source/Model/RadioSection.swift; sourceTree = "<group>"; };
+		8C2C94D292707F3E3F9E65F49F401477 /* UIColor+JJFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+JJFloatingActionButton.swift"; path = "Sources/UIColor+JJFloatingActionButton.swift"; sourceTree = "<group>"; };
+		8CF54072D46F61026ADD51B2CDBCDCB7 /* JJFloatingActionButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JJFloatingActionButton-dummy.m"; sourceTree = "<group>"; };
+		8D46C3F8F948FF46A85AD9EFDFF744B2 /* IVBezierPathRenderer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IVBezierPathRenderer-prefix.pch"; sourceTree = "<group>"; };
+		93634DB56955E88E97FE2642641B33D6 /* QuickTableViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QuickTableViewController.xcconfig; sourceTree = "<group>"; };
+		95F5A48091CF715C75124569664B3C8D /* Styles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Styles.swift; path = Sources/Styles.swift; sourceTree = "<group>"; };
+		987AC4CB0CCC6C9859B9B55D618FD1E2 /* IVBezierPathRenderer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IVBezierPathRenderer.xcconfig; sourceTree = "<group>"; };
+		9A6EABA62BA21D2F0F71E104462EF182 /* SHCircleBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHCircleBar.swift; path = CircleBar/Classes/SHCircleBar.swift; sourceTree = "<group>"; };
+		9A8B200268C5C3C554371A514DF621D2 /* Pods-RunTracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RunTracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9CFD5A4A0E67F915E838BFBCEFE56D6F /* JJFloatingActionButtonState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJFloatingActionButtonState.swift; path = Sources/JJFloatingActionButtonState.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A21D8DEDFE488FC475109D9626B2E1F3 /* Subtitle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtitle.swift; path = Source/Model/Subtitle.swift; sourceTree = "<group>"; };
-		A417607597BFC2B2E0CC6298359512A7 /* JJFloatingActionButtonDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJFloatingActionButtonDelegate.swift; path = Sources/JJFloatingActionButtonDelegate.swift; sourceTree = "<group>"; };
-		AEC3FA0F7653E9338FE49C64976E1D39 /* QuickTableViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QuickTableViewController.modulemap; sourceTree = "<group>"; };
-		B0C35A36E9FCD1A69DEA85C206D15C96 /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = Source/Protocol/Row.swift; sourceTree = "<group>"; };
-		B16F0ECC8ACCFC40560AE853009106D9 /* JJFloatingActionButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JJFloatingActionButton.modulemap; sourceTree = "<group>"; };
-		B2E98BA840EA125FB45194C7847731C9 /* UIColor+JJFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+JJFloatingActionButton.swift"; path = "Sources/UIColor+JJFloatingActionButton.swift"; sourceTree = "<group>"; };
-		B39ECB203814E0B477049873DBEA123C /* JJFloatingActionButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JJFloatingActionButton.framework; path = JJFloatingActionButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC71E6C5076858C93DF21FFC7425C7B8 /* RadioSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioSection.swift; path = Source/Model/RadioSection.swift; sourceTree = "<group>"; };
-		C2E94A34FFEEFDE34A2E5C8AA7416461 /* SwitchRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchRow.swift; path = Source/Rows/SwitchRow.swift; sourceTree = "<group>"; };
-		CD07674C7B6AC847E21C21F974891679 /* SwitchCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCell.swift; path = Source/Views/SwitchCell.swift; sourceTree = "<group>"; };
-		D319B6F733DD126C6CCCBA5C73602E93 /* JJFloatingActionButton+Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JJFloatingActionButton+Animation.swift"; path = "Sources/JJFloatingActionButton+Animation.swift"; sourceTree = "<group>"; };
-		D4F760E2F3BBFC38EFCA69F69AA37983 /* NavigationRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationRow.swift; path = Source/Rows/NavigationRow.swift; sourceTree = "<group>"; };
-		D518A77BAFB8C11DDFE0E5411B4DC02F /* Pods-RunTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RunTracker.release.xcconfig"; sourceTree = "<group>"; };
-		DAFACF595376744194297BF0F8F63DDF /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Source/Model/Deprecated.swift; sourceTree = "<group>"; };
-		DB466263B8E8FE13E31C7B718BD3AF26 /* IVBezierPathRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IVBezierPathRenderer.h; path = IVBezierPathRenderer/Classes/IVBezierPathRenderer.h; sourceTree = "<group>"; };
-		DC5DAA41140549B414A1C5B43200590A /* CircleBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircleBar.xcconfig; sourceTree = "<group>"; };
-		E1447667E20B1FC08935152B86DED7E6 /* JJActionItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJActionItem.swift; path = Sources/JJActionItem.swift; sourceTree = "<group>"; };
-		E1C3B4AF973C0EA2B2356A3128B8EEAF /* CircleBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleBar-prefix.pch"; sourceTree = "<group>"; };
-		E279242069E7CA46DEBCCA50E9900812 /* Pods-RunTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RunTracker-umbrella.h"; sourceTree = "<group>"; };
-		EBED8129B131DB20EB9BB3A152BAF588 /* SHCircleBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHCircleBarController.swift; path = CircleBar/Classes/SHCircleBarController.swift; sourceTree = "<group>"; };
-		EE7DC2D44D9105DA4C851C09065148F7 /* UIView+JJFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JJFloatingActionButton.swift"; path = "Sources/UIView+JJFloatingActionButton.swift"; sourceTree = "<group>"; };
-		EEB6DB6444850FFA4E1673D4A46301C5 /* JJFloatingActionButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JJFloatingActionButton-Info.plist"; sourceTree = "<group>"; };
-		F0F955BF2370578BF351836C2045C1E3 /* TapActionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapActionCell.swift; path = Source/Views/TapActionCell.swift; sourceTree = "<group>"; };
-		F377B0071A30231ECC1BC75DB6A9A931 /* RowCompatible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowCompatible.swift; path = Source/Protocol/RowCompatible.swift; sourceTree = "<group>"; };
-		F3D75512BCC879D9E00889BE7B26E116 /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Source/Model/Section.swift; sourceTree = "<group>"; };
-		F52AA94E28D73F9965BEDF1287CF9749 /* JJCircleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJCircleView.swift; path = Sources/JJCircleView.swift; sourceTree = "<group>"; };
-		F60321B7CA10E751A58201B33057C063 /* CircleBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CircleBar-Info.plist"; sourceTree = "<group>"; };
+		A9D132D3BA465806C20A6BA6E1FF4AA7 /* Icon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Icon.swift; path = Source/Model/Icon.swift; sourceTree = "<group>"; };
+		AA6B04F394EE229706E77C3E830940CC /* AnimationConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationConfiguration.swift; path = Sources/AnimationConfiguration.swift; sourceTree = "<group>"; };
+		AC1BD55B54ADD40828917A493F8C42FF /* CircleBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircleBar-dummy.m"; sourceTree = "<group>"; };
+		B39ECB203814E0B477049873DBEA123C /* libJJFloatingActionButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJJFloatingActionButton.a; path = libJJFloatingActionButton.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B581005824D3150EF44BDB6AFA2DEEB5 /* JJFloatingActionButton+Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JJFloatingActionButton+Animation.swift"; path = "Sources/JJFloatingActionButton+Animation.swift"; sourceTree = "<group>"; };
+		B671D1CDD77890FBCA0BB91929D254A3 /* QuickTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTableViewController.swift; path = Source/QuickTableViewController.swift; sourceTree = "<group>"; };
+		B88A9D6DF865D5A7B1BDCF68B5E0EC21 /* CircleBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleBar-prefix.pch"; sourceTree = "<group>"; };
+		BBF2FA86C0A1EF6D75E081A4B9006292 /* RowStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowStyle.swift; path = Source/Protocol/RowStyle.swift; sourceTree = "<group>"; };
+		BE335110D31D840D9076BFCC0FC9A27C /* JJFloatingActionButton+Placement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JJFloatingActionButton+Placement.swift"; path = "Sources/JJFloatingActionButton+Placement.swift"; sourceTree = "<group>"; };
+		C14D39E365E7EE2F37A66FAF1B691DBC /* JJFloatingActionButtonDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJFloatingActionButtonDelegate.swift; path = Sources/JJFloatingActionButtonDelegate.swift; sourceTree = "<group>"; };
+		C3510AFB08AAC6AA4B2CD1E9F451E217 /* IVBezierPathRenderer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IVBezierPathRenderer-dummy.m"; sourceTree = "<group>"; };
+		C4EA82E7908AB79270EF20700A5A2F4D /* JJFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJFloatingActionButton.swift; path = Sources/JJFloatingActionButton.swift; sourceTree = "<group>"; };
+		C62286A1B6E4BE7C9195EAC0B9C575A9 /* JJFloatingActionButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JJFloatingActionButton.xcconfig; sourceTree = "<group>"; };
+		C68E8894026FA87FD528BE7A67B33F11 /* CircleBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CircleBar.modulemap; sourceTree = "<group>"; };
+		D117D58A9765889D20C50A5703F69E83 /* Subtitle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtitle.swift; path = Source/Model/Subtitle.swift; sourceTree = "<group>"; };
+		D513BD6BA0BE23668B4C4F04CBE7C52F /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = Source/Protocol/Row.swift; sourceTree = "<group>"; };
+		D76C6B5CA62B3B18B418EA04584BBDC1 /* CircleBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircleBar.xcconfig; sourceTree = "<group>"; };
+		DF0295A1219D50DFD6FFAEDCCB0284C2 /* QuickTableViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QuickTableViewController.modulemap; sourceTree = "<group>"; };
+		E39338BFF78D8C10C5A744585D79C1B0 /* SwitchRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchRow.swift; path = Source/Rows/SwitchRow.swift; sourceTree = "<group>"; };
+		E58DB65679240159F56C02D6E7DFD491 /* SHCircleBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHCircleBarController.swift; path = CircleBar/Classes/SHCircleBarController.swift; sourceTree = "<group>"; };
+		E7B81C9F29F309275641879E07026595 /* Pods-RunTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RunTracker-dummy.m"; sourceTree = "<group>"; };
+		E8EE2F55BF6325BD56B68C37E2DFCC53 /* IVBezierPathRenderer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IVBezierPathRenderer-umbrella.h"; sourceTree = "<group>"; };
+		ED0A41D54E9540DC506D94C20F401250 /* UIView+JJFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JJFloatingActionButton.swift"; path = "Sources/UIView+JJFloatingActionButton.swift"; sourceTree = "<group>"; };
+		EF3DE021F92849D84375F0FE29506F59 /* DetailText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DetailText.swift; path = Source/Model/DetailText.swift; sourceTree = "<group>"; };
+		EF5F77F0B87D696BB220B89A100DE432 /* LayerProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerProperties.swift; path = Sources/LayerProperties.swift; sourceTree = "<group>"; };
+		F14F69DC0CA2410AA59AC6C7BA9E068E /* JJActionItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JJActionItem.swift; path = Sources/JJActionItem.swift; sourceTree = "<group>"; };
+		F8263301FBDE9D793C92044090195737 /* Configurable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configurable.swift; path = Source/Protocol/Configurable.swift; sourceTree = "<group>"; };
+		FB9845472964972E3C7185F1E99A4E22 /* Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Source/Protocol/Reusable.swift; sourceTree = "<group>"; };
+		FD787D6485FC1CCE3635D4178AC3DBF4 /* JJFloatingActionButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JJFloatingActionButton-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2A471A5A3ACF29BB605C72BBFDDB80BB /* Frameworks */ = {
+		048D34D9A2CD9A647B8F85633E07CAF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D03706889AA70EAA2054B4B9F71CEBB /* Foundation.framework in Frameworks */,
-				6EED64A04F3FDADC69E76BF5D5028444 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A2EF017EE0BAACC1F862EAA9E141651 /* Frameworks */ = {
+		1EAF7305190BDF92AC4A70D9EF81CC02 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				399BB8D333C09505FB799B06DF1B4C2E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8667247EA76B4B9D715B626E5261E390 /* Frameworks */ = {
+		7C87E6BB78C4B916A24577ADC7ABD6FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3E4C8B0E9F54F0E9252D465962FBE7B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1736D75CE483248EA7603AAABB849B9 /* Frameworks */ = {
+		B8090DCABC80F3DD44461C964DC5790F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5A46A55511253DC3185BB44A375FEF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5E92942E3DBC7E26A37EE62175A9CBA /* Frameworks */ = {
+		E14C1E4FA02E00EF90D4BF2D6CFD9079 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D01609D8B2BEBDE3CA89D8858432C83 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+		032A645E866EA915FEB87B3938167AFB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1B686B96B5DCC64A7CF2EB6CB95BB757 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				80828051BD07D05E3A6409A461B2BF16 /* CircleBar.modulemap */,
-				DC5DAA41140549B414A1C5B43200590A /* CircleBar.xcconfig */,
-				05EE8DE3A64BDAA01E6116D2C5C93AC0 /* CircleBar-dummy.m */,
-				F60321B7CA10E751A58201B33057C063 /* CircleBar-Info.plist */,
-				E1C3B4AF973C0EA2B2356A3128B8EEAF /* CircleBar-prefix.pch */,
-				003BE3194A2870FEC45696A2E9806802 /* CircleBar-umbrella.h */,
+				0E48F3DF59CC4E01FB60AFA10913C1FA /* JJFloatingActionButton.modulemap */,
+				C62286A1B6E4BE7C9195EAC0B9C575A9 /* JJFloatingActionButton.xcconfig */,
+				8CF54072D46F61026ADD51B2CDBCDCB7 /* JJFloatingActionButton-dummy.m */,
+				32304368E83D950DB290F91D810232C8 /* JJFloatingActionButton-prefix.pch */,
+				FD787D6485FC1CCE3635D4178AC3DBF4 /* JJFloatingActionButton-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/CircleBar";
+			path = "../Target Support Files/JJFloatingActionButton";
 			sourceTree = "<group>";
 		};
-		375DECC0EEEB1D080801CC8769278FC9 /* Pods */ = {
+		043F9123A354DD3FF6AA814A06FCED43 /* JJFloatingActionButton */ = {
 			isa = PBXGroup;
 			children = (
-				B68576CC19158524A9B8EA6519903CA8 /* CircleBar */,
-				D0871A3D550925BC3F8DA4164C23A7C0 /* IVBezierPathRenderer */,
-				7A77820E5A642E0AA5EA3DEDA42142C7 /* JJFloatingActionButton */,
-				C7D6CE1CDB47AF69024E5C407B377E41 /* QuickTableViewController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		7A77820E5A642E0AA5EA3DEDA42142C7 /* JJFloatingActionButton */ = {
-			isa = PBXGroup;
-			children = (
-				6568DFCC8441E2D4E450DFBE89CC1917 /* AnimationConfiguration.swift */,
-				E1447667E20B1FC08935152B86DED7E6 /* JJActionItem.swift */,
-				0BC8229646AA6D9F73829B2D63C63332 /* JJActionItemTitlePosition.swift */,
-				F52AA94E28D73F9965BEDF1287CF9749 /* JJCircleView.swift */,
-				0AB14BA8C39F9DFE48B8480C5EA03C31 /* JJFloatingActionButton.swift */,
-				D319B6F733DD126C6CCCBA5C73602E93 /* JJFloatingActionButton+Animation.swift */,
-				0083ECE6F3FD1C7ECED60EBC158B8C80 /* JJFloatingActionButton+Placement.swift */,
-				A417607597BFC2B2E0CC6298359512A7 /* JJFloatingActionButtonDelegate.swift */,
-				5070E31662516224A0DC69D0F44E933A /* JJFloatingActionButtonState.swift */,
-				9BF31FDEB15326736D14B641B30EC3D0 /* LayerProperties.swift */,
-				0D62C04B9471D148E11641100972A2E5 /* Styles.swift */,
-				B2E98BA840EA125FB45194C7847731C9 /* UIColor+JJFloatingActionButton.swift */,
-				EE7DC2D44D9105DA4C851C09065148F7 /* UIView+JJFloatingActionButton.swift */,
-				DF7D55118D9C68ADC174BCF5E6D9009C /* Support Files */,
+				AA6B04F394EE229706E77C3E830940CC /* AnimationConfiguration.swift */,
+				F14F69DC0CA2410AA59AC6C7BA9E068E /* JJActionItem.swift */,
+				58F7490592A2AA72AA2A35C9EE4C84B2 /* JJActionItemTitlePosition.swift */,
+				38F0B4EADEF7791C83B2FD8D056FEE5F /* JJCircleView.swift */,
+				C4EA82E7908AB79270EF20700A5A2F4D /* JJFloatingActionButton.swift */,
+				B581005824D3150EF44BDB6AFA2DEEB5 /* JJFloatingActionButton+Animation.swift */,
+				BE335110D31D840D9076BFCC0FC9A27C /* JJFloatingActionButton+Placement.swift */,
+				C14D39E365E7EE2F37A66FAF1B691DBC /* JJFloatingActionButtonDelegate.swift */,
+				9CFD5A4A0E67F915E838BFBCEFE56D6F /* JJFloatingActionButtonState.swift */,
+				EF5F77F0B87D696BB220B89A100DE432 /* LayerProperties.swift */,
+				95F5A48091CF715C75124569664B3C8D /* Styles.swift */,
+				8C2C94D292707F3E3F9E65F49F401477 /* UIColor+JJFloatingActionButton.swift */,
+				ED0A41D54E9540DC506D94C20F401250 /* UIView+JJFloatingActionButton.swift */,
+				032A645E866EA915FEB87B3938167AFB /* Support Files */,
 			);
 			name = JJFloatingActionButton;
 			path = JJFloatingActionButton;
 			sourceTree = "<group>";
 		};
-		88829876E4818ABFBD942A9590AEDD48 /* Products */ = {
+		11FE1D2C56412574CD7364B20CCB33D6 /* IVBezierPathRenderer */ = {
 			isa = PBXGroup;
 			children = (
-				43697E92E1EF903807158F32D260C4DC /* CircleBar.framework */,
-				6FF101141632A39134B4563B6322F8EB /* IVBezierPathRenderer.framework */,
-				B39ECB203814E0B477049873DBEA123C /* JJFloatingActionButton.framework */,
-				02806F33E13CA423040315664ED960C2 /* Pods_RunTracker.framework */,
-				1FA89163971C9751850A2C3EFD313884 /* QuickTableViewController.framework */,
+				6BF87A4B7C56616100072B8D3B2BEDF2 /* IVBezierPathRenderer.h */,
+				39F934849B3FA21A3E345CFD5FA6229F /* IVBezierPathRenderer.m */,
+				5972096DCCE545A81FC98E1B56730A17 /* UIBezierPath+GuidedPath.h */,
+				883B7400F530F77F2B0CFC86F81C1885 /* UIBezierPath+GuidedPath.m */,
+				8590AC1A2A43AF73C3678345301E72B4 /* Support Files */,
 			);
-			name = Products;
+			name = IVBezierPathRenderer;
+			path = IVBezierPathRenderer;
 			sourceTree = "<group>";
 		};
-		8C81CEB2978856D92C68A8DB5B98E975 /* Support Files */ = {
+		16B2FB36A560633124BB0A4A6AD3991E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AEC3FA0F7653E9338FE49C64976E1D39 /* QuickTableViewController.modulemap */,
-				712EC9563BB17E30F17DF99745E811EA /* QuickTableViewController.xcconfig */,
-				925D6A165D247268E9C2FE5EEDA49059 /* QuickTableViewController-dummy.m */,
-				24071A007C8C71DE789E31E8333A79D1 /* QuickTableViewController-Info.plist */,
-				145FD806E2C191FFFF424C900FF15AFF /* QuickTableViewController-prefix.pch */,
-				6D4C589AB2E9E7414F619A3124D9F091 /* QuickTableViewController-umbrella.h */,
+				CA8BC3582682D70F70A3483E1B17F379 /* Pods-RunTracker */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		323602EAE9416EE80D794B47D8FA566F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF0295A1219D50DFD6FFAEDCCB0284C2 /* QuickTableViewController.modulemap */,
+				93634DB56955E88E97FE2642641B33D6 /* QuickTableViewController.xcconfig */,
+				05F18192FBCB76E379647B1E183AA4EB /* QuickTableViewController-dummy.m */,
+				226A45A4EE41FB0BFF009C5DC114EF9E /* QuickTableViewController-prefix.pch */,
+				16F7E7CAED2F4C2AA3AF365FE2AB50BF /* QuickTableViewController-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/QuickTableViewController";
 			sourceTree = "<group>";
 		};
-		AFC400FC2206F583E73818554375D612 /* Targets Support Files */ = {
+		375DECC0EEEB1D080801CC8769278FC9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B33F32BDC09B4F97618748550836F0CF /* Pods-RunTracker */,
+				6E09A0542C7710BE0B6AE7B716BF4DFA /* CircleBar */,
+				11FE1D2C56412574CD7364B20CCB33D6 /* IVBezierPathRenderer */,
+				043F9123A354DD3FF6AA814A06FCED43 /* JJFloatingActionButton */,
+				59CB0C3871ACD1D42F8FB17998E580E9 /* QuickTableViewController */,
 			);
-			name = "Targets Support Files";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		B33F32BDC09B4F97618748550836F0CF /* Pods-RunTracker */ = {
+		59CB0C3871ACD1D42F8FB17998E580E9 /* QuickTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3CECD9155739C321901796D48DDA26DC /* Pods-RunTracker.modulemap */,
-				777682ED71ECA23FEBC6E3136E097B0A /* Pods-RunTracker-acknowledgements.markdown */,
-				5B89FE15E17BDD60DF7EE8D15300CD61 /* Pods-RunTracker-acknowledgements.plist */,
-				1B731ACAF7D989DB185D9C25DD4FED63 /* Pods-RunTracker-dummy.m */,
-				266EAE5CED0E4EF42CD00FB514F261C7 /* Pods-RunTracker-frameworks.sh */,
-				6E281A1A467CE14ED5B68F56C80D7549 /* Pods-RunTracker-Info.plist */,
-				E279242069E7CA46DEBCCA50E9900812 /* Pods-RunTracker-umbrella.h */,
-				61562409B1F6804F2B65FBC1D1DACE92 /* Pods-RunTracker.debug.xcconfig */,
-				D518A77BAFB8C11DDFE0E5411B4DC02F /* Pods-RunTracker.release.xcconfig */,
+				F8263301FBDE9D793C92044090195737 /* Configurable.swift */,
+				4F024710AA83324338535902F6E01E85 /* Deprecated.swift */,
+				EF3DE021F92849D84375F0FE29506F59 /* DetailText.swift */,
+				A9D132D3BA465806C20A6BA6E1FF4AA7 /* Icon.swift */,
+				2D0270038F8A33FBD30EB29538C04105 /* NavigationRow.swift */,
+				2F36DF422D6109F4CD8B5FE308ED3AEF /* OptionRow.swift */,
+				B671D1CDD77890FBCA0BB91929D254A3 /* QuickTableViewController.swift */,
+				8BC866BD1FBD4A6368AB9359EF5717BA /* RadioSection.swift */,
+				FB9845472964972E3C7185F1E99A4E22 /* Reusable.swift */,
+				D513BD6BA0BE23668B4C4F04CBE7C52F /* Row.swift */,
+				1D234B8D135C6107FBDED99064E60577 /* RowCompatible.swift */,
+				BBF2FA86C0A1EF6D75E081A4B9006292 /* RowStyle.swift */,
+				67ED3C777EE65B70AE8C964A82C9164B /* Section.swift */,
+				D117D58A9765889D20C50A5703F69E83 /* Subtitle.swift */,
+				7F53FDB667717A0606A32A5133075208 /* SwitchCell.swift */,
+				E39338BFF78D8C10C5A744585D79C1B0 /* SwitchRow.swift */,
+				089E68BF3659D0E54FFBA7691281FCBA /* TapActionCell.swift */,
+				7A1F92FFC4C3E4F5EF1E7E5B2831E891 /* TapActionRow.swift */,
+				323602EAE9416EE80D794B47D8FA566F /* Support Files */,
 			);
-			name = "Pods-RunTracker";
-			path = "Target Support Files/Pods-RunTracker";
+			name = QuickTableViewController;
+			path = QuickTableViewController;
 			sourceTree = "<group>";
 		};
-		B68576CC19158524A9B8EA6519903CA8 /* CircleBar */ = {
+		6E09A0542C7710BE0B6AE7B716BF4DFA /* CircleBar */ = {
 			isa = PBXGroup;
 			children = (
-				89DA77CEC9FBFE4A95230A33C0052E65 /* SHCircleBar.swift */,
-				EBED8129B131DB20EB9BB3A152BAF588 /* SHCircleBarController.swift */,
-				1B686B96B5DCC64A7CF2EB6CB95BB757 /* Support Files */,
+				9A6EABA62BA21D2F0F71E104462EF182 /* SHCircleBar.swift */,
+				E58DB65679240159F56C02D6E7DFD491 /* SHCircleBarController.swift */,
+				8EDC1C55EB630A376FF7329ABF49A93E /* Support Files */,
 			);
 			name = CircleBar;
 			path = CircleBar;
 			sourceTree = "<group>";
 		};
-		C7D6CE1CDB47AF69024E5C407B377E41 /* QuickTableViewController */ = {
+		8590AC1A2A43AF73C3678345301E72B4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3C39A0E344C66DC5A62D73F47E0593BC /* Configurable.swift */,
-				DAFACF595376744194297BF0F8F63DDF /* Deprecated.swift */,
-				70B24B4E6F019B2AE69A03039207BA04 /* DetailText.swift */,
-				80D04D1C9355F9CD6A0D8AAFCA8E84DF /* Icon.swift */,
-				D4F760E2F3BBFC38EFCA69F69AA37983 /* NavigationRow.swift */,
-				920BDF62E14B91ABB72DCBF7F0F4DFCD /* OptionRow.swift */,
-				08C7AD9950EE388E67BE462F3D3D86B6 /* QuickTableViewController.swift */,
-				BC71E6C5076858C93DF21FFC7425C7B8 /* RadioSection.swift */,
-				94EABB711F5159CFDA473E18962707EB /* Reusable.swift */,
-				B0C35A36E9FCD1A69DEA85C206D15C96 /* Row.swift */,
-				F377B0071A30231ECC1BC75DB6A9A931 /* RowCompatible.swift */,
-				55053AC7374312E90474A231D4464DA8 /* RowStyle.swift */,
-				F3D75512BCC879D9E00889BE7B26E116 /* Section.swift */,
-				A21D8DEDFE488FC475109D9626B2E1F3 /* Subtitle.swift */,
-				CD07674C7B6AC847E21C21F974891679 /* SwitchCell.swift */,
-				C2E94A34FFEEFDE34A2E5C8AA7416461 /* SwitchRow.swift */,
-				F0F955BF2370578BF351836C2045C1E3 /* TapActionCell.swift */,
-				0089550420175071B17BE557E922752E /* TapActionRow.swift */,
-				8C81CEB2978856D92C68A8DB5B98E975 /* Support Files */,
+				353E67DE0F22E1F987E1DEAB8D0EA81C /* IVBezierPathRenderer.modulemap */,
+				987AC4CB0CCC6C9859B9B55D618FD1E2 /* IVBezierPathRenderer.xcconfig */,
+				C3510AFB08AAC6AA4B2CD1E9F451E217 /* IVBezierPathRenderer-dummy.m */,
+				8D46C3F8F948FF46A85AD9EFDFF744B2 /* IVBezierPathRenderer-prefix.pch */,
+				E8EE2F55BF6325BD56B68C37E2DFCC53 /* IVBezierPathRenderer-umbrella.h */,
 			);
-			name = QuickTableViewController;
-			path = QuickTableViewController;
+			name = "Support Files";
+			path = "../Target Support Files/IVBezierPathRenderer";
+			sourceTree = "<group>";
+		};
+		8EDC1C55EB630A376FF7329ABF49A93E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C68E8894026FA87FD528BE7A67B33F11 /* CircleBar.modulemap */,
+				D76C6B5CA62B3B18B418EA04584BBDC1 /* CircleBar.xcconfig */,
+				AC1BD55B54ADD40828917A493F8C42FF /* CircleBar-dummy.m */,
+				B88A9D6DF865D5A7B1BDCF68B5E0EC21 /* CircleBar-prefix.pch */,
+				0F2A896DAE6679D723B1E7DE1BA9AA32 /* CircleBar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CircleBar";
+			sourceTree = "<group>";
+		};
+		91C1FAEAF34860B887445E53EB80014C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43697E92E1EF903807158F32D260C4DC /* libCircleBar.a */,
+				6FF101141632A39134B4563B6322F8EB /* libIVBezierPathRenderer.a */,
+				B39ECB203814E0B477049873DBEA123C /* libJJFloatingActionButton.a */,
+				02806F33E13CA423040315664ED960C2 /* libPods-RunTracker.a */,
+				1FA89163971C9751850A2C3EFD313884 /* libQuickTableViewController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA8BC3582682D70F70A3483E1B17F379 /* Pods-RunTracker */ = {
+			isa = PBXGroup;
+			children = (
+				7A8C9423C243F1410C16EE7362ED7746 /* Pods-RunTracker.modulemap */,
+				9A8B200268C5C3C554371A514DF621D2 /* Pods-RunTracker-acknowledgements.markdown */,
+				059483D8A9F0DC9F5BCEBD271A90A41B /* Pods-RunTracker-acknowledgements.plist */,
+				E7B81C9F29F309275641879E07026595 /* Pods-RunTracker-dummy.m */,
+				7B9B7967631702E1118A80CC325570A7 /* Pods-RunTracker-umbrella.h */,
+				02DFC1FCE218407FDBF17B923EC855FE /* Pods-RunTracker.debug.xcconfig */,
+				68D456CC37D47ADE13F538E2D5D3457A /* Pods-RunTracker.release.xcconfig */,
+			);
+			name = "Pods-RunTracker";
+			path = "Target Support Files/Pods-RunTracker";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				375DECC0EEEB1D080801CC8769278FC9 /* Pods */,
-				88829876E4818ABFBD942A9590AEDD48 /* Products */,
-				AFC400FC2206F583E73818554375D612 /* Targets Support Files */,
+				91C1FAEAF34860B887445E53EB80014C /* Products */,
+				16B2FB36A560633124BB0A4A6AD3991E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D0871A3D550925BC3F8DA4164C23A7C0 /* IVBezierPathRenderer */ = {
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB466263B8E8FE13E31C7B718BD3AF26 /* IVBezierPathRenderer.h */,
-				9C283D55A0E698E80204F7E237E9DA72 /* IVBezierPathRenderer.m */,
-				4A2EBFB04700E172537F80A832952BB5 /* UIBezierPath+GuidedPath.h */,
-				02CDE95C0B455477CF85B24C73DF04C7 /* UIBezierPath+GuidedPath.m */,
-				F1558122AD0B193006F07CC80A94339B /* Support Files */,
 			);
-			name = IVBezierPathRenderer;
-			path = IVBezierPathRenderer;
-			sourceTree = "<group>";
-		};
-		DF7D55118D9C68ADC174BCF5E6D9009C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B16F0ECC8ACCFC40560AE853009106D9 /* JJFloatingActionButton.modulemap */,
-				8447AA1FB316B69E0B64BF18A4338184 /* JJFloatingActionButton.xcconfig */,
-				802A91A5D0DBD6E0EB2AB95CF31996AB /* JJFloatingActionButton-dummy.m */,
-				EEB6DB6444850FFA4E1673D4A46301C5 /* JJFloatingActionButton-Info.plist */,
-				8041F4B0D58B00089AA35A85E57B9212 /* JJFloatingActionButton-prefix.pch */,
-				9BD9E5D98C271BC12B1B44532521A672 /* JJFloatingActionButton-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/JJFloatingActionButton";
-			sourceTree = "<group>";
-		};
-		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
-				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		F1558122AD0B193006F07CC80A94339B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2521BD2D7ED10B817CAFCF679447232A /* IVBezierPathRenderer.modulemap */,
-				82459659489F79610955E3FC63CE72C6 /* IVBezierPathRenderer.xcconfig */,
-				99272A5941A19DC4202CAA6EB777F613 /* IVBezierPathRenderer-dummy.m */,
-				47937733D3D934D73274C310DA1404BF /* IVBezierPathRenderer-Info.plist */,
-				13A75867D8F0C884F70E577E8C18BDBD /* IVBezierPathRenderer-prefix.pch */,
-				12DC9C642DAC53C53D1839A6ABF2FB92 /* IVBezierPathRenderer-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/IVBezierPathRenderer";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		221336D41DE40039675DB1613D4CDADA /* Headers */ = {
+		136D704E540644E999A017D14B78FC26 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF378D1ABACF355BD352F447B3BB210D /* CircleBar-umbrella.h in Headers */,
+				B9BB1A4095662D7D818C8DB81E173253 /* JJFloatingActionButton-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EA299E65DE31F5055CA2FBD9F3FF651 /* Headers */ = {
+		184D6CBCA0D5ABDD4E7AAE5E6CBB9704 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35DE44316F0EC442DACC6B0B894CBB78 /* JJFloatingActionButton-umbrella.h in Headers */,
+				34CE4EC5649D490952C6785C08E0583E /* CircleBar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8BBDEDA10DD0726EBB941DB98CE62F0E /* Headers */ = {
+		B49665DFD598C3C81E72E5D98DE07234 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDDEBF1A34C0589917D5DC8F5C7F3BC2 /* IVBezierPathRenderer-umbrella.h in Headers */,
-				95C4A11B7AEC0B03159506E2A4CFB81F /* IVBezierPathRenderer.h in Headers */,
-				21C804201E28FF33C4E65A9F8B98E360 /* UIBezierPath+GuidedPath.h in Headers */,
+				9F4D5794545089AB343160BE3ECD5F35 /* IVBezierPathRenderer-umbrella.h in Headers */,
+				6CE7FA2B2857F7582254AEF029DF50B5 /* IVBezierPathRenderer.h in Headers */,
+				80FF71733E053EF4D07B2F30A6485F94 /* UIBezierPath+GuidedPath.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B25E49AE9E25B0D201845024044CA074 /* Headers */ = {
+		BD282336EB92730DE28B07A76E411E1C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381CEF1FBD3A743539F3D7BE3C59E5A7 /* QuickTableViewController-umbrella.h in Headers */,
+				8E3FB4CA2B5438A14AE5D7401D1D584C /* Pods-RunTracker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E90D004DF650131CFF39E2E69BDDBD9B /* Headers */ = {
+		DD76FFE42E104E5FB7A764C8E68239AB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A113BF15197305C270F59DB821EDB6 /* Pods-RunTracker-umbrella.h in Headers */,
+				1F8BA966885763FD4F895F5B19BFE696 /* QuickTableViewController-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,12 +438,11 @@
 /* Begin PBXNativeTarget section */
 		7DFB55D104197FC817D4F341CF2B2C44 /* IVBezierPathRenderer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8ABC05C1FCB4889DB62ACC9E45A8D33 /* Build configuration list for PBXNativeTarget "IVBezierPathRenderer" */;
+			buildConfigurationList = 3D0721557B6B78E516C5C5745846FA61 /* Build configuration list for PBXNativeTarget "IVBezierPathRenderer" */;
 			buildPhases = (
-				8BBDEDA10DD0726EBB941DB98CE62F0E /* Headers */,
-				2EAC6BAC4DD6FF8DA8F4BC2DC70E5F76 /* Sources */,
-				8667247EA76B4B9D715B626E5261E390 /* Frameworks */,
-				7A6D0300B476E6B33591E1A3CEE3CECB /* Resources */,
+				B49665DFD598C3C81E72E5D98DE07234 /* Headers */,
+				501B61AB15FE3DC5630E0660B13E6B43 /* Sources */,
+				1EAF7305190BDF92AC4A70D9EF81CC02 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -487,17 +450,17 @@
 			);
 			name = IVBezierPathRenderer;
 			productName = IVBezierPathRenderer;
-			productReference = 6FF101141632A39134B4563B6322F8EB /* IVBezierPathRenderer.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 6FF101141632A39134B4563B6322F8EB /* libIVBezierPathRenderer.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		B7378E43393E401083784252E88810C0 /* CircleBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D6E0DC73A4DFBF30C70A7DFE2707E71 /* Build configuration list for PBXNativeTarget "CircleBar" */;
+			buildConfigurationList = 24F43560B4CA1FB2C4C28C7347D4554A /* Build configuration list for PBXNativeTarget "CircleBar" */;
 			buildPhases = (
-				221336D41DE40039675DB1613D4CDADA /* Headers */,
-				113BE18E3C3AD654CD3B1EAF0D3496EE /* Sources */,
-				E1736D75CE483248EA7603AAABB849B9 /* Frameworks */,
-				7FB422C6E795506AAD6CA282CAA2D116 /* Resources */,
+				184D6CBCA0D5ABDD4E7AAE5E6CBB9704 /* Headers */,
+				CDD257F84A0FEF2F2D7304469767ECE0 /* Sources */,
+				048D34D9A2CD9A647B8F85633E07CAF1 /* Frameworks */,
+				C157BA23D72A82233738E1D8C28C4537 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -505,17 +468,17 @@
 			);
 			name = CircleBar;
 			productName = CircleBar;
-			productReference = 43697E92E1EF903807158F32D260C4DC /* CircleBar.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 43697E92E1EF903807158F32D260C4DC /* libCircleBar.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		E109C6B6B466F202BA0B94E76B45D72B /* JJFloatingActionButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41A52B17C6477187CCA74D1FB8818FAA /* Build configuration list for PBXNativeTarget "JJFloatingActionButton" */;
+			buildConfigurationList = F25C5D1FBAC2675174BD0A7820903126 /* Build configuration list for PBXNativeTarget "JJFloatingActionButton" */;
 			buildPhases = (
-				4EA299E65DE31F5055CA2FBD9F3FF651 /* Headers */,
-				901B615255AAA5CF8C591867EB1F7D45 /* Sources */,
-				2A471A5A3ACF29BB605C72BBFDDB80BB /* Frameworks */,
-				50E77406962BAF4F71E5E4622E720B8B /* Resources */,
+				136D704E540644E999A017D14B78FC26 /* Headers */,
+				222AE73F65B65B618DE1C1217556D28B /* Sources */,
+				E14C1E4FA02E00EF90D4BF2D6CFD9079 /* Frameworks */,
+				07D9F2BEF63DEFFE539B7E180F75D68F /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -523,39 +486,38 @@
 			);
 			name = JJFloatingActionButton;
 			productName = JJFloatingActionButton;
-			productReference = B39ECB203814E0B477049873DBEA123C /* JJFloatingActionButton.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = B39ECB203814E0B477049873DBEA123C /* libJJFloatingActionButton.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		E6CA704C3ECF6D4832E8D656D6319926 /* Pods-RunTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FDEAB8F10D01E80552CEB8D32E0E0CC5 /* Build configuration list for PBXNativeTarget "Pods-RunTracker" */;
+			buildConfigurationList = 97C427370331F4C5766E951B0BAD36C6 /* Build configuration list for PBXNativeTarget "Pods-RunTracker" */;
 			buildPhases = (
-				E90D004DF650131CFF39E2E69BDDBD9B /* Headers */,
-				0772BE14E7043C665284E9721C9D0C00 /* Sources */,
-				6A2EF017EE0BAACC1F862EAA9E141651 /* Frameworks */,
-				F165F98C3236EB416560333DD4D06DAC /* Resources */,
+				BD282336EB92730DE28B07A76E411E1C /* Headers */,
+				85F400631E05D0EA73E6F93AC750E30E /* Sources */,
+				7C87E6BB78C4B916A24577ADC7ABD6FC /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F9CF583CA9013024D5EDA50C0D9D6154 /* PBXTargetDependency */,
-				E0E89CE2094221074FCD1081AE161F52 /* PBXTargetDependency */,
-				7207E7965F81988EAC646CDD660C4200 /* PBXTargetDependency */,
-				7D1F2335CCD07AFA2282FB066ED1272B /* PBXTargetDependency */,
+				CA1F305FD39E1716F41D5BDFEC0360FD /* PBXTargetDependency */,
+				7AC9B62CC15CABA4666592029EAF5F83 /* PBXTargetDependency */,
+				112B70849918C53635662384E70B1325 /* PBXTargetDependency */,
+				6BE3BD1637364DFCCCD18CB11E36BF27 /* PBXTargetDependency */,
 			);
 			name = "Pods-RunTracker";
 			productName = "Pods-RunTracker";
-			productReference = 02806F33E13CA423040315664ED960C2 /* Pods_RunTracker.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 02806F33E13CA423040315664ED960C2 /* libPods-RunTracker.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		E7D16F6260A6FAB7F88EB5ACC56D911D /* QuickTableViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F57C21105FD76A3321AE995685296404 /* Build configuration list for PBXNativeTarget "QuickTableViewController" */;
+			buildConfigurationList = 6047201F9F77A7629C42F45224987AD1 /* Build configuration list for PBXNativeTarget "QuickTableViewController" */;
 			buildPhases = (
-				B25E49AE9E25B0D201845024044CA074 /* Headers */,
-				34676A869A63F434A97F71E3D003B985 /* Sources */,
-				F5E92942E3DBC7E26A37EE62175A9CBA /* Frameworks */,
-				7E7CEE97A86377B6A076621FDA2D79BB /* Resources */,
+				DD76FFE42E104E5FB7A764C8E68239AB /* Headers */,
+				74B33881CCA956D3F607544ABBABE2FB /* Sources */,
+				B8090DCABC80F3DD44461C964DC5790F /* Frameworks */,
+				EE5A1FCC02D6F2C87545001458F7DD23 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -563,8 +525,8 @@
 			);
 			name = QuickTableViewController;
 			productName = QuickTableViewController;
-			productReference = 1FA89163971C9751850A2C3EFD313884 /* QuickTableViewController.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 1FA89163971C9751850A2C3EFD313884 /* libQuickTableViewController.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -576,7 +538,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -584,7 +546,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 88829876E4818ABFBD942A9590AEDD48 /* Products */;
+			productRefGroup = 91C1FAEAF34860B887445E53EB80014C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -597,146 +559,183 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		50E77406962BAF4F71E5E4622E720B8B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		07D9F2BEF63DEFFE539B7E180F75D68F /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/JJFloatingActionButton/JJFloatingActionButton.modulemap",
+				"${PODS_ROOT}/Headers/Public/JJFloatingActionButton/JJFloatingActionButton-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/JJFloatingActionButton-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/JJFloatingActionButton/JJFloatingActionButton.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/JJFloatingActionButton/JJFloatingActionButton-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		7A6D0300B476E6B33591E1A3CEE3CECB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+		C157BA23D72A82233738E1D8C28C4537 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/CircleBar/CircleBar.modulemap",
+				"${PODS_ROOT}/Headers/Public/CircleBar/CircleBar-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/CircleBar-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CircleBar/CircleBar.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CircleBar/CircleBar-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		7E7CEE97A86377B6A076621FDA2D79BB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+		EE5A1FCC02D6F2C87545001458F7DD23 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7FB422C6E795506AAD6CA282CAA2D116 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/QuickTableViewController/QuickTableViewController.modulemap",
+				"${PODS_ROOT}/Headers/Public/QuickTableViewController/QuickTableViewController-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/QuickTableViewController-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/QuickTableViewController/QuickTableViewController.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/QuickTableViewController/QuickTableViewController-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		F165F98C3236EB416560333DD4D06DAC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0772BE14E7043C665284E9721C9D0C00 /* Sources */ = {
+		222AE73F65B65B618DE1C1217556D28B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0E46EE7A576EBFBB367F2D279DBE783 /* Pods-RunTracker-dummy.m in Sources */,
+				FCED18ABC548CA831CF7BEBD17D770C9 /* AnimationConfiguration.swift in Sources */,
+				0E24E1BFA630E94D44666EEB9E4997C2 /* JJActionItem.swift in Sources */,
+				2E8793444C6CD4DCA8E38FE1B22A4D9F /* JJActionItemTitlePosition.swift in Sources */,
+				78F379279B6E77B6E75493EEE8E97E60 /* JJCircleView.swift in Sources */,
+				F21CA13F824959FF7E40C9F5295FE1D8 /* JJFloatingActionButton+Animation.swift in Sources */,
+				094523C685AA315745EB03E0AE7A66DC /* JJFloatingActionButton+Placement.swift in Sources */,
+				724E55DF39290E49D9DFC3EA968CDEB4 /* JJFloatingActionButton-dummy.m in Sources */,
+				E8A2D75FFB079D55A1161C344CA2CE71 /* JJFloatingActionButton.swift in Sources */,
+				ABB3EDDE974AE85764766D86BB28C099 /* JJFloatingActionButtonDelegate.swift in Sources */,
+				CF4BAB094362CAD409198FD374276C6E /* JJFloatingActionButtonState.swift in Sources */,
+				9E4ED0568CDD0FC01952E3275FED7546 /* LayerProperties.swift in Sources */,
+				4AC9574EFE74B2516E5C6728F1243CDB /* Styles.swift in Sources */,
+				24828E0EDBF62182DDE759B9FB5A9B36 /* UIColor+JJFloatingActionButton.swift in Sources */,
+				17B7D4523A4E66C57075A132893A0FFF /* UIView+JJFloatingActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		113BE18E3C3AD654CD3B1EAF0D3496EE /* Sources */ = {
+		501B61AB15FE3DC5630E0660B13E6B43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CCE43A9C0B6AAB932CA7400616B867D /* CircleBar-dummy.m in Sources */,
-				FF7F5D61C7E342DB4EEA1FC67B7F96A4 /* SHCircleBar.swift in Sources */,
-				F7AE75D23C11A1220C5A7AEB70B06B0C /* SHCircleBarController.swift in Sources */,
+				5FACCE2F95F0EBB6A243363ECBADBA45 /* IVBezierPathRenderer-dummy.m in Sources */,
+				7D374D1CF7F16F296908A974B9432B60 /* IVBezierPathRenderer.m in Sources */,
+				01949B880D210EF96FCE574B6364D123 /* UIBezierPath+GuidedPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EAC6BAC4DD6FF8DA8F4BC2DC70E5F76 /* Sources */ = {
+		74B33881CCA956D3F607544ABBABE2FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43DE8A19AEEEBC8C373156E50CA96F8D /* IVBezierPathRenderer-dummy.m in Sources */,
-				B4644BF4F7D9500F21A9E59ED2507D8A /* IVBezierPathRenderer.m in Sources */,
-				8B2BEA447DFDDB19EAE6023D6D2DA49D /* UIBezierPath+GuidedPath.m in Sources */,
+				EB991ED27584BFF526463EEC448003AF /* Configurable.swift in Sources */,
+				104ADEE5F9B33ADFAC00618D98B8FCCB /* Deprecated.swift in Sources */,
+				08B7B3D09647F32D98F409293C29FD86 /* DetailText.swift in Sources */,
+				C34792C0A02C608104936F6189FA5D7F /* Icon.swift in Sources */,
+				CC0ADA7EB902340A9A0260E445690D5C /* NavigationRow.swift in Sources */,
+				E0EB99757F4ED3CFB1167BDF709BF4C3 /* OptionRow.swift in Sources */,
+				7935986CAD12EB623251E6B4A88BAF36 /* QuickTableViewController-dummy.m in Sources */,
+				0A31B59642B3F5A563A47E327035010B /* QuickTableViewController.swift in Sources */,
+				514EE9B491F8B7A2374C40B70D18BA39 /* RadioSection.swift in Sources */,
+				DB7597745762C517FFA5E349F634EF04 /* Reusable.swift in Sources */,
+				4CDA19897BE4A6FFFEE24AF0FFF1B2D2 /* Row.swift in Sources */,
+				0FF923A71A50D41C6C9DC31F3ACA2398 /* RowCompatible.swift in Sources */,
+				783B4BFBC5766F01E694FE3F4FB686D4 /* RowStyle.swift in Sources */,
+				221F69F371CB5B4B6932F3C03C3336E7 /* Section.swift in Sources */,
+				06A2E0C01EC9316E5C17A8AEE199B582 /* Subtitle.swift in Sources */,
+				92900465FFABC38CCF91051C70E4529C /* SwitchCell.swift in Sources */,
+				719837FF65B9272879D04795D6DF8EA9 /* SwitchRow.swift in Sources */,
+				95D78BA6BD48F793C0BC01838A46BBB0 /* TapActionCell.swift in Sources */,
+				7F4C9B1D6C424635423FCECFCFAD2BF6 /* TapActionRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34676A869A63F434A97F71E3D003B985 /* Sources */ = {
+		85F400631E05D0EA73E6F93AC750E30E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E6D23173201FD8696A04F11A012F541 /* Configurable.swift in Sources */,
-				105AB6387C76D40EB21ABF22657F19F0 /* Deprecated.swift in Sources */,
-				2A7668C904625BD7143905BCB94A95EF /* DetailText.swift in Sources */,
-				36C5D6BD146967C86B630B9169159FC3 /* Icon.swift in Sources */,
-				C8F5E9C6B499170CE116C3F3010DD611 /* NavigationRow.swift in Sources */,
-				5DC0E68954C8AE1378E91A9F8DEC1E8A /* OptionRow.swift in Sources */,
-				E3266C1899A6363E8D72293C59E643B5 /* QuickTableViewController-dummy.m in Sources */,
-				23C08E79767B3469BAFDC3A05EA7708E /* QuickTableViewController.swift in Sources */,
-				30D7F3BF1038D22E5B03E4EE7F3C2482 /* RadioSection.swift in Sources */,
-				B7C974C99AFE6B8C24C413D9A2ADF0FF /* Reusable.swift in Sources */,
-				36C5B65CE92BD69F2A614B83F47A9065 /* Row.swift in Sources */,
-				9817C03A7C30D2160B17482798330CE6 /* RowCompatible.swift in Sources */,
-				9B13BF9D901FC55A9D2D9362333F6DB7 /* RowStyle.swift in Sources */,
-				F3754258FE6F52FF2DA0DD5899A16242 /* Section.swift in Sources */,
-				07898C802008C513800D7160086D59AC /* Subtitle.swift in Sources */,
-				D2BE414742211AFA83FC9E43546147FB /* SwitchCell.swift in Sources */,
-				E2EDB7A3C5B1EE901D282005DDA2BC51 /* SwitchRow.swift in Sources */,
-				C3D5809932973831E875B8DCFD5C3FC7 /* TapActionCell.swift in Sources */,
-				23090B6E3B50A20A4CDA177F88306361 /* TapActionRow.swift in Sources */,
+				C666ED65CE0D813AA29EB11A45294515 /* Pods-RunTracker-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		901B615255AAA5CF8C591867EB1F7D45 /* Sources */ = {
+		CDD257F84A0FEF2F2D7304469767ECE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CEE1DA232D52B659F47A271E705CC70 /* AnimationConfiguration.swift in Sources */,
-				7A76FA7683A62BEFCF71CF4F89EE6C22 /* JJActionItem.swift in Sources */,
-				0581FC5727F2B26F08EC275E63926FE3 /* JJActionItemTitlePosition.swift in Sources */,
-				9ABBD6C2B80EE3E3F39395F477BE919F /* JJCircleView.swift in Sources */,
-				319CDA9C78434FE53446B2E3D4472915 /* JJFloatingActionButton+Animation.swift in Sources */,
-				D8DED3C84CDFAB1974C10527D3836C43 /* JJFloatingActionButton+Placement.swift in Sources */,
-				BAB7A20973143C2159E0EA320BB360E2 /* JJFloatingActionButton-dummy.m in Sources */,
-				392490EF77C9BACDCC5DB1C64E5EF862 /* JJFloatingActionButton.swift in Sources */,
-				892C319F31B40B03FDFA001267545BE6 /* JJFloatingActionButtonDelegate.swift in Sources */,
-				18D09554320A4B2D136735131E630D40 /* JJFloatingActionButtonState.swift in Sources */,
-				F7399F863C0A79AA2C0B2EC9FC061990 /* LayerProperties.swift in Sources */,
-				2941D6FD25DF541311E4C15DE09FD098 /* Styles.swift in Sources */,
-				9A3A8B8A211ED19AD3F55A826C5B689C /* UIColor+JJFloatingActionButton.swift in Sources */,
-				BA8DA38FC765D94151DA6B59381E68E2 /* UIView+JJFloatingActionButton.swift in Sources */,
+				B519640628BB048656DBBB734A8A094F /* CircleBar-dummy.m in Sources */,
+				A7A8C28E9DBC60F3BB24EF6E2C489101 /* SHCircleBar.swift in Sources */,
+				2A56EEFA9CD9355122779AF2290075A9 /* SHCircleBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7207E7965F81988EAC646CDD660C4200 /* PBXTargetDependency */ = {
+		112B70849918C53635662384E70B1325 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JJFloatingActionButton;
 			target = E109C6B6B466F202BA0B94E76B45D72B /* JJFloatingActionButton */;
-			targetProxy = 4EAB565BFA80895E785DAA8FDBEAB9DF /* PBXContainerItemProxy */;
+			targetProxy = 550B7FE82FF4C3A4115CCA3E8A359C1A /* PBXContainerItemProxy */;
 		};
-		7D1F2335CCD07AFA2282FB066ED1272B /* PBXTargetDependency */ = {
+		6BE3BD1637364DFCCCD18CB11E36BF27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = QuickTableViewController;
 			target = E7D16F6260A6FAB7F88EB5ACC56D911D /* QuickTableViewController */;
-			targetProxy = 373D5CBDC87B7C932BB505FE676A9795 /* PBXContainerItemProxy */;
+			targetProxy = 767F1961E7253B30797BBC82C423D36B /* PBXContainerItemProxy */;
 		};
-		E0E89CE2094221074FCD1081AE161F52 /* PBXTargetDependency */ = {
+		7AC9B62CC15CABA4666592029EAF5F83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IVBezierPathRenderer;
 			target = 7DFB55D104197FC817D4F341CF2B2C44 /* IVBezierPathRenderer */;
-			targetProxy = 1FF29402C1FCAA8C4CCD3ECA5959EFE5 /* PBXContainerItemProxy */;
+			targetProxy = 4569828D45A804BFC98C088B8987E578 /* PBXContainerItemProxy */;
 		};
-		F9CF583CA9013024D5EDA50C0D9D6154 /* PBXTargetDependency */ = {
+		CA1F305FD39E1716F41D5BDFEC0360FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CircleBar;
 			target = B7378E43393E401083784252E88810C0 /* CircleBar */;
-			targetProxy = 244AF0801E496730B61C011DE738CA62 /* PBXContainerItemProxy */;
+			targetProxy = EF0E0678E8DB54B2062ADD7FCDBA0441 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -805,368 +804,232 @@
 			};
 			name = Debug;
 		};
-		2691B5472F54D2C5983D895F7FF04C07 /* Debug */ = {
+		22DE133DD05DE010691B10F9C4D367A8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 712EC9563BB17E30F17DF99745E811EA /* QuickTableViewController.xcconfig */;
+			baseConfigurationReference = 987AC4CB0CCC6C9859B9B55D618FD1E2 /* IVBezierPathRenderer.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QuickTableViewController/QuickTableViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QuickTableViewController/QuickTableViewController-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/QuickTableViewController/QuickTableViewController.modulemap";
-				PRODUCT_MODULE_NAME = QuickTableViewController;
-				PRODUCT_NAME = QuickTableViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3611EF45293DAB1E7B1C62058F3FCC79 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC5DAA41140549B414A1C5B43200590A /* CircleBar.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CircleBar/CircleBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CircleBar/CircleBar-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CircleBar/CircleBar.modulemap";
-				PRODUCT_MODULE_NAME = CircleBar;
-				PRODUCT_NAME = CircleBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		43E89DD2A848DBF903E55FCBC44158A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82459659489F79610955E3FC63CE72C6 /* IVBezierPathRenderer.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer.modulemap";
+				MODULEMAP_FILE = Headers/Public/IVBezierPathRenderer/IVBezierPathRenderer.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = IVBezierPathRenderer;
 				PRODUCT_NAME = IVBezierPathRenderer;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		56CAE19035257841C65C14DA9C5B4632 /* Debug */ = {
+		33758187F1384E73D35702083BB5485D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82459659489F79610955E3FC63CE72C6 /* IVBezierPathRenderer.xcconfig */;
+			baseConfigurationReference = C62286A1B6E4BE7C9195EAC0B9C575A9 /* JJFloatingActionButton.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer.modulemap";
-				PRODUCT_MODULE_NAME = IVBezierPathRenderer;
-				PRODUCT_NAME = IVBezierPathRenderer;
+				GCC_PREFIX_HEADER = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/JJFloatingActionButton/JJFloatingActionButton.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JJFloatingActionButton;
+				PRODUCT_NAME = JJFloatingActionButton;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		812432EAE3DAB1F44363514942F1BFAC /* Debug */ = {
+		478F2B476F0300B8719AC01232EF72BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61562409B1F6804F2B65FBC1D1DACE92 /* Pods-RunTracker.debug.xcconfig */;
+			baseConfigurationReference = D76C6B5CA62B3B18B418EA04584BBDC1 /* CircleBar.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RunTracker/Pods-RunTracker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				GCC_PREFIX_HEADER = "Target Support Files/CircleBar/CircleBar-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				MODULEMAP_FILE = Headers/Public/CircleBar/CircleBar.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CircleBar;
+				PRODUCT_NAME = CircleBar;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8205BD2A5CD3FCE800BCE5A22F4EEB17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68D456CC37D47ADE13F538E2D5D3457A /* Pods-RunTracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-RunTracker/Pods-RunTracker.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8CB391A6E42380B83DF862150B4FE371 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 712EC9563BB17E30F17DF99745E811EA /* QuickTableViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QuickTableViewController/QuickTableViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QuickTableViewController/QuickTableViewController-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/QuickTableViewController/QuickTableViewController.modulemap";
-				PRODUCT_MODULE_NAME = QuickTableViewController;
-				PRODUCT_NAME = QuickTableViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		8D26E77158EE465B9E8996C51C63B50D /* Release */ = {
+		A6155CAABE1223336069D98EAE41FFB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC5DAA41140549B414A1C5B43200590A /* CircleBar.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CircleBar/CircleBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CircleBar/CircleBar-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CircleBar/CircleBar.modulemap";
-				PRODUCT_MODULE_NAME = CircleBar;
-				PRODUCT_NAME = CircleBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A82972A5B11D5CE0F674E2E09E4B5631 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8447AA1FB316B69E0B64BF18A4338184 /* JJFloatingActionButton.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton.modulemap";
-				PRODUCT_MODULE_NAME = JJFloatingActionButton;
-				PRODUCT_NAME = JJFloatingActionButton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D7E0527C31E3DD51C0EEBF229B047C8E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D518A77BAFB8C11DDFE0E5411B4DC02F /* Pods-RunTracker.release.xcconfig */;
+			baseConfigurationReference = 02DFC1FCE218407FDBF17B923EC855FE /* Pods-RunTracker.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RunTracker/Pods-RunTracker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-RunTracker/Pods-RunTracker.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		DF6DCB8B89B022484BD859A5CB73225E /* Release */ = {
+		AD01A1C421889B8FB263D3122C7EC068 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8447AA1FB316B69E0B64BF18A4338184 /* JJFloatingActionButton.xcconfig */;
+			baseConfigurationReference = 93634DB56955E88E97FE2642641B33D6 /* QuickTableViewController.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QuickTableViewController/QuickTableViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/QuickTableViewController/QuickTableViewController.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = QuickTableViewController;
+				PRODUCT_NAME = QuickTableViewController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B11494D8798E7E0140E0E5E3CAFC246D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C62286A1B6E4BE7C9195EAC0B9C575A9 /* JJFloatingActionButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/JJFloatingActionButton/JJFloatingActionButton.modulemap";
+				MODULEMAP_FILE = Headers/Public/JJFloatingActionButton/JJFloatingActionButton.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = JJFloatingActionButton;
 				PRODUCT_NAME = JJFloatingActionButton;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		C28AB470CE22EF5A7A984DCBB29381B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93634DB56955E88E97FE2642641B33D6 /* QuickTableViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/QuickTableViewController/QuickTableViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/QuickTableViewController/QuickTableViewController.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = QuickTableViewController;
+				PRODUCT_NAME = QuickTableViewController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C880B41011764AF2F4A0AFDFEC00C75D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 987AC4CB0CCC6C9859B9B55D618FD1E2 /* IVBezierPathRenderer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/IVBezierPathRenderer/IVBezierPathRenderer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/IVBezierPathRenderer/IVBezierPathRenderer.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = IVBezierPathRenderer;
+				PRODUCT_NAME = IVBezierPathRenderer;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1228,23 +1091,49 @@
 			};
 			name = Release;
 		};
+		F400B2C1B344641C71E8A76D49A8D3C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D76C6B5CA62B3B18B418EA04584BBDC1 /* CircleBar.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CircleBar/CircleBar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULEMAP_FILE = Headers/Public/CircleBar/CircleBar.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CircleBar;
+				PRODUCT_NAME = CircleBar;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D6E0DC73A4DFBF30C70A7DFE2707E71 /* Build configuration list for PBXNativeTarget "CircleBar" */ = {
+		24F43560B4CA1FB2C4C28C7347D4554A /* Build configuration list for PBXNativeTarget "CircleBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3611EF45293DAB1E7B1C62058F3FCC79 /* Debug */,
-				8D26E77158EE465B9E8996C51C63B50D /* Release */,
+				F400B2C1B344641C71E8A76D49A8D3C9 /* Debug */,
+				478F2B476F0300B8719AC01232EF72BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41A52B17C6477187CCA74D1FB8818FAA /* Build configuration list for PBXNativeTarget "JJFloatingActionButton" */ = {
+		3D0721557B6B78E516C5C5745846FA61 /* Build configuration list for PBXNativeTarget "IVBezierPathRenderer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A82972A5B11D5CE0F674E2E09E4B5631 /* Debug */,
-				DF6DCB8B89B022484BD859A5CB73225E /* Release */,
+				C880B41011764AF2F4A0AFDFEC00C75D /* Debug */,
+				22DE133DD05DE010691B10F9C4D367A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1258,29 +1147,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8ABC05C1FCB4889DB62ACC9E45A8D33 /* Build configuration list for PBXNativeTarget "IVBezierPathRenderer" */ = {
+		6047201F9F77A7629C42F45224987AD1 /* Build configuration list for PBXNativeTarget "QuickTableViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56CAE19035257841C65C14DA9C5B4632 /* Debug */,
-				43E89DD2A848DBF903E55FCBC44158A5 /* Release */,
+				C28AB470CE22EF5A7A984DCBB29381B5 /* Debug */,
+				AD01A1C421889B8FB263D3122C7EC068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F57C21105FD76A3321AE995685296404 /* Build configuration list for PBXNativeTarget "QuickTableViewController" */ = {
+		97C427370331F4C5766E951B0BAD36C6 /* Build configuration list for PBXNativeTarget "Pods-RunTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2691B5472F54D2C5983D895F7FF04C07 /* Debug */,
-				8CB391A6E42380B83DF862150B4FE371 /* Release */,
+				A6155CAABE1223336069D98EAE41FFB1 /* Debug */,
+				8205BD2A5CD3FCE800BCE5A22F4EEB17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FDEAB8F10D01E80552CEB8D32E0E0CC5 /* Build configuration list for PBXNativeTarget "Pods-RunTracker" */ = {
+		F25C5D1FBAC2675174BD0A7820903126 /* Build configuration list for PBXNativeTarget "JJFloatingActionButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				812432EAE3DAB1F44363514942F1BFAC /* Debug */,
-				D7E0527C31E3DD51C0EEBF229B047C8E /* Release */,
+				B11494D8798E7E0140E0E5E3CAFC246D /* Debug */,
+				33758187F1384E73D35702083BB5485D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
