@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		497E658123FA9B6B00AA2E0E /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658023FA9B6B00AA2E0E /* RunViewController.swift */; };
 		497E658523FAEE4600AA2E0E /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658423FAEE4600AA2E0E /* BlurLoader.swift */; };
 		497E658723FAF23D00AA2E0E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E658623FAF23D00AA2E0E /* LocationManager.swift */; };
+		4991AFF4241A74C50052B07B /* MapRunAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4991AFF3241A74C50052B07B /* MapRunAnnotation.swift */; };
 		49AB967C24194C1700770AB4 /* UILabel+html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB967B24194C1700770AB4 /* UILabel+html.swift */; };
 		49AB967E2419678B00770AB4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB967D2419678B00770AB4 /* ProfileViewController.swift */; };
 		49AB968024196B7C00770AB4 /* UIAlertController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB967F24196B7C00770AB4 /* UIAlertController+TextField.swift */; };
@@ -48,6 +49,7 @@
 		497E658023FA9B6B00AA2E0E /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		497E658423FAEE4600AA2E0E /* BlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
 		497E658623FAF23D00AA2E0E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4991AFF3241A74C50052B07B /* MapRunAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRunAnnotation.swift; sourceTree = "<group>"; };
 		49AB967B24194C1700770AB4 /* UILabel+html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+html.swift"; sourceTree = "<group>"; };
 		49AB967D2419678B00770AB4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		49AB967F24196B7C00770AB4 /* UIAlertController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+TextField.swift"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				4933BF6D2406F6990018ABCA /* Settings */,
 				49AB967B24194C1700770AB4 /* UILabel+html.swift */,
 				49AB967F24196B7C00770AB4 /* UIAlertController+TextField.swift */,
+				4991AFF3241A74C50052B07B /* MapRunAnnotation.swift */,
 			);
 			path = RunTracker;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				497E658723FAF23D00AA2E0E /* LocationManager.swift in Sources */,
 				49AB968024196B7C00770AB4 /* UIAlertController+TextField.swift in Sources */,
 				497E656A23FA967F00AA2E0E /* AppDelegate.swift in Sources */,
+				4991AFF4241A74C50052B07B /* MapRunAnnotation.swift in Sources */,
 				49AB967E2419678B00770AB4 /* ProfileViewController.swift in Sources */,
 				49B2E157240FFC590052F0F3 /* Settings.swift in Sources */,
 				497E656C23FA967F00AA2E0E /* SceneDelegate.swift in Sources */,

@@ -33,6 +33,8 @@ class RunDetailsViewController: UIViewController {
         loadMap()
         
         fillRunDetails()
+        
+        addAnnotations()
     }
     
     private func fillRunDetails() {
@@ -166,15 +168,24 @@ class RunDetailsViewController: UIViewController {
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "run_annotation")
+        annotationView.image =  UIImage(systemName: (annotation as! MapRunAnnotation).imageName!)
+        annotationView.contentMode = .bottom
+        annotationView.canShowCallout = false
+        return annotationView
+    }
+    
+    private func addAnnotations() {
+        let startLocation = run?.locations!.firstObject as! Location
+        let endLocation = run?.locations!.lastObject as! Location
+        let startCoord = CLLocationCoordinate2DMake(startLocation.latitude, startLocation.longitude)
+        let endCoord = CLLocationCoordinate2DMake(endLocation.latitude, endLocation.longitude)
+        let startPin = MapRunAnnotation(coordinate: startCoord, imageName: "1.circle")
+        let endPin = MapRunAnnotation(coordinate: endCoord, imageName: "2.circle")
+        self.mapView.addAnnotation(startPin)
+        self.mapView.addAnnotation(endPin)
+    }
     
 }
 
