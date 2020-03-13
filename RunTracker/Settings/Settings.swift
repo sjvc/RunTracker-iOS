@@ -39,6 +39,8 @@ public class Settings {
     private static let KEY_PROFILE_WEIGHT = "Profile_Weight"
     private static let KEY_PROFILE_HEIGHT = "Profile_Height"
     
+    private static let KEY_RUN_DATA_ORDER = "RunDataOrder"
+    
     public static func getCadence() -> Int {
         return UserDefaults.standard.integer(forKey: KEY_CADENCE)
     }
@@ -120,5 +122,14 @@ public class Settings {
     
     public static func setProfileHeight(value: Int) {
         UserDefaults.standard.set(value, forKey: KEY_PROFILE_HEIGHT)
+    }
+    
+    public static func setRunDataOrder(index: Int, key: String) {
+        UserDefaults.standard.set(key, forKey: KEY_RUN_DATA_ORDER + String(index))
+    }
+    
+    public static func getRunDataOrder(index: Int) -> String? {
+        let strValue = UserDefaults.standard.string(forKey: KEY_RUN_DATA_ORDER + String(index))
+        return strValue == "" ? nil : strValue
     }
 }

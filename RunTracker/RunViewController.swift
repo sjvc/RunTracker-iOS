@@ -174,7 +174,15 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        refreshDataContainerConstraints("time", "distance", "pace", "cadence", duration: 0) // TODO: secuencia inicial de shared prefs
+        refreshDataContainerConstraints(
+            Settings.getRunDataOrder(index: 0) ?? "time",
+            Settings.getRunDataOrder(index: 1) ?? "distance",
+            Settings.getRunDataOrder(index: 2) ?? "pace",
+            Settings.getRunDataOrder(index: 3) ?? "cadence",
+            duration: 0
+        )
+        
+        // GPS Accuracy
         
         switch CLLocationManager.authorizationStatus() {
             case .notDetermined:
@@ -527,22 +535,43 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     }
     
     @objc func timeLabelTapped(sender: UITapGestureRecognizer) {
+        if Settings.getRunDataOrder(index: 0) == "time" {
+            return
+        }
+        
         refreshDataContainerConstraints("time", "distance", "pace", "cadence")
     }
     
     @objc func kmLabelTapped(sender: UITapGestureRecognizer) {
+        if Settings.getRunDataOrder(index: 0) == "distance" {
+            return
+        }
+        
         refreshDataContainerConstraints("distance", "time", "pace", "cadence")
     }
     
     @objc func mpkLabelTapped(sender: UITapGestureRecognizer) {
+        if Settings.getRunDataOrder(index: 0) == "pace" {
+            return
+        }
+        
         refreshDataContainerConstraints("pace", "distance", "time", "cadence")
     }
     
     @objc func spmLabelTapped(sender: UITapGestureRecognizer) {
+        if Settings.getRunDataOrder(index: 0) == "cadence" {
+            return
+        }
+        
         refreshDataContainerConstraints("cadence", "distance", "pace", "time")
     }
     
-    func refreshDataContainerConstraints(_ labelId0: String, _ labelId1: String, _ labelId2: String, _ labelId3: String, duration : Double = 0.3) {
+    func refreshDataContainerConstraints(_ labelId0: String, _ labelId1: String, _ labelId2: String, _ labelId3: String, duration : Double = 0.5) {
+        Settings.setRunDataOrder(index: 0, key: labelId0)
+        Settings.setRunDataOrder(index: 1, key: labelId1)
+        Settings.setRunDataOrder(index: 2, key: labelId2)
+        Settings.setRunDataOrder(index: 3, key: labelId3)
+        
         let labelWidth = 144.0 as CGFloat
         let bigLabelHOffset = 36.0 as CGFloat
         let bigLabelTop = 16.0 as CGFloat
@@ -581,10 +610,12 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         // Animar transición del icono
         UIView.animate(withDuration: duration * 0.5, delay: 0.0, options: .curveEaseInOut , animations: {
             self.bigLabelIconImage.alpha = 0
+            self.bigLabelIconImage.transform = CGAffineTransform(translationX: 0, y: -100)
         }, completion: { finished in
             UIView.animate(withDuration: duration * 0.5, delay: 0.0, options: .curveEaseInOut , animations: {
                 self.bigLabelIconImage.image = self.dataIconsImages[labelId0]
                 self.bigLabelIconImage.alpha = 1
+                self.bigLabelIconImage.transform = CGAffineTransform(translationX: 0, y: 0)
             })
         })
     }
