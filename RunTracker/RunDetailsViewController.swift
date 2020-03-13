@@ -32,9 +32,9 @@ class RunDetailsViewController: UIViewController {
         
         loadMap()
         
-        fillRunDetails()
+        addMapAnnotations()
         
-        addAnnotations()
+        fillRunDetails()
     }
     
     private func fillRunDetails() {
@@ -176,15 +176,26 @@ class RunDetailsViewController: UIViewController {
         return annotationView
     }
     
-    private func addAnnotations() {
-        let startLocation = run?.locations!.firstObject as! Location
-        let endLocation = run?.locations!.lastObject as! Location
-        let startCoord = CLLocationCoordinate2DMake(startLocation.latitude, startLocation.longitude)
-        let endCoord = CLLocationCoordinate2DMake(endLocation.latitude, endLocation.longitude)
-        let startPin = MapRunAnnotation(coordinate: startCoord, imageName: "1.circle")
-        let endPin = MapRunAnnotation(coordinate: endCoord, imageName: "2.circle")
-        self.mapView.addAnnotation(startPin)
-        self.mapView.addAnnotation(endPin)
+    private func addMapAnnotation(coordinate: CLLocationCoordinate2D, index: Int) {
+        let imageName = String((index % 49) + 1) + ".circle"
+        let pin = MapRunAnnotation(coordinate: coordinate, imageName: imageName)
+        self.mapView.addAnnotation(pin)
+    }
+    
+    // Recorre el array de locations y añade las annotations al mapa
+    private func addMapAnnotations() {
+        var locationIndex=0
+        var annotationIndex = 0
+        let lastLocationIndex = (run?.locations!.array.count)! - 1
+        for location in (run?.locations!.array)! {
+            let location = location as! Location
+            
+            if locationIndex == 0 || (locationIndex+1<lastLocationIndex && (run?.locations!.array[locationIndex+1] as! Location).isNewStart) || location.isNewStart || locationIndex == lastLocationIndex {
+                addMapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude), index: annotationIndex)
+                annotationIndex += 1
+            }
+            locationIndex += 1
+        }
     }
     
 }
