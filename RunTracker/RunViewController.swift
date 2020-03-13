@@ -86,7 +86,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         dataLabelsLabels["cadence"] = cadenceLabel
         
         dataIconsImages["time"] = UIImage(systemName: "clock")
-        dataIconsImages["distance"] = UIImage(systemName: "mappin.and.ellipse")
+        dataIconsImages["distance"] = UIImage(systemName: "arrow.left.and.right.square")
         dataIconsImages["pace"] = UIImage(systemName: "stopwatch")
         dataIconsImages["cadence"] = UIImage(systemName: "metronome")
         
