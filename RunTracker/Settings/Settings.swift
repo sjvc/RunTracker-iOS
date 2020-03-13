@@ -87,6 +87,15 @@ public class Settings {
         return UserDefaults.standard.string(forKey: KEY_PROFILE_NAME) ?? ""
     }
     
+    public static func getProfileShortName() -> String {
+        let name = getProfileName()
+        if !name.contains(" ") {
+            return name
+        }
+        
+        return name.components(separatedBy: " ").first!
+    }
+    
     public static func setProfileName(_ name: String) {
         UserDefaults.standard.set(name, forKey: KEY_PROFILE_NAME)
     }

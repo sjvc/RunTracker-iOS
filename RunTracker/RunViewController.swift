@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 import JJFloatingActionButton
 import MapKit
 import CoreLocation
@@ -43,6 +44,11 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     
     let mapRegionRadius: CLLocationDistance = 500
     let debug = true
+    
+    var lastNotificationTimestamp: Double = 0
+    let minNotificationInterval: Double = 15
+    var lastTimeNotificationValue: Int = 0
+    var lastDistanceNotificationValue: Double = 0
     
     var startRunFab : JJFloatingActionButton? = nil
     var pauseRunFab : JJFloatingActionButton? = nil
@@ -239,6 +245,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             if lastLocation != nil {
                 let delta = location.distance(from: lastLocation!)
                 distance = distance + Measurement(value: delta, unit: UnitLength.meters)
+                checkDistanceNotification(meters: distance.value)
                 
                 mapView.addOverlay(MKPolyline(coordinates: [lastLocation!.coordinate, location.coordinate], count: 2))
             }
@@ -408,6 +415,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
                     }
                     if (pedometerData.currentCadence != nil) {
                         self?.lastPedometerCadence = pedometerData.currentCadence
+                        self?.checkCadenceNotification(stepsPerSeconds: self?.lastPedometerCadence)
                     }
                 }
             }
@@ -466,6 +474,9 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
                 distance = Measurement(value: 0, unit: UnitLength.meters)
                 locationList.removeAll()
                 mapView.removeOverlays(mapView.overlays)
+                
+                lastTimeNotificationValue = 0
+                lastDistanceNotificationValue = 0
             }
             runResumeDate = Date()
             updateDisplay()
@@ -524,6 +535,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     
     func eachSecond() {
         seconds += 1
+        checkTimeNotification(seconds: seconds)
         updateDisplay()
     }
     
@@ -638,5 +650,64 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         self.mapView.addAnnotation(pin)
         
         annotationIndex += 1
+    }
+    
+    private func checkCadenceNotification(stepsPerSeconds: NSNumber?) {
+        let minCadence = Double(Settings.getCadence())
+        if minCadence > 0 {
+            let currentCadence = Double(truncating: stepsPerSeconds!) * Double(60.0)
+            if currentCadence < minCadence {
+                _ = notifyTalking(string: "Vas a \(currentCadence) pasos por minuto. Vamos, intenta estar por encima de los \(minCadence) \(Settings.getProfileShortName())")
+            }
+        }
+    }
+    
+    private func checkTimeNotification(seconds: Int) {
+        if Settings.getIntervalType() == IntervalType.TIME {
+            let interval = Settings.getIntervalValue() // segundos
+            let notificationValue = seconds / interval
+            if notificationValue > lastTimeNotificationValue {
+                if notifyTalking(string: "Muy bien \(Settings.getProfileShortName()). Ya llevas entrenando \(seconds/60) \(seconds/60 == 1 ? "minuto" : "minutos"). Sigue así.") {
+                    lastTimeNotificationValue = notificationValue
+                }
+            }
+        }
+    }
+    
+    private func checkDistanceNotification(meters: Double) {
+        if Settings.getIntervalType() == IntervalType.DISTANCE {
+            let interval = Settings.getIntervalValue() // metros
+            let notificationValue = Int(meters) / interval
+            if notificationValue > Int(lastDistanceNotificationValue) {
+                if notifyTalking(string: "Muy bien \(Settings.getProfileShortName()). Ya llevas recorridos \(meters) metros. No pares.") {
+                    lastDistanceNotificationValue = Double(notificationValue)
+                }
+            }
+        }
+    }
+    
+    private func notifyTalking(string: String) -> Bool {
+        // Comprobar si podemos notificar
+        let currentTimestamp = Date().timeIntervalSince1970
+        if currentTimestamp - lastNotificationTimestamp < minNotificationInterval {
+            return false
+        }
+        lastNotificationTimestamp = currentTimestamp
+        
+        // Notificar
+        do {
+           try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: AVAudioSession.CategoryOptions.mixWithOthers)
+           try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print(error)
+        }
+        
+        let speechSynthesizer = AVSpeechSynthesizer()
+        let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string: string)
+        speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.5
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "es-ES")
+        speechSynthesizer.speak(speechUtterance)
+        
+        return true
     }
 }

@@ -20,6 +20,18 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Capturar tu foto para tu perfil</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Monitorizar tu entrenamiento</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Monitorizar tu entrenamiento</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Monitorizar tu entrenamiento</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Monitorizar tu entrenamiento</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Capturar tu foto para tu perfil</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -41,6 +53,7 @@
 	</dict>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>audio</string>
 		<string>location</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
@@ -57,18 +70,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Monitorizar tu entrenamiento</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Monitorizar tu entrenamiento</string>
-	<key>NSLocationUsageDescription</key>
-	<string>Monitorizar tu entrenamiento</string>
-	<key>NSMotionUsageDescription</key>
-	<string>Monitorizar tu entrenamiento</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Capturar tu foto para tu perfil</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Capturar tu foto para tu perfil</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
