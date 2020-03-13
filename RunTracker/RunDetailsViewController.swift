@@ -169,11 +169,15 @@ class RunDetailsViewController: UIViewController {
     
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "run_annotation")
-        annotationView.image =  UIImage(systemName: (annotation as! MapRunAnnotation).imageName!)
-        annotationView.contentMode = .bottom
-        annotationView.canShowCallout = false
-        return annotationView
+        if annotation is MapRunAnnotation {
+            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "run_annotation")
+            annotationView.image =  UIImage(systemName: (annotation as! MapRunAnnotation).imageName!)
+            annotationView.contentMode = .bottom
+            annotationView.canShowCallout = false
+            return annotationView
+        }
+        
+        return nil
     }
     
     private func addMapAnnotation(coordinate: CLLocationCoordinate2D, index: Int) {

@@ -48,6 +48,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     var pauseRunFab : JJFloatingActionButton? = nil
     var centerMapFab: JJFloatingActionButton? = nil
     var runStatus = RunStatus.Stopped
+    var annotationIndex = 0
     
     let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
@@ -219,7 +220,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
                 continue
             }
             
-            // Crear code data managed object
+            // Crear core data managed object
             let locationObject = Location(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
             locationObject.date = location.timestamp
             locationObject.latitude = location.coordinate.latitude
@@ -237,6 +238,11 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             // Guardar ubicación
             locationList.append(locationObject)
             lastLocation = location
+            
+            // ¿Mostrar anotación de inicio?
+            if locationObject.isNewStart {
+                addMapAnnotation(coordinate: location.coordinate)
+            }
             
             if debug {
                 print("Ubicación almacenada: \(location.coordinate). Precisión: \(location.horizontalAccuracy). howRecent: \(howRecent)")
@@ -469,6 +475,11 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             stopLocationUpdates()
             stopPedometerUpdates()
             stopTrackingActivityType()
+            
+            // Poner anotación de fin
+            if lastLocation != nil {
+                addMapAnnotation(coordinate: lastLocation!.coordinate)
+            }
             break
             
         case RunStatus.Stopped:
@@ -576,5 +587,25 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
                 self.bigLabelIconImage.alpha = 1
             })
         })
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MapRunAnnotation {
+            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "run_annotation")
+            annotationView.image =  UIImage(systemName: (annotation as! MapRunAnnotation).imageName!)
+            annotationView.contentMode = .bottom
+            annotationView.canShowCallout = false
+            return annotationView
+        }
+        
+        return nil
+    }
+    
+    private func addMapAnnotation(coordinate: CLLocationCoordinate2D) {
+        let imageName = String((annotationIndex % 49) + 1) + ".circle"
+        let pin = MapRunAnnotation(coordinate: coordinate, imageName: imageName)
+        self.mapView.addAnnotation(pin)
+        
+        annotationIndex += 1
     }
 }
