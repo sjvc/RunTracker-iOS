@@ -15,8 +15,6 @@ import CoreMotion
 import CoreData
 import IVBezierPathRenderer
 
-// TODO: AutoPause con detector de actividad de CoreMotion (nos indica qué actividad estamos haciendo). ¿O usar GPS?
-
 class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var debugLabel: UILabel!
     
@@ -194,8 +192,6 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             Settings.getRunDataOrder(index: 3) ?? "cadence",
             duration: 0
         )
-        
-        // TODO: GPS Accuracy
         
         switch CLLocationManager.authorizationStatus() {
             case .notDetermined:
