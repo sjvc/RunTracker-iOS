@@ -86,6 +86,13 @@
                                                 </constraints>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32" weight="light"/>
                                             </imageView>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DebugLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHz-z4-BTy">
+                                                <rect key="frame" x="16" y="8" width="93" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -114,6 +121,7 @@
                         <outlet property="bigLabelIconImage" destination="6RZ-NR-Xan" id="OS5-ff-zh0"/>
                         <outlet property="cadenceLabel" destination="Mxh-8Y-v7h" id="18t-ML-zIQ"/>
                         <outlet property="dataContainerView" destination="zck-aX-bdW" id="Adq-zn-ZWq"/>
+                        <outlet property="debugLabel" destination="MHz-z4-BTy" id="1p2-k1-cOZ"/>
                         <outlet property="distanceLabel" destination="dJc-pB-PHD" id="HiG-xg-1O5"/>
                         <outlet property="kmLabel" destination="kBv-9m-6Wn" id="7FA-uD-4Cz"/>
                         <outlet property="mapView" destination="Lqc-To-WMP" id="9Tq-1L-rIT"/>

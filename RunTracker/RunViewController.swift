@@ -18,6 +18,7 @@ import IVBezierPathRenderer
 // TODO: AutoPause con detector de actividad de CoreMotion (nos indica qué actividad estamos haciendo). ¿O usar GPS?
 
 class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
+    @IBOutlet weak var debugLabel: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
  
@@ -42,6 +43,11 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         case Stopping
     }
     
+    struct ActivityType {
+        var moving : Bool
+        var date : Date
+    }
+    
     let mapRegionRadius: CLLocationDistance = 500
     let debug = true
     
@@ -60,6 +66,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     let pedometer = CMPedometer()
     var lastPedometerPace : NSNumber?
     var lastPedometerCadence : NSNumber?
+    var lastActivityTypes : [ActivityType?] = []
     
     var runResumeDate : Date?
     let locationManager = LocationManager.shared
@@ -188,7 +195,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             duration: 0
         )
         
-        // GPS Accuracy
+        // TODO: GPS Accuracy
         
         switch CLLocationManager.authorizationStatus() {
             case .notDetermined:
@@ -209,8 +216,6 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        timer?.invalidate()
-        stopLocationUpdates()
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -428,21 +433,16 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             guard let activity = activity else { return }
             DispatchQueue.main.async {
                 if activity.stationary {
-                    
-                } else if activity.walking {
-                   
-                } else if activity.running {
-                    
-                } else if activity.cycling {
-                    
-                } else if activity.automotive {
-                    
+                    self?.lastActivityTypes.append(ActivityType(moving: false, date: Date()))
+                } else {
+                    self?.lastActivityTypes.append(ActivityType(moving: true, date: Date()))
                 }
             }
         }
     }
     
     private func stopTrackingActivityType() {
+        lastActivityTypes.removeAll()
         activityManager.stopActivityUpdates()
     }
     
@@ -536,6 +536,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
     func eachSecond() {
         seconds += 1
         checkTimeNotification(seconds: seconds)
+        checkAutoPause()
         updateDisplay()
     }
     
@@ -657,7 +658,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         if minCadence > 0 {
             let currentCadence = Double(truncating: stepsPerSeconds!) * Double(60.0)
             if currentCadence < minCadence {
-                _ = notifyTalking(string: "Vas a \(currentCadence) pasos por minuto. Vamos, intenta estar por encima de los \(minCadence) \(Settings.getProfileShortName())")
+                _ = notifyTalking(string: "Vas a \(Int(currentCadence)) pasos por minuto. Vamos, intenta estar por encima de los \(Int(minCadence)) \(Settings.getProfileShortName())")
             }
         }
     }
@@ -679,7 +680,7 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
             let interval = Settings.getIntervalValue() // metros
             let notificationValue = Int(meters) / interval
             if notificationValue > Int(lastDistanceNotificationValue) {
-                if notifyTalking(string: "Muy bien \(Settings.getProfileShortName()). Ya llevas recorridos \(meters) metros. No pares.") {
+                if notifyTalking(string: "Muy bien \(Settings.getProfileShortName()). Ya llevas recorridos \(notificationValue * interval) metros. No pares.") {
                     lastDistanceNotificationValue = Double(notificationValue)
                 }
             }
@@ -709,5 +710,39 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         speechSynthesizer.speak(speechUtterance)
         
         return true
+    }
+    
+    private func checkAutoPause() {
+        if !Settings.getAutoPause() {
+            return
+        }
+        
+        // Calcular el tiempo que se ha estado en stationary en los últimos 10 segundos
+        // Recorro el array en modo inverso para que el borrado no afecte al bucle
+        var secondsInStationary = 0.0
+        var i = (self.lastActivityTypes.count) - 1
+        while i >= 0 {
+            // Si la última actividad registrada es stationary, le sumo el intervalo hasta ahora
+            if i == (self.lastActivityTypes.count)-1 && !(self.lastActivityTypes[i]?.moving)! {
+                secondsInStationary += abs((self.lastActivityTypes[i]?.date)!.timeIntervalSinceNow)
+            }
+            
+            // Si la actividad anterior a esta es stationary, le sumo el intervalo
+            if i-1 > 0 && !(self.lastActivityTypes[i-1]?.moving)! {
+                secondsInStationary += abs(self.lastActivityTypes[i-1]!.date.timeIntervalSince((self.lastActivityTypes[i]?.date)!))
+            }
+            
+            // Borro los registros antiguos (más de 10 segundos), excepto el último
+            if i < (self.lastActivityTypes.count)-1  && abs((self.lastActivityTypes[i]?.date)!.timeIntervalSinceNow) > 10 {
+                self.lastActivityTypes.remove(at: i)
+            }
+            
+            i -= 1
+        }
+        
+        if secondsInStationary > 5 {
+            pauseRunFab?.open()
+        }
+        
     }
 }
