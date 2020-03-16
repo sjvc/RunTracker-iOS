@@ -473,6 +473,8 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
                 
                 lastTimeNotificationValue = 0
                 lastDistanceNotificationValue = 0
+                annotationIndex = 0
+                mapView.removeAnnotations(mapView.annotations.filter({$0 is MapRunAnnotation}))
             }
             runResumeDate = Date()
             updateDisplay()
