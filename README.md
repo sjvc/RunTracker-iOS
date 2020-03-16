@@ -7,7 +7,7 @@ En el vídeo de presentación de la app se muestran todos los detalles del mismo
 ## Pantalla "entrenamiento"
 - Muestra la distancia recorrida, duración, ritmo y cadencia.
 - Permite cambiar el dato que se ve en grande al pulsar sobre él (**mejora opcional**)
-- En lugar de parar el entrenamiento manteniendo pulsado el botón de pausa, aparece un nuevo botón para dicho propósito cuando se pulsa el de pausa. Se usan botones flotantes proporcionados por la librería [JJFloatingActionButton](http://https://github.com/jjochen/JJFloatingActionButton "JJFloatingActionButton") (**variación respecto a los requisitos originales**)
+- En lugar de parar el entrenamiento manteniendo pulsado el botón de pausa, aparece un nuevo botón para dicho propósito cuando se pulsa el de pausa. Se usan botones flotantes proporcionados por la librería [JJFloatingActionButton](https://github.com/jjochen/JJFloatingActionButton "JJFloatingActionButton") (**variación respecto a los requisitos originales**)
 - Se permite navegar por el mapa, alejándonos de la ubicación actual. Cuando lo hacemos, aparece un botón que sirve para volver a centrar el mapa en dicha ubicación. (**mejora propuesta**)
 - Cada tramo del recorrido dibujado quedará marcado en su inicio y fin con números indicando el orden cronológico (**mejora propuesta**)
 - El tramo del recorrido se dibuja de forma mejorada y más estilizada usando la librería [IVBezierPathRenderer](https://github.com/ivan114/IVBezierPathRenderer "IVBezierPathRenderer") (**mejora propuesta**)
