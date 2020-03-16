@@ -18,9 +18,9 @@ class GpsSettingsViewController : QuickTableViewController {
         
         tableContents = [
             RadioSection(title: "Selecciona la precisión del GPS", options: [
-                OptionRow(text: "Alta", isSelected: gpsAccuracy == GpsAccuracy.HIGH, action: didToggleSelection(GpsAccuracy.HIGH)),
-                OptionRow(text: "Media", isSelected: gpsAccuracy == GpsAccuracy.MEDIUM, action: didToggleSelection(GpsAccuracy.MEDIUM)),
-                OptionRow(text: "Baja", isSelected: gpsAccuracy == GpsAccuracy.LOW, action: didToggleSelection(GpsAccuracy.LOW))
+                OptionRow(text: "Óptima", isSelected: gpsAccuracy == GpsAccuracy.HIGH, action: didToggleSelection(GpsAccuracy.HIGH))//,
+                //OptionRow(text: "Media", isSelected: gpsAccuracy == GpsAccuracy.MEDIUM, action: didToggleSelection(GpsAccuracy.MEDIUM)),
+                //OptionRow(text: "Baja", isSelected: gpsAccuracy == GpsAccuracy.LOW, action: didToggleSelection(GpsAccuracy.LOW))
             ])
         ]
     }

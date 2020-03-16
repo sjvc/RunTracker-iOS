@@ -1,13 +1,13 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/IVBezierPathRenderer"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CircleBar" "${PODS_CONFIGURATION_BUILD_DIR}/IVBezierPathRenderer" "${PODS_CONFIGURATION_BUILD_DIR}/JJFloatingActionButton" "${PODS_CONFIGURATION_BUILD_DIR}/QuickTableViewController"
-OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/CircleBar/CircleBar.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/JJFloatingActionButton/JJFloatingActionButton.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/QuickTableViewController/QuickTableViewController.modulemap" -fmodule-map-file="${PODS_ROOT}/Headers/Public/IVBezierPathRenderer/IVBezierPathRenderer.modulemap"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"CircleBar" -l"IVBezierPathRenderer" -l"JJFloatingActionButton" -l"QuickTableViewController" -framework "UIKit"
-OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/CircleBar/CircleBar.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/JJFloatingActionButton/JJFloatingActionButton.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/QuickTableViewController/QuickTableViewController.modulemap" -Xcc -fmodule-map-file="${PODS_ROOT}/Headers/Public/IVBezierPathRenderer/IVBezierPathRenderer.modulemap"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/IVBezierPathRenderer" "${PODS_CONFIGURATION_BUILD_DIR}/JJFloatingActionButton" "${PODS_CONFIGURATION_BUILD_DIR}/QuickTableViewController"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/JJFloatingActionButton/JJFloatingActionButton.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/QuickTableViewController/QuickTableViewController.modulemap" -fmodule-map-file="${PODS_ROOT}/Headers/Public/IVBezierPathRenderer/IVBezierPathRenderer.modulemap"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"IVBezierPathRenderer" -l"JJFloatingActionButton" -l"QuickTableViewController" -framework "UIKit"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/JJFloatingActionButton/JJFloatingActionButton.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/QuickTableViewController/QuickTableViewController.modulemap" -Xcc -fmodule-map-file="${PODS_ROOT}/Headers/Public/IVBezierPathRenderer/IVBezierPathRenderer.modulemap"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
-SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CircleBar" "${PODS_CONFIGURATION_BUILD_DIR}/JJFloatingActionButton" "${PODS_CONFIGURATION_BUILD_DIR}/QuickTableViewController"
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/JJFloatingActionButton" "${PODS_CONFIGURATION_BUILD_DIR}/QuickTableViewController"
 USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

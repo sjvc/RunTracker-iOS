@@ -7,7 +7,6 @@ target 'RunTracker' do
   use_modular_headers!
 
   # Pods for RunTracker
-  pod 'CircleBar'
   pod 'JJFloatingActionButton'
   pod 'IVBezierPathRenderer'
   pod 'QuickTableViewController'
