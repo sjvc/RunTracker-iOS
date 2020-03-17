@@ -25,6 +25,7 @@ En [este vídeo de presentación de la app](https://youtu.be/rQ2SbKH3jaw "este v
 - Cada dato tiene su propia validación de tipo de datos y valores permitidos.
 
 ## Pantalla "ajustes"
+- Uso [QuickTableViewController](https://github.com/bcylin/QuickTableViewController "QuickTableViewController") para generar esta pantalla
 - Permite configurar 2 tipos distintos de notificaciones: cadencia mínima e intervalos.
 - Los intervalos pueden ser por duración o por distancia.
 - Las notificaciones sonoras se generan mediante el sitentizador de voz de Apple, indicando datos del entrenamiento (ritmo, duración o cadencia).
