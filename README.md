@@ -2,7 +2,7 @@
 
 Este documento enumera las características de cada apartado de la app. Algunas partes varían respecto a los requisitos establecidos en el enunciado de la práctica, o son mejoras opcionales, o son mejoras propuestas por mí, por lo que esto también queda indicado en este documento.
 
-En el vídeo de presentación de la app se muestran todos los detalles del mismo, quedando este documento como índice y resumen de las caracteríasticas.
+En [este vídeo de presentación de la app](https://youtu.be/rQ2SbKH3jaw "este vídeo de presentación de la app") se muestran todos los detalles del mismo, quedando este documento como índice y resumen de las caracteríasticas.
 
 ## Pantalla "entrenamiento"
 - Muestra la distancia recorrida, duración, ritmo y cadencia.
