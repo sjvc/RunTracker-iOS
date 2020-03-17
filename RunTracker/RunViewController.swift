@@ -214,58 +214,6 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if (status == CLAuthorizationStatus.restricted || status == CLAuthorizationStatus.denied) {
-            exit(0)
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if runStatus != RunStatus.Running {
-            return
-        }
-        
-        for location in locations {
-            // Descarto la ubicaciones sin precisión o antiguas
-            let howRecent = location.timestamp.timeIntervalSinceNow
-            guard location.horizontalAccuracy >= 0 && location.horizontalAccuracy < 20 && abs(howRecent) < 10 else {
-                if debug {
-                    print("Ubicación descartada: \(location.coordinate). Precisión: \(location.horizontalAccuracy). howRecent: \(howRecent)")
-                }
-                continue
-            }
-            
-            // Crear core data managed object
-            let locationObject = Location(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
-            locationObject.date = location.timestamp
-            locationObject.latitude = location.coordinate.latitude
-            locationObject.longitude = location.coordinate.longitude
-            locationObject.isNewStart = lastLocation == nil
-            
-            // Incrementar distancia recorrida
-            if lastLocation != nil {
-                let delta = location.distance(from: lastLocation!)
-                distance = distance + Measurement(value: delta, unit: UnitLength.meters)
-                checkDistanceNotification(meters: distance.value)
-                
-                mapView.addOverlay(MKPolyline(coordinates: [lastLocation!.coordinate, location.coordinate], count: 2))
-            }
-            
-            // Guardar ubicación
-            locationList.append(locationObject)
-            lastLocation = location
-            
-            // ¿Mostrar anotación de inicio?
-            if locationObject.isNewStart {
-                addMapAnnotation(coordinate: location.coordinate)
-            }
-            
-            if debug {
-                print("Ubicación almacenada: \(location.coordinate). Precisión: \(location.horizontalAccuracy). howRecent: \(howRecent)")
-            }
-        }
-    }
-    
     func showPermissionAlert() {
         let alertController = UIAlertController(title: "Permiso de ubicación", message: "Has de dar permiso de ubicación desde la pantalla de ajustes", preferredStyle: .alert)
         
@@ -391,6 +339,58 @@ class RunViewController: UIViewController, JJFloatingActionButtonDelegate, CLLoc
         // renderer.borderColor = renderer.strokeColor
         // renderer.borderMultiplier = 1.5
         return renderer
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if (status == CLAuthorizationStatus.restricted || status == CLAuthorizationStatus.denied) {
+            exit(0)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if runStatus != RunStatus.Running {
+            return
+        }
+        
+        for location in locations {
+            // Descarto la ubicaciones sin precisión o antiguas
+            let howRecent = location.timestamp.timeIntervalSinceNow
+            guard location.horizontalAccuracy >= 0 && location.horizontalAccuracy < 20 && abs(howRecent) < 10 else {
+                if debug {
+                    print("Ubicación descartada: \(location.coordinate). Precisión: \(location.horizontalAccuracy). howRecent: \(howRecent)")
+                }
+                continue
+            }
+            
+            // Crear core data managed object
+            let locationObject = Location(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+            locationObject.date = location.timestamp
+            locationObject.latitude = location.coordinate.latitude
+            locationObject.longitude = location.coordinate.longitude
+            locationObject.isNewStart = lastLocation == nil
+            
+            // Incrementar distancia recorrida
+            if lastLocation != nil {
+                let delta = location.distance(from: lastLocation!)
+                distance = distance + Measurement(value: delta, unit: UnitLength.meters)
+                checkDistanceNotification(meters: distance.value)
+                
+                mapView.addOverlay(MKPolyline(coordinates: [lastLocation!.coordinate, location.coordinate], count: 2))
+            }
+            
+            // Guardar ubicación
+            locationList.append(locationObject)
+            lastLocation = location
+            
+            // ¿Mostrar anotación de inicio?
+            if locationObject.isNewStart {
+                addMapAnnotation(coordinate: location.coordinate)
+            }
+            
+            if debug {
+                print("Ubicación almacenada: \(location.coordinate). Precisión: \(location.horizontalAccuracy). howRecent: \(howRecent)")
+            }
+        }
     }
     
     private func startLocationUpdates() {
